@@ -398,6 +398,8 @@ void SyntaxCheckTest::checkAllowedMath_data(){
              <<"\\alpha"<<true;
      QTest::newRow("nested text in math")
              <<"$\\textit{\\alpha}$"<<true;
+     QTest::newRow("nested text in math with linebreak")
+         <<"$\\textit{\n\\alpha}$"<<true;
      QTest::newRow("nested text in math (underscore)")
              <<"$\\textit{a_b}$"<<true;
      QTest::newRow("nested text in math and extra braces")
@@ -412,7 +414,10 @@ void SyntaxCheckTest::checkAllowedMath_data(){
              <<"$\\textit{$ {\\alpha}$}$"<<false;
      QTest::newRow("nested math in text in math and extra braces (underscore)")
              <<"$\\textit{$ {a_b}$}$"<<false;
-
+     QTest::newRow("handle math aliases correctly")
+         <<"\\usepackage{amsmath}\n\\begin{align}\n\\alpha\n\\end{align}"<<false;
+     QTest::newRow("handle math aliases correctly, force error")
+         <<"\\usepackage{amsmath}\n\\begin{align}\n\\text{\\alpha}\n\\end{align}"<<true;
 }
 
 void SyntaxCheckTest::checkAllowedMath(){
@@ -429,14 +434,75 @@ void SyntaxCheckTest::checkAllowedMath(){
     LatexDocument *doc=edView->getDocument();
     doc->synChecker.waitForQueueProcess(); // wait for syntax checker to finish (as it runs in a parallel thread)
 
-    QDocumentLineHandle *dlh=doc->line(0).handle();
-    QList<QFormatRange> formats=dlh->getOverlays(LatexEditorView::syntaxErrorFormat);
-    QEQUAL(!formats.isEmpty(),error);
+    bool errorFlag=false;
+    for(int i=0;i<doc->lines();++i){
+        QDocumentLineHandle *dlh=doc->line(i).handle();
+        QList<QFormatRange> formats=dlh->getOverlays(LatexEditorView::syntaxErrorFormat);
+        errorFlag|=!formats.isEmpty();
+    }
+    QEQUAL(errorFlag,error);
 
     edView->getConfig()->inlineSyntaxChecking = inlineSyntaxChecking;
     edView->getConfig()->realtimeChecking = realtimeChecking;
 }
 
+void SyntaxCheckTest::checkExplHighlight_data(){
+    QTest::addColumn<QString>("text");
+    QTest::addColumn<QList<int>>("start");
+    QTest::addColumn<QList<int>>("length");
+    QTest::addColumn<QList<int>>("colonStart");
+    QTest::addColumn<QList<int>>("colonLength");
+
+    QTest::newRow("simple")
+        <<"text"<<QList<int>{}<<QList<int>{}<<QList<int>{}<<QList<int>{};
+    QTest::newRow("simple text")
+        <<"\\ExplSyntaxOn text \\ExplSyntaxOff"<<QList<int>{}<<QList<int>{}<<QList<int>{}<<QList<int>{};
+    QTest::newRow("simple cmd")
+        <<"\\ExplSyntaxOn \\test \\ExplSyntaxOff"<<QList<int>{14}<<QList<int>{5}<<QList<int>{}<<QList<int>{};
+    QTest::newRow("simple cmd with _")
+        <<"\\ExplSyntaxOn \\test_asd_asd \\ExplSyntaxOff"<<QList<int>{14}<<QList<int>{13}<<QList<int>{}<<QList<int>{};
+    QTest::newRow("simple cmd with :")
+        <<"\\ExplSyntaxOn \\test_asd_asd:NN \\ExplSyntaxOff"<<QList<int>{14}<<QList<int>{14}<<QList<int>{28}<<QList<int>{2};
+    QTest::newRow("two cmds")
+        <<"\\ExplSyntaxOn \\test \\test \\ExplSyntaxOff"<<QList<int>{14,20}<<QList<int>{5,5}<<QList<int>{}<<QList<int>{};
+}
+
+void SyntaxCheckTest::checkExplHighlight(){
+    QFETCH(QString, text);
+    QFETCH(QList<int>, start);
+    QFETCH(QList<int>, length);
+    QFETCH(QList<int>, colonStart);
+    QFETCH(QList<int>, colonLength);
+
+    bool inlineSyntaxChecking = edView->getConfig()->inlineSyntaxChecking;
+    bool realtimeChecking = edView->getConfig()->realtimeChecking;
+
+    edView->getConfig()->inlineSyntaxChecking = true;
+    edView->getConfig()->realtimeChecking = true;
+
+    edView->editor->setText(text, false);
+    LatexDocument *doc=edView->getDocument();
+    doc->synChecker.waitForQueueProcess(); // wait for syntax checker to finish (as it runs in a parallel thread)
+
+    for(int i=0;i<doc->lineCount();++i){
+        QDocumentLineHandle *dlh=doc->line(i).handle();
+        QList<QFormatRange> formats=dlh->getOverlays(doc->getFormatId("picture-keyword"));
+        QList<QFormatRange> colonTextFormat=dlh->getOverlays(LatexEditorView::numbersFormat);
+        QEQUAL(formats.length(),start.length());
+        QEQUAL(colonTextFormat.length(),colonStart.length());
+        for(int k=0;k<formats.length();++k){
+            QEQUAL(formats[k].offset,start.value(k));
+            QEQUAL(formats[k].length,length.value(k));
+        }
+        for(int k=0;k<colonTextFormat.length();++k){
+            QEQUAL(colonTextFormat[k].offset,colonStart.value(k));
+            QEQUAL(colonTextFormat[k].length,colonLength.value(k));
+        }
+    }
+
+    edView->getConfig()->inlineSyntaxChecking = inlineSyntaxChecking;
+    edView->getConfig()->realtimeChecking = realtimeChecking;
+}
 
 #endif
 

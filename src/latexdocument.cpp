@@ -890,8 +890,13 @@ void LatexDocument::interpretCommandArguments(QDocumentLineHandle *dlh, const in
             }
 
             foreach (const QString &elem, packages) {
-                if (!data.removedUsepackages.removeAll(firstOptArg + "#" + elem))
-                    data.addedUsepackages << firstOptArg + "#" + elem;
+                if (!data.removedUsepackages.removeAll(firstOptArg + "#" + elem)){
+                    if(!data.handledUsepackages.contains(firstOptArg + "#" + elem)){
+                        data.addedUsepackages << firstOptArg + "#" + elem;
+                    }
+                }else{
+                    data.handledUsepackages << firstOptArg + "#" + elem;
+                }
                 mUsepackageList.insert(dlh, firstOptArg + "#" + elem); // hand on option of usepackages for conditional cwl load ..., force load if option is changed
             }
             continue;
@@ -1036,8 +1041,8 @@ void LatexDocument::interpretCommandArguments(QDocumentLineHandle *dlh, const in
                 CodeSnippet cs(txt,true,true);
                 cs.type=CodeSnippet::userConstruct;
                 mUserCommandList.insert(dlh, UserCommandPair(QString(), cs));
-                if (!data.removedUserCommands.removeAll(txt)) {
-                    data.addedUserCommands << txt;
+                if (!data.removedUserSnippets.removeAll(txt)) {
+                    data.addedUserSnippets << txt;
                 }
             }
         }
@@ -1050,8 +1055,8 @@ void LatexDocument::interpretCommandArguments(QDocumentLineHandle *dlh, const in
                     CodeSnippet cs(txt,true,true);
                     cs.type=CodeSnippet::userConstruct;
                     mUserCommandList.insert(dlh, UserCommandPair(QString(), cs));
-                    if (!data.removedUserCommands.removeAll(txt)) {
-                        data.addedUserCommands << txt;
+                    if (!data.removedUserSnippets.removeAll(txt)) {
+                        data.addedUserSnippets << txt;
                     }
                 }
             }
@@ -1133,10 +1138,16 @@ void LatexDocument::handleRescanDocuments(HandledData changedCommands){
         // includes changed
         if(!changedCommands.lstFilesToLoad.isEmpty()){
             // lex2 & argument parsing, syntax check
-            bool newPackagesFound=parent->addDocsToLoad(changedCommands.lstFilesToLoad,this);
+            std::pair<bool,bool> result=parent->addDocsToLoad(changedCommands.lstFilesToLoad,this);
+            bool newPackagesFound=result.first;
+            bool newUserComamndsFound=result.second;
             changedCommands.lstFilesToLoad.clear();
             if(newPackagesFound){
                 changedCommands.addedUsepackages<<"dummy"; // force handling newly included packages
+            }
+            if(newUserComamndsFound){
+                changedCommands.addedUserCommands<<"dummy"; // force handling newly included packages
+                updateCompleter=true;
             }
         }
         if(!changedCommands.removedIncludes.isEmpty() || !changedCommands.addedIncludes.isEmpty()){
@@ -1157,9 +1168,12 @@ void LatexDocument::handleRescanDocuments(HandledData changedCommands){
             if(!changedCommands.addedUsepackages.isEmpty()){
                 changedCommands.addedUsepackages.clear();
                 int start=0;
-                int cnt=lineCount();
-                lexLines(start,cnt,true);
-                reinterpretCommandArguments(changedCommands);
+                QList<LatexDocument *>listOfDocs = getListOfDocs();
+                foreach(LatexDocument *elem, listOfDocs){
+                    int cnt=elem->lineCount();
+                    elem->lexLines(start,cnt,true);
+                    elem->reinterpretCommandArguments(changedCommands);
+                }
                 if(!changedCommands.addedIncludes.isEmpty()||!changedCommands.addedUsepackages.isEmpty()||!changedCommands.lstFilesToLoad.isEmpty()){
                     loopAgain=true;
                     updateCompleter=true;
@@ -1177,6 +1191,7 @@ void LatexDocument::handleRescanDocuments(HandledData changedCommands){
                         ltxCommands.possibleCommands[category].insert(elem);
                     }
                 }
+                changedCommands.addedUserCommands.clear();
             }
             if(!changedCommands.removedUserCommands.isEmpty()){
                 for(const QString &key: changedCommands.removedUserCommands){
@@ -1188,17 +1203,15 @@ void LatexDocument::handleRescanDocuments(HandledData changedCommands){
                         ltxCommands.possibleCommands[category].remove(elem);
                     }
                 }
+                changedCommands.removedUserCommands.clear();
             }
 
             synChecker.setLtxCommands(lp); // redundant here, updateCompletionfiles
             reCheckSyntax();
         }
     }while(loopAgain);
-    if(updateCompleter){
-        emit updateCompleterCommands(); // TODO: necessary ?
-    }
-    // user commands changed
-    // update completer & syntax check
+
+
 
     // bib files changed
     // update bibitem checking and completer
@@ -1212,6 +1225,12 @@ void LatexDocument::handleRescanDocuments(HandledData changedCommands){
             if (elem->edView)
                 elem->edView->updateCitationFormats();
         }
+        updateCompleter=true;
+    }
+    // user commands or bibitems changed
+    // update completer & syntax check
+    if(updateCompleter){
+        emit updateCompleterCommands();
     }
 }
 /*!
@@ -1239,9 +1258,11 @@ void LatexDocument::removeLineElements(QDocumentLineHandle *dlh, HandledData &ch
                 ltxCommands.possibleCommands["user"].remove(elem);
             }
         }
-        if(cmd.snippet.type==CodeSnippet::userConstruct)
-            continue;
-        changedCommands.removedUserCommands << elem;
+        if(cmd.snippet.type==CodeSnippet::userConstruct){
+            changedCommands.removedUserSnippets << elem;
+        }else{
+            changedCommands.removedUserCommands << elem;
+        }
     }
     if (mLabelItem.contains(dlh)) {
         QList<ReferencePair> labels = mLabelItem.values(dlh);
@@ -2438,10 +2459,11 @@ void LatexDocuments::removeDocs(QStringList removeIncludes)
  * \param filenames
  * \return true if newly loaded files contains packages
  */
-bool LatexDocuments::addDocsToLoad(QStringList filenames, LatexDocument *parentDocument,bool isHigherLevel)
+std::pair<bool,bool> LatexDocuments::addDocsToLoad(QStringList filenames, LatexDocument *parentDocument,bool isHigherLevel)
 {
     auto *conf=dynamic_cast<ConfigManager *>(ConfigManagerInterface::getInstance());
     bool newPackagesFound=false;
+    bool newUserCommandsFound=false;
     if(conf->autoLoadChildren){
         LatexDocument *docForUpdate=nullptr;
         for(const QString &fn:filenames){
@@ -2474,6 +2496,7 @@ bool LatexDocuments::addDocsToLoad(QStringList filenames, LatexDocument *parentD
                 doc->lp->append(doc->ltxCommands);
                 docForUpdate=doc;
                 newPackagesFound|=!doc->usedPackages(true).isEmpty();
+                newUserCommandsFound|=!doc->userCommandList().isEmpty();
             }
         }
         if(docForUpdate){
@@ -2492,7 +2515,7 @@ bool LatexDocuments::addDocsToLoad(QStringList filenames, LatexDocument *parentD
             }
         }
     }
-    return newPackagesFound;
+    return std::pair<bool,bool>{newPackagesFound,newUserCommandsFound};
 }
 
 void LatexDocuments::hideDocInEditor(LatexEditorView *edView)
@@ -3477,7 +3500,17 @@ bool LatexDocument::saveCachingData(const QString &folder)
     QJsonArray ja_userCommands;
     for(const auto &elem:mUserCommandList.values()){
         if(elem.name.isEmpty()) continue; // skip empty values
-        ja_userCommands.append(elem.name);
+        QJsonArray ja_CommandPair;
+        ja_CommandPair.append(elem.name);
+        QString word=elem.snippet.word;
+        if(word.startsWith("\\begin")){
+            int i=word.indexOf("\\end");
+            if(i>0){
+                word=word.left(i);
+            }
+        }
+        ja_CommandPair.append(word);
+        ja_userCommands.append(ja_CommandPair);
     }
 
     QJsonArray ja_packages;
@@ -3603,10 +3636,10 @@ bool LatexDocument::restoreCachedData(const QString &folder,const QString fileNa
     ja=dd.value("usercommands").toArray();
     const bool addedUserCommands=ja.size()>0;
     for (int i = 0; i < ja.size(); ++i) {
-        QString cmd=ja[i].toString();
-        UserCommandPair up(cmd,cmd);
+        const auto cmd=ja[i].toArray();
+        UserCommandPair up(cmd[0].toString(),cmd[1].toString());
         mUserCommandList.insert(nullptr,up);
-        ltxCommands.possibleCommands["user"].insert(cmd);
+        ltxCommands.possibleCommands["user"].insert(cmd[1].toString());
     }
     ja=dd.value("packages").toArray();
     const bool addedPackages=ja.size()>0;
@@ -3615,7 +3648,6 @@ bool LatexDocument::restoreCachedData(const QString &folder,const QString fileNa
         mUsepackageList.insert(nullptr,package);
     }
     ja=dd.value("toc").toArray();
-    QVector<StructureEntry *> parent_level(lp->structureDepth()+1);
     for (int i = 0; i < ja.size(); ++i) {
         QString section=ja[i].toString();
         QStringList l_section=section.split("#");

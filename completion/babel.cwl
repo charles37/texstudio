@@ -1,6 +1,6 @@
 # babel.sty
 # available from ctan
-# tbraun 4.11.2008; Matthew Bertucci 2024/01/07 for v24.1
+# tbraun 4.11.2008; Matthew Bertucci 2024/04/20 for v24.4
 
 #keyvals:\usepackage/babel#c
 %<language%>
@@ -161,7 +161,7 @@ Alph=%<counter%>
 onchar=#ids,fonts,letters
 intraspace=%<base shrink stretch%>
 intrapenalty=%<penalty%>
-transforms=#transliteration.dad,digraphs.ligatures,hyphen.repeat,oneletter.nobreak,prehyphen.nobreak,punctuation.space,diaeresis.hyphen,transliteration.omega,sigma.final,transliteration.hk,punctuation.space,digraphs.hyphen,danda.nobreak,letters.noj,letters.uv,transliteration.iast,transliteration.gajica,kashida.plain
+transforms=#transliteration.dad,digraphs.ligatures,hyphen.repeat,oneletter.nobreak,prehyphen.nobreak,diaeresis.hyphen,transliteration.omega,sigma.final,transliteration.hk,punctuation.space,digraphs.hyphen,danda.nobreak,letters.noj,letters.uv,transliteration.iast,transliteration.gajica,kashida.plain
 justification=#kashida,elongated,unhyphenated,padding
 linebreaking=#kashida,elongated,unhyphenated,padding
 mapfont=
@@ -245,7 +245,6 @@ digraphs.ligatures
 hyphen.repeat
 oneletter.nobreak
 prehyphen.nobreak
-punctuation.space
 diaeresis.hyphen
 transliteration.omega
 sigma.final
@@ -338,6 +337,7 @@ select.write=#shift,keep,omit
 select.encoding=#off
 #endkeyvals
 
+\localebox{text}#*
 \fmtname#*
 
 \glqq
@@ -371,6 +371,8 @@ select.encoding=#off
 \addto{cmd}{code}#S
 \AfterBabelCommands{code}#S
 \allowhyphens#S
+\BabelCJKGlue#S
+\BabelCJKSpace#S
 \BabelDated{arg}#S
 \BabelDatedd{arg}#S
 \BabelDateDot#S
@@ -1247,7 +1249,7 @@ select.encoding=#off
 #repl:"> »
 #endif
 
-### frenchb.ldf v3.5m (and associated acadian.ldf) ###
+### french.ldf v3.6a (and associated acadian.ldf) ###
 #ifOption:french
 \frenchsetup{options%keyvals}
 \frenchbsetup{options%keyvals}#S
@@ -1327,6 +1329,7 @@ SuppressWarning#true,false
 \FBeverylineguill#*
 \FBfigtabshape#*
 \FBfnindent#*
+\FBfnmarkspace#*
 \FBFrenchFootnotesfalse#*
 \FBFrenchFootnotestrue#*
 \FBFrenchSuperscriptstrue#*
@@ -1403,7 +1406,6 @@ SuppressWarning#true,false
 \ifFBOldFigTabCaptions#*
 \ifFBOriginalTypewriter#*
 \ifFBPartNameFull#*
-\ifFBReduceListSpacing#*
 \ifFBShowOptions#*
 \ifFBSmallCapsFigTabCaptions#*
 \ifFBStandardEnumerateEnv#*
@@ -1543,6 +1545,7 @@ SuppressWarning#true,false
 \FBeverylineguill#*
 \FBfigtabshape#*
 \FBfnindent#*
+\FBfnmarkspace#*
 \FBFrenchFootnotesfalse#*
 \FBFrenchFootnotestrue#*
 \FBFrenchSuperscriptstrue#*
@@ -1619,7 +1622,6 @@ SuppressWarning#true,false
 \ifFBOldFigTabCaptions#*
 \ifFBOriginalTypewriter#*
 \ifFBPartNameFull#*
-\ifFBReduceListSpacing#*
 \ifFBShowOptions#*
 \ifFBSmallCapsFigTabCaptions#*
 \ifFBStandardEnumerateEnv#*

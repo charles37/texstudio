@@ -209,9 +209,7 @@ Texstudio::Texstudio(QWidget *parent, Qt::WindowFlags flags, QSplashScreen *spla
     int iconSize = qRound(qMax(16, configManager.guiToolbarIconSize)*scale);
 	setIconSize(QSize(iconSize, iconSize));
 
-	leftPanel = nullptr;
-	sidePanel = nullptr;
-    //structureTreeView = nullptr;
+    m_toggleDocksAction = nullptr;
     structureTreeWidget = nullptr;
     topTOCTreeWidget = nullptr;
 	outputView = nullptr;
@@ -287,7 +285,7 @@ Texstudio::Texstudio(QWidget *parent, Qt::WindowFlags flags, QSplashScreen *spla
 	centralToolBar->setFloatable(false);
 	centralToolBar->setOrientation(Qt::Vertical);
 	centralToolBar->setMovable(false);
-	iconSize = qRound(configManager.guiSecondaryToolbarIconSize*scale);
+    iconSize = qRound(configManager.guiSecondaryToolbarIconSize*scale);
 	centralToolBar->setIconSize(QSize(iconSize, iconSize));
 
 	editors = new Editors(centralFrame);
@@ -319,16 +317,13 @@ Texstudio::Texstudio(QWidget *parent, Qt::WindowFlags flags, QSplashScreen *spla
 	centralLayout->addWidget(centralToolBar);
 	centralLayout->addWidget(editors);
 
-	centralVSplitter = new MiniSplitter(Qt::Vertical, this);
+    centralVSplitter = new MiniSplitter(Qt::Vertical, this);
 	centralVSplitter->setChildrenCollapsible(false);
 	centralVSplitter->addWidget(centralFrame);
 	centralVSplitter->setStretchFactor(0, 1);  // all stretch goes to the editor (0th widget)
 
-	sidePanelSplitter = new MiniSplitter(Qt::Horizontal, this);
-	sidePanelSplitter->addWidget(centralVSplitter);
-
 	mainHSplitter = new MiniSplitter(Qt::Horizontal, this);  // top-level element: splits: [ everything else | PDF ]
-	mainHSplitter->addWidget(sidePanelSplitter);
+    mainHSplitter->addWidget(centralVSplitter);
 	mainHSplitter->setChildrenCollapsible(false);
 	setCentralWidget(mainHSplitter);
 
@@ -354,6 +349,12 @@ Texstudio::Texstudio(QWidget *parent, Qt::WindowFlags flags, QSplashScreen *spla
 	restoreState(windowstate, 0);
 	//workaround as toolbar central seems not be be handled by windowstate
 	centralToolBar->setVisible(configManager.centralVisible);
+    //check if config was written before txs 4.8.0, resetDock if yes
+    QSettings *config=configManager.getSettings();
+    QString txsVersionConfigWritten=config->value("version/written_by_TXS_version").toString();
+    if(Version::compareStringVersion(txsVersionConfigWritten,"4.8.0")==Version::Lower){
+        resetDocks();
+    }
 
 	createStatusBar();
 	completer = nullptr;
@@ -587,17 +588,25 @@ void Texstudio::loadManagedMenu(const QString &fn)
  */
 void Texstudio::addTagList(const QString &id, const QString &iconName, const QString &text, const QString &tagFile)
 {
-	XmlTagsListWidget *list = qobject_cast<XmlTagsListWidget *>(leftPanel->widget(id));
+    QDockWidget *oldDock=findChild<QDockWidget *>(id,Qt::FindDirectChildrenOnly);
+    XmlTagsListWidget *list = nullptr;
+    if(oldDock){
+        list = qobject_cast<XmlTagsListWidget *>(oldDock->widget());
+    }
+
 	if (!list) {
-		list = new XmlTagsListWidget(this, ":/tags/" + tagFile);
+		// check for user tags
+		QString configBaseDir = configManager.configBaseDir;
+		QString pathPrefix=joinPath(configBaseDir,"tags/");
+		QFileInfo userTagFile(pathPrefix+tagFile);
+		if(!QFileInfo::exists(pathPrefix+tagFile) || !userTagFile.isReadable()) {
+			pathPrefix = ":/tags/";
+		}
+		list = new XmlTagsListWidget(this, pathPrefix + tagFile);
 		list->setObjectName("tags/" + tagFile.left(tagFile.indexOf("_tags.xml")));
 		UtilsUi::enableTouchScrolling(list);
-        connect(list, SIGNAL(itemClicked(QListWidgetItem*)), this, SLOT(insertXmlTag(QListWidgetItem*)));
-		leftPanel->addWidget(list, id, text, iconName);
-		//(*list)->setProperty("mType",2);
-    } else {
-        leftPanel->setWidgetText(list, text);
-        leftPanel->setWidgetIcon(list,iconName);
+		connect(list, SIGNAL(itemClicked(QListWidgetItem*)), this, SLOT(insertXmlTag(QListWidgetItem*)));
+        addDock(id,iconName,text,list);
     }
 }
 
@@ -611,7 +620,11 @@ void Texstudio::addTagList(const QString &id, const QString &iconName, const QSt
 void Texstudio::addMacrosAsTagList()
 {
     bool addToPanel=true;
-    QListWidget *list = qobject_cast<QListWidget *>(leftPanel->widget("txs-macros"));
+    QDockWidget *oldDock=findChild<QDockWidget *>("txs-macro",Qt::FindDirectChildrenOnly);
+    QListWidget *list = nullptr;
+    if(oldDock){
+        list=qobject_cast<QListWidget *>(oldDock->widget());
+    }
     if (!list) {
         list = new QListWidget(this);
         list->setObjectName("tags/txs-macros");
@@ -630,10 +643,7 @@ void Texstudio::addMacrosAsTagList()
     UtilsUi::enableTouchScrolling(list);
     connect(list, SIGNAL(itemClicked(QListWidgetItem*)), this, SLOT(insertFromTagList(QListWidgetItem*)),Qt::UniqueConnection);
     if(addToPanel){
-        leftPanel->addWidget(list, "txs-macros", tr("Macros"), getRealIconFile("executeMacro"));
-    }else{
-        leftPanel->setWidgetText(list,tr("Macros"));
-        leftPanel->setWidgetIcon(list,getRealIconFile("executeMacro"));
+        addDock("txs-macro","executeMacro_R90",tr("Macros"),list);
     }
 }
 
@@ -646,34 +656,17 @@ void Texstudio::setupDockWidgets()
     // adapt icon size to dpi
     double dpi=QGuiApplication::primaryScreen()->logicalDotsPerInch();
     double scale=dpi/96;
+    setTabPosition(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea, QTabWidget::West);
 
-    if (!sidePanel) {
-        sidePanel = new SidePanel(this);
-        sidePanel->toggleViewAction()->setIcon(getRealIcon("sidebar"));
-        sidePanel->toggleViewAction()->setText(tr("Side Panel"));
-        sidePanel->toggleViewAction()->setChecked(configManager.getOption("GUI/sidePanel/visible", true).toBool());
-        addAction(sidePanel->toggleViewAction());
-
-        sidePanelSplitter->insertWidget(0, sidePanel);
-        sidePanelSplitter->setStretchFactor(0, 0);  // panel does not get rescaled
-        sidePanelSplitter->setStretchFactor(1, 1);
+    if (!m_toggleDocksAction) {
+        m_toggleDocksAction=new QAction(this);
+        m_toggleDocksAction->setCheckable(true);
+        m_toggleDocksAction->setIcon(getRealIcon("sidebar"));
+        m_toggleDocksAction->setText(tr("Side Panel"));
+        m_toggleDocksAction->setChecked(configManager.getOption("GUI/sidePanel/visible", true).toBool());
+        connect(m_toggleDocksAction, &QAction::toggled,this, &Texstudio::toggleDocks);
     }else{
-        sidePanel->toggleViewAction()->setIcon(getRealIcon("sidebar"));
-    }
-
-    //Structure panel
-    if (!leftPanel) {
-        leftPanel = new CustomWidgetList(this);
-        leftPanel->setObjectName("leftPanel");
-        TitledPanelPage *page = new TitledPanelPage(leftPanel, "leftPanel", "TODO");
-        sidePanel->appendPage(page);
-        if (hiddenLeftPanelWidgets != "") {
-            leftPanel->setHiddenWidgets(hiddenLeftPanelWidgets);
-            hiddenLeftPanelWidgets = ""; //not needed anymore after the first call
-        }
-        connect(leftPanel, SIGNAL(titleChanged(QString)), page, SLOT(setTitle(QString)));
-        connect(leftPanel, SIGNAL(currentWidgetChanged(QWidget*)), this, SLOT(leftPanelChanged(QWidget*)));
-        connect(sidePanel,&TitledPanel::showPanel,this,&Texstudio::updateTOCs);
+        m_toggleDocksAction->setIcon(getRealIcon("sidebar"));
     }
 
     // load icons for structure view
@@ -688,10 +681,7 @@ void Texstudio::setupDockWidgets()
         structureTreeWidget->setHeaderHidden(true);
         structureTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
         structureTreeWidget->installEventFilter(this);
-        leftPanel->addWidget(structureTreeWidget, "structureTreeWidget", tr("Structure"), getRealIconFile("structure"));
-    } else {
-        leftPanel->setWidgetText(structureTreeWidget, tr("Structure"));
-        leftPanel->setWidgetIcon(structureTreeWidget, getRealIconFile("structure"));
+        addDock("structure", "structure_R90",tr("Structure"), structureTreeWidget);
     }
     if(!topTOCTreeWidget){
         topTOCTreeWidget = new QTreeWidget();
@@ -702,63 +692,66 @@ void Texstudio::setupDockWidgets()
         topTOCTreeWidget->setHeaderHidden(true);
         topTOCTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
         topTOCTreeWidget->installEventFilter(this);
-        leftPanel->addWidget(topTOCTreeWidget, "topTOCTreeWidget", tr("TOC"), getRealIconFile("toc"));
-    } else {
-        leftPanel->setWidgetText(topTOCTreeWidget, tr("TOC"));
-        leftPanel->setWidgetIcon(topTOCTreeWidget, getRealIconFile("toc"));
+        addDock("TOC", "toc_R90",tr("TOC"), topTOCTreeWidget);
     }
-    if (!leftPanel->widget("bookmarks")) {
+    QDockWidget *dock=findChild<QDockWidget *>("bookmarks",Qt::FindDirectChildrenOnly);
+    if (!dock) {
         QListWidget *bookmarksWidget = bookmarks->widget();
         bookmarks->setDarkMode(darkMode);
         connect(bookmarks, SIGNAL(loadFileRequest(QString)), this, SLOT(load(QString)));
         connect(bookmarks, SIGNAL(gotoLineRequest(int,int,LatexEditorView*)), this, SLOT(gotoLine(int,int,LatexEditorView*)));
-        leftPanel->addWidget(bookmarksWidget, "bookmarks", tr("Bookmarks"), getRealIconFile("bookmarks"));
+        addDock("bookmarks", "bookmarks_R90",tr("Bookmarks"), bookmarksWidget);
     } else {
-        leftPanel->setWidgetText("bookmarks", tr("Bookmarks"));
-        leftPanel->setWidgetIcon("bookmarks", getRealIconFile("bookmarks"));
         bookmarks->setDarkMode(darkMode);
     }
-
-    if (!leftPanel->widget("symbols")) {
+    dock=findChild<QDockWidget *>("symbols",Qt::FindDirectChildrenOnly);
+    if (!dock) {
         symbolWidget = new SymbolWidget(symbolListModel, configManager.insertSymbolsAsUnicode, this);
         symbolWidget->restoreSplitter(configManager.stateSymbolsWidget);
         symbolWidget->setSymbolSize(qRound(configManager.guiSymbolGridIconSize*scale));
         connect(symbolWidget, SIGNAL(insertSymbol(QString)), this, SLOT(insertSymbol(QString)));
-        leftPanel->addWidget(symbolWidget, "symbols", tr("Symbols"), getRealIconFile("symbols"));
+        addDock("symbols", "symbols_R90",tr("Symbols"), symbolWidget);
     } else {
-        leftPanel->setWidgetText("symbols", tr("Symbols"));
-        leftPanel->setWidgetIcon("symbols", getRealIconFile("symbols"));
         symbolListModel->setDarkmode(darkMode);
         symbolWidget->reloadData();
     }
+    // setup a dock widget with a file explorer
+    dock=findChild<QDockWidget *>("explorer",Qt::FindDirectChildrenOnly);
+    if(!dock){
+        fileView=new QTreeView();
+        fileExplorerModel = new QFileSystemModel(this);
+        fileExplorerModel->setRootPath(QDir::currentPath());
+        fileView->setModel(fileExplorerModel);
+        fileView->setColumnHidden(1,true);
+        fileView->setColumnHidden(2,true);
+        fileView->setColumnHidden(3,true);
+        fileView->setRootIndex(fileExplorerModel->index(QDir::currentPath()));
+        QAction *act=new QAction();
+        act->setText(tr("Insert filename"));
+        connect(act,&QAction::triggered,this,&Texstudio::insertFromExplorer);
+        fileView->addAction(act);
+        fileView->setContextMenuPolicy(Qt::ActionsContextMenu);
+        connect(fileView,&QAbstractItemView::doubleClicked,this,&Texstudio::openFromExplorer);
+        addDock("explorer", "folder_R90",tr("Files"), fileView);
+    }
 
-    addTagList("brackets", getRealIconFile("leftright"), tr("Left/Right Brackets"), "brackets_tags.xml");
-    addTagList("pstricks", getRealIconFile("pstricks"), tr("PSTricks Commands"), "pstricks_tags.xml");
-    addTagList("metapost", getRealIconFile("metapost"), tr("MetaPost Commands"), "metapost_tags.xml");
-    addTagList("tikz", getRealIconFile("tikz"), tr("TikZ Commands"), "tikz_tags.xml");
-    addTagList("asymptote", getRealIconFile("asymptote"), tr("Asymptote Commands"), "asymptote_tags.xml");
-    addTagList("beamer", getRealIconFile("beamer"), tr("Beamer Commands"), "beamer_tags.xml");
-    addTagList("xymatrix", getRealIconFile("xy"), tr("XY Commands"), "xymatrix_tags.xml");
+    addTagList("brackets", getRealIconFile("leftright_R90"), tr("Left/Right Brackets"), "brackets_tags.xml");
+    addTagList("pstricks", getRealIconFile("pstricks_R90"), tr("PSTricks Commands"), "pstricks_tags.xml");
+    addTagList("metapost", getRealIconFile("metapost_R90"), tr("MetaPost Commands"), "metapost_tags.xml");
+    addTagList("tikz", getRealIconFile("tikz_R90"), tr("TikZ Commands"), "tikz_tags.xml");
+    addTagList("asymptote", getRealIconFile("asymptote_R90"), tr("Asymptote Commands"), "asymptote_tags.xml");
+    addTagList("beamer", getRealIconFile("beamer_R90"), tr("Beamer Commands"), "beamer_tags.xml");
+    addTagList("xymatrix", getRealIconFile("xy_R90"), tr("XY Commands"), "xymatrix_tags.xml");
     addMacrosAsTagList();
+    // in case of hidden sidepanel, mark docks which are to be raised
+    QStringList toRaise=docksToBeRaised.split("|");
+    QList<QDockWidget *> docks=findChildren<QDockWidget *>();
+    foreach(QDockWidget *dw,docks){
+        if(toRaise.contains(dw->objectName())){
+            dw->setProperty("toBeRaised",true);
+        }
+    }
 
-    leftPanel->showWidgets();
-    // restore selected view in sidepanel
-	QList<QString> hiddenWidgetsIdsList = leftPanel->hiddenWidgets().split("|");
-    int viewNr = configManager.getOption("GUI/sidePanel/currentPage", 0).toInt();
-	int k = -1; // index of visible tool found
-	for (int i = 0; i < leftPanel->widgetCount(); i++)  {
-		QString currentWidgetId = leftPanel->widget(i)->property("id").toString();
-		if (!hiddenWidgetsIdsList.contains(currentWidgetId)) {
-			k++;
-			if (k == viewNr) {
-				leftPanel->setCurrentWidget(leftPanel->widget(i));
-				emit leftPanel->titleChanged(leftPanel->widget(i)->property("Name").toString());
-				break;
-			}
-		}
-	}
-	if (k == -1) // there are no visible tools
-		emit leftPanel->titleChanged("");
 
     // OUTPUT WIDGETS
     if (!outputView) {
@@ -774,6 +767,7 @@ void Texstudio::setupDockWidgets()
         connect(outputView->getLogWidget(), SIGNAL(logResetted()), this, SLOT(clearLogEntriesInEditors()));
         connect(outputView, SIGNAL(pageChanged(QString)), this, SLOT(outputPageChanged(QString)));
         connect(outputView->getSearchResultWidget(), &SearchResultWidget::jumpToSearchResult, this, &Texstudio::jumpToSearchResult);
+        connect(outputView->getSearchResultWidget(), &SearchResultWidget::jumpToFileSearchResult, this, &Texstudio::jumpToFileSearchResult);
         connect(outputView->getSearchResultWidget(), SIGNAL(runSearch(SearchQuery*)), this, SLOT(runSearch(SearchQuery*)));
 
         connect(&buildManager, SIGNAL(previewAvailable(const QString&,const PreviewSource&)), this, SLOT(previewAvailable(const QString&,const PreviewSource&)));
@@ -787,15 +781,9 @@ void Texstudio::setupDockWidgets()
         connect(&buildManager, SIGNAL(latexCompiled(LatexCompileResult*)), SLOT(viewLogOrReRun(LatexCompileResult*)));
         connect(&buildManager, SIGNAL(runInternalCommand(QString,QFileInfo,QString)), SLOT(runInternalCommand(QString,QFileInfo,QString)));
         connect(&buildManager, SIGNAL(commandLineRequested(QString,QString*,bool*)), SLOT(commandLineRequested(QString,QString*,bool*)));
-
-        addAction(outputView->toggleViewAction());
-        QAction *temp = new QAction(this);
-        temp->setSeparator(true);
-        addAction(temp);
     }else{
         outputView->updateIcon();
     }
-    sidePanelSplitter->restoreState(configManager.getOption("GUI/sidePanelSplitter/state").toByteArray());
 }
 
 void Texstudio::updateToolBarMenu(const QString &menuName)
@@ -1286,6 +1274,9 @@ void Texstudio::setupMenus()
 	newManagedAction(menu, "beamer", tr("Quick &Beamer Presentation..."), SLOT(quickBeamer()));
 	newManagedAction(menu, "letter", tr("Quick &Letter..."), SLOT(quickLetter()));
 
+    menu->addSeparator();
+    newManagedAction(menu, "aichat", tr("AI &Chat..."), SLOT(aiChat()));
+
 	menu->addSeparator();
 	newManagedAction(menu, "tabular", tr("Quick &Tabular..."), SLOT(quickTabular()));
 	newManagedAction(menu, "tabbing", tr("Quick T&abbing..."), SLOT(quickTabbing()));
@@ -1360,11 +1351,33 @@ void Texstudio::setupMenus()
 
 	menu->addSeparator();
 	submenu = newManagedMenu(menu, "show", tr("Show"));
-	newManagedAction(submenu, "structureview", sidePanel->toggleViewAction());
+    newManagedAction(submenu, "structureview", m_toggleDocksAction);
 	newManagedAction(submenu, "outputview", outputView->toggleViewAction());
 	act = newManagedAction(submenu, "statusbar", tr("Statusbar"), SLOT(showStatusbar()));
 	act->setCheckable(true);
 	act->setChecked(configManager.getOption("View/ShowStatusbar").toBool());
+    newManagedAction(submenu, "resetdocks", tr("Reset Sidepanel/docks"), SLOT(resetDocks()));
+    submenu->addSeparator();
+    // toggle visibiliyt of all docks
+    QList<QDockWidget*> dockWidgets = findChildren<QDockWidget*>(); // get all dock widgets
+    QStringList hiddenDocks=hiddenLeftPanelWidgets.split("|");
+    int i=0;
+    foreach (QDockWidget* dockWidget, dockWidgets) {
+        if (dockWidget->toggleViewAction()) {
+            QLabel *lbl=qobject_cast<QLabel*>(dockWidget->titleBarWidget());
+            if(lbl == nullptr){
+                // dockwidget is not from sidepanel but pdf viewer
+                continue;
+            }
+            auto *act=newManagedAction(submenu, QString("dockview_%1").arg(i),dockWidget->objectName(),SLOT(toggleDockVisibility()));
+            act->setData(dockWidget->objectName());
+            act->setText(lbl->text());
+            act->setCheckable(true);
+            bool hide=hiddenDocks.contains(dockWidget->objectName());
+            act->setChecked(!hide);
+            ++i;
+        }
+    }
 
 	newManagedAction(menu, "enlargePDF", tr("Show embedded PDF large"), SLOT(enlargeEmbeddedPDFViewer()));
 	newManagedAction(menu, "shrinkPDF", tr("Show embedded PDF small"), SLOT(shrinkEmbeddedPDFViewer()));
@@ -1714,7 +1727,7 @@ void Texstudio::createStatusBar()
     QSize iconSize = QSize(iconWidth, iconWidth);
 	QAction *act;
 	QToolButton *tb;
-	act = getManagedAction("main/view/show/structureview");
+    act = getManagedAction("main/view/show/structureview");
 	if (act) {
 		tb = new QToolButton(status);
 		tb->setCheckable(true);
@@ -1873,14 +1886,22 @@ void Texstudio::currentEditorChanged()
 #ifdef INTERNAL_TERMINAL
 	outputView->getTerminalWidget()->setCurrentFileName(getCurrentFileName());
 #endif
-	if (!currentEditorView()) return;
+    LatexEditorView *edView = currentEditorView();
+    if (!edView) return;
 	if (configManager.watchedMenus.contains("main/view/documents"))
 		updateToolBarMenu("main/view/documents");
-	editorSpellerChanged(currentEditorView()->getSpeller());
-	currentEditorView()->lastUsageTime = QDateTime::currentDateTime();
-	currentEditorView()->checkRTLLTRLanguageSwitching();
+    editorSpellerChanged(edView->getSpeller());
+    edView->lastUsageTime = QDateTime::currentDateTime();
+    edView->checkRTLLTRLanguageSwitching();
+
     // update global toc
     updateTOCs();
+    // set dock file explorer to current file, root to root document folder
+    LatexDocument *doc=edView->getDocument();
+    QFileInfo fi=doc->getFileInfo();
+    const QString rootDir=fi.absoluteDir().path();
+    fileExplorerModel->setRootPath(rootDir);
+    fileView->setRootIndex(fileExplorerModel->index(rootDir));
 }
 
 /*!
@@ -3169,7 +3190,15 @@ void Texstudio::fileClose()
     if(!closeFile){
         return;
     }
+    if( (cnt_open-cnt_hidden) > 1){
+        // reload all discarded files in case they are just hidden (#3550)
+        // not necessary if only one file is open
+        for(auto *d:lst){
+            d->getEditorView()->editor->reload();
+        }
+    }
     documents.deleteDocument(currentEditorView()->document);
+
 	//UpdateCaption(); unnecessary as called by tabChanged (signal)
     updateTOCs();
 
@@ -3197,7 +3226,9 @@ void Texstudio::fileExit()
     if (canCloseNow())
 	qApp->quit();
 }
-
+/*!
+ * \brief special exit function which is only used with auto-tests and auto-tests result in errors
+ */
 void Texstudio::fileExitWithError()
 {
     if (canCloseNow()){
@@ -3207,13 +3238,21 @@ void Texstudio::fileExitWithError()
 
 bool Texstudio::saveAllFilesForClosing()
 {
-    return saveFilesForClosing(documents.getDocuments());
+    QList<LatexDocument *> lst=documents.getDocuments();
+    return saveFilesForClosing(lst);
 }
-
-bool Texstudio::saveFilesForClosing(const QList<LatexDocument *> &documentList)
+/*!
+ * \brief ask for all documents in documentList if they should be saved before closing
+ * The documents which are discarded are collected and returned in the referenced documentList !
+ * \param documentList List of documents
+ * \return closing can go ahed (false: canceled)
+ */
+bool Texstudio::saveFilesForClosing(QList<LatexDocument *> &documentList)
 {
+    QList<LatexDocument *>inputDocs=documentList;
+    documentList.clear();
 	LatexEditorView *savedCurrentEditorView = currentEditorView();
-    foreach (LatexDocument *doc, documentList) {
+    foreach (LatexDocument *doc, inputDocs) {
 repeatAfterFileSavingFailed:
         LatexEditorView *edView=doc->getEditorView();
         if(!edView) continue;
@@ -3232,6 +3271,7 @@ repeatAfterFileSavingFailed:
 					goto repeatAfterFileSavingFailed;
 				break;
             case QMessageBox::Discard:
+                documentList<<doc;
 				break;
             case QMessageBox::Cancel:
 			default:
@@ -3588,9 +3628,9 @@ void Texstudio::restoreSession(const Session &s, bool showProgress, bool warnMis
                     col = 0;
                 }
             }
-            edView->editor->setCursorPosition(line, col);
-            edView->editor->scrollToFirstLine(f.firstLine);
+            edView->editor->setCursorPosition(line, col, false);
             edView->document->foldLines(f.foldedLines);
+            edView->editor->scrollToFirstLine(f.firstLine+1);
             editors->moveToTabGroup(edView, f.editorGroup, -1);
         } else {
             missingFiles.append(f.fileName);
@@ -3959,7 +3999,7 @@ void Texstudio::editEraseWordCmdEnv()
 
         switch (tk.type) {
         case Token::commandUnknown:
-            [[gnu::fallthrough]];
+            [[fallthrough]];
         case Token::command:
             command = tk.getText();
             if (command == "\\begin" || command == "\\end") {
@@ -4012,15 +4052,12 @@ void Texstudio::editEraseWordCmdEnv()
                 cursor.removeSelectedText();
                 // remove curly brakets as well
                 if (cursor.nextChar() == QChar('{')) {
-                    cursor.deleteChar();
-                    line = cursor.line().text();
-                    int col = cursor.columnNumber();
-                    int i = findClosingBracket(line, col);
-                    if (i > -1) {
-                        cursor.moveTo(cursor.lineNumber(), i);
-                        cursor.deleteChar();
-                        cursor.moveTo(cursor.lineNumber(), col);
+                    QDocumentCursor orig, to;
+                    cursor.getMatchingPair(orig, to, false);
+                    if (orig.isValid() && to.isValid()){
+                        to.removeSelectedText();
                     }
+                    cursor.deleteChar();
                 }
                 currentEditorView()->editor->document()->endMacro();
             }
@@ -4451,7 +4488,13 @@ void Texstudio::readSettings(bool reread)
     symbolListModel = new SymbolListModel(config->value("Symbols/UsageCount").toMap(),
                                           config->value("Symbols/FavoriteIDs").toStringList());
     symbolListModel->setDarkmode(darkMode);
-    hiddenLeftPanelWidgets = config->value("Symbols/hiddenlists", "").toString();  // TODO: still needed?
+#ifdef Q_OS_MAC
+    // hide some docks by default as OSX dockwidget handle larger number badly
+    hiddenLeftPanelWidgets = config->value("Symbols/hiddenlists", "brackets|pstricks|metapost|tikz|asymptote|beamer|xymatrix").toString();
+#else
+    hiddenLeftPanelWidgets = config->value("Symbols/hiddenlists", "").toString();
+#endif
+    docksToBeRaised = config->value("Symbols/docksToBeRaised", "").toString();
 
     configManager.editorKeys = QEditor::getEditOperations(false); //this will also initialize the default keys
     configManager.editorAvailableOperations = QEditor::getAvailableOperations();
@@ -4577,11 +4620,9 @@ void Texstudio::saveSettings(const QString &configName)
 		config->setValue("Geometries/MainwindowX", x());
 		config->setValue("Geometries/MainwindowY", y());
 
-		config->setValue("GUI/sidePanelSplitter/state", sidePanelSplitter->saveState());
 		config->setValue("centralVSplitterState", centralVSplitter->saveState());
 		config->setValue("GUI/outputView/visible", outputView->isVisible());
-		config->setValue("GUI/sidePanel/visible", sidePanel->isVisible());
-        config->setValue("GUI/sidePanel/currentPage", leftPanel->currentIndex());
+        config->setValue("GUI/sidePanel/visible", m_toggleDocksAction->isChecked());
 
 		if (!ConfigManager::dontRestoreSession) { // don't save session when using --no-restore as this is used for single doc handling
 			Session s = getCurrentSession();
@@ -4605,7 +4646,8 @@ void Texstudio::saveSettings(const QString &configName)
 
 	// TODO: parse old "Symbols/Favorite IDs"
 
-	config->setValue("Symbols/hiddenlists", leftPanel->hiddenWidgets());
+    config->setValue("Symbols/hiddenlists", hiddenLeftPanelWidgets);
+    config->setValue("Symbols/docksToBeRaised", docksToBeRaised);
 
 	QHash<QString, int> keys = QEditor::getEditOperations(true);
 	config->remove("Editor/Use Tab for Move to Placeholder");
@@ -5257,7 +5299,30 @@ void Texstudio::insertBib()
 	insertTag(tag, 0, 1);
 	outputView->setMessage(QString("The argument to \\bibliography refers to the bib file (without extension)\n") +
 	                       "which should contain your database in BibTeX format.\n" +
-	                       "TeXstudio inserts automatically the base name of the TeX file");
+                           "TeXstudio inserts automatically the base name of the TeX file");
+}
+/*!
+ * \brief open file which was double clicked in the file explorer (dock)
+ * \param index
+ */
+void Texstudio::openFromExplorer(const QModelIndex &index)
+{
+    QFileInfo fi = fileExplorerModel->fileInfo(index);
+    if (fi.isFile() && fi.isReadable()) {
+        openExternalFile(fi.absoluteFilePath());
+    }
+}
+/*!
+ * \brief insert file from context menu in the file explorer (dock)
+ * \param index
+ */
+void Texstudio::insertFromExplorer(bool )
+{
+    auto index=fileView->currentIndex();
+    QFileInfo fi = fileExplorerModel->fileInfo(index);
+    const QString rootDir=fileExplorerModel->rootPath();
+    const QString fn=getRelativeFileName(fi.absolutePath(),rootDir);
+    insertText(fn);
 }
 
 void Texstudio::quickTabular(const QMimeData *d)
@@ -5387,6 +5452,31 @@ void Texstudio::quickMath()
 	connectUnique(MathAssistant::instance(), SIGNAL(formulaReceived(QString)), this, SLOT(insertFormula(QString)));
 	MathAssistant::instance()->exec();
 #endif
+}
+
+void Texstudio::aiChat()
+{
+    if(configManager.ai_apikey.isEmpty() && configManager.ai_provider<2){
+        // message box for now, only for external ai provider
+        QMessageBox::warning(this, tr("AI Chat"), tr("Please set the API key in the settings."));
+        return;
+    }
+    if(aiChatDlg==nullptr){
+        aiChatDlg = new AIChatAssistant(this);
+        aiChatDlg->setModal(false);
+        connect(aiChatDlg,&AIChatAssistant::insertText,this,&Texstudio::insertText);
+        connect(aiChatDlg,&AIChatAssistant::executeMacro,this,[this](QString script){this->runScript(script);});
+    }
+    // add selected text to chat
+    if (currentEditor()){
+        QDocumentCursor cur = currentEditor()->cursor();
+        QString txt=cur.selectedText();
+        if(!txt.isEmpty()){
+            aiChatDlg->setSelectedText(txt);
+        }
+    }
+    aiChatDlg->clearConversation();
+    aiChatDlg->show();
 }
 
 void Texstudio::quickTabbing()
@@ -6002,9 +6092,8 @@ void Texstudio::runInternalPdfViewer(const QFileInfo &master, const QString &opt
 		int pg = viewer->syncFromSource(getCurrentFileName(), ln, col, displayPolicy);
 		viewer->fillRenderCache(pg);
         if (viewer->embeddedMode && configManager.viewerEnlarged) {
-            sidePanelSplitter->hide();
 			viewer->setStateEnlarged(true);
-            //centralVSplitter->hide();
+            centralVSplitter->hide();
 		}
 
 		if (preserveDuplicates) break;
@@ -7128,9 +7217,9 @@ void Texstudio::leftPanelChanged(QWidget *widget)
 }
 /*!
  * \brief generate translations for definition files
- * some command insertions are control via definition files, not c++ source code
- * This method reads in those commands and generate a pseudo sorce code (additionaltranslations.cpp) which can be used to generate translations
- * The translation for the pseudo code are used to do the translation of the commands in the definition files
+ * some command insertions are controlled via definition files, not c++ source code
+ * This method reads these commands and generates a pseudo source code (additionaltranslations.cpp) that can be used to generate translations
+ * The translations for the pseudo code are used to do the translation of the commands in the definition files
  */
 void Texstudio::generateAddtionalTranslations()
 {
@@ -7140,7 +7229,7 @@ void Texstudio::generateAddtionalTranslations()
 	translations << " * Do not manually edit this file. It is automatically generated by a call to";
 	translations << " * texstudio --update-translations";
 	translations << " * This generates some additional translations which lupdate doesn't find";
-        translations << " * (e.g. from uiconfig.xml, color names, qnfa format names and tags) ";
+	translations << " * (e.g. from uiconfig.xml, color names, qnfa format names and tags) ";
 	translations << " ******************************************************************************/";
 
 	translations << "#undef UNDEFINED";
@@ -7398,7 +7487,7 @@ void Texstudio::viewCloseElement()
 	}
     if (currentEditorView() && currentEditorView()->closeElement())
         return;
-    if (getManagedAction("main/tools/stopcompile")->isEnabled()) {
+    if (getManagedAction("main/tools/stopcompile")->shortcut().isEmpty() && getManagedAction("main/tools/stopcompile")->isEnabled()) {
         getManagedAction("main/tools/stopcompile")->trigger();
         return;
     }
@@ -7694,7 +7783,6 @@ bool Texstudio::eventFilter(QObject *obj, QEvent *event)
         }
     }
 #endif
-
     if (event->type() == QEvent::ToolTip) {
         if(obj==structureTreeWidget || obj==topTOCTreeWidget){
             QHelpEvent *helpEvent = dynamic_cast<QHelpEvent *>(event);
@@ -7954,6 +8042,30 @@ void Texstudio::jumpToSearchResult(LatexDocument *doc, int lineNumber, const Sea
         gotoLine(lineNumber, col);
     } else {
         gotoLine(lineNumber, doc->getFileName().size() ? doc->getFileName() : qobject_cast<LatexDocument *>(doc)->getTemporaryFileName());
+        int col = query->getNextSearchResultColumn(currentEditor()->document()->line(lineNumber).text(), 0);
+        gotoLine(lineNumber, col);
+        outputView->showPage(outputView->SEARCH_RESULT_PAGE);
+    }
+    QDocumentCursor highlight = currentEditor()->cursor();
+    highlight.movePosition(query->searchExpression().length(), QDocumentCursor::NextCharacter, QDocumentCursor::KeepAnchor);
+    currentEditorView()->temporaryHighlight(highlight);
+}
+/*!
+ * \brief jump to search results for search in files (searchResultsWidget)
+ * \param fn
+ * \param lineNumber
+ * \param query
+ */
+void Texstudio::jumpToFileSearchResult(QString fn, int lineNumber, const SearchQuery *query)
+{
+    if (currentEditor() && currentEditor()->fileName() == fn && currentEditor()->cursor().lineNumber() == lineNumber) {
+        QDocumentCursor c = currentEditor()->cursor();
+        int col = c.columnNumber();
+        col = query->getNextSearchResultColumn(c.line().text() , col + 1);
+        gotoLine(lineNumber, col);
+    } else {
+        // in files linenr are 0-based
+        gotoLine(lineNumber, fn);
         int col = query->getNextSearchResultColumn(currentEditor()->document()->line(lineNumber).text(), 0);
         gotoLine(lineNumber, col);
         outputView->showPage(outputView->SEARCH_RESULT_PAGE);
@@ -8755,7 +8867,7 @@ void Texstudio::showPreview(const QString &text)
 	QStringList header;
 	for (int l = 0; l < m_endingLine; l++)
 		header << edView->editor->document()->line(l).text();
-	if (buildManager.dvi2pngMode == BuildManager::DPM_EMBEDDED_PDF || buildManager.dvi2pngMode == BuildManager::DPM_LUA_EMBEDDED_PDF) {
+	if (buildManager.dvi2pngMode == BuildManager::DPM_EMBEDDED_PDF || buildManager.dvi2pngMode == BuildManager::DPM_LUA_EMBEDDED_PDF || buildManager.dvi2pngMode == BuildManager::DPM_XE_EMBEDDED_PDF) {
 		header << "\\usepackage[active,tightpage]{preview}"
 		       << "\\usepackage{varwidth}"
 		       << "\\AtBeginDocument{\\begin{preview}\\begin{varwidth}{\\linewidth}}"
@@ -8855,7 +8967,7 @@ QStringList Texstudio::makePreviewHeader(const LatexDocument *rootDoc)
 			header << newLine;
 		}
 	}
-	if ((buildManager.dvi2pngMode == BuildManager::DPM_EMBEDDED_PDF || buildManager.dvi2pngMode == BuildManager::DPM_LUA_EMBEDDED_PDF)
+	if ((buildManager.dvi2pngMode == BuildManager::DPM_EMBEDDED_PDF || buildManager.dvi2pngMode == BuildManager::DPM_LUA_EMBEDDED_PDF || buildManager.dvi2pngMode == BuildManager::DPM_XE_EMBEDDED_PDF)
 			&& configManager.previewMode != ConfigManager::PM_EMBEDDED) {
 		header << "\\usepackage[active,tightpage]{preview}"
 			<< "\\usepackage{varwidth}"
@@ -9022,7 +9134,8 @@ void Texstudio::cursorPositionChanged()
     if(newSection!=currentSection){
         StructureEntry *old=currentSection;
         currentSection=newSection;
-        updateCurrentPosInTOC(nullptr,old);
+        updateCurrentPosInTOC(old);
+        updateCurrentPosInStructure(old);
     }
 
 	syncPDFViewer(currentEditor()->cursor(), false);
@@ -11133,8 +11246,8 @@ void Texstudio::enlargeEmbeddedPDFViewer()
 	PDFDocument *viewer = oldPDFs.first();
 	if (!viewer->embeddedMode)
 		return;
-	sidePanelSplitter->hide();
-	configManager.viewerEnlarged = true;
+    centralVSplitter->hide();
+    configManager.viewerEnlarged = true;
 	PDFDocumentConfig *pdfConfig=configManager.pdfDocumentConfig;
 	if(!enlargedViewer){
 		rememberFollowFromScroll=pdfConfig->followFromScroll;
@@ -11151,8 +11264,8 @@ void Texstudio::enlargeEmbeddedPDFViewer()
 void Texstudio::shrinkEmbeddedPDFViewer(bool preserveConfig)
 {
 #ifndef NO_POPPLER_PREVIEW
-	sidePanelSplitter->show();
-	if (!preserveConfig)
+    centralVSplitter->show();
+    if (!preserveConfig)
 		configManager.viewerEnlarged = false;
 	QList<PDFDocument *> oldPDFs = PDFDocument::documentList();
 	if (oldPDFs.isEmpty())
@@ -11194,6 +11307,12 @@ void Texstudio::showExtendedSearch()
 	bool isReg = edView->getSearchIsRegExp();
 	SearchQuery *query = new SearchQuery(edView->getSearchText(), edView->getReplaceText(), isCase, isWord, isReg);
 	query->setScope(searchResultWidget()->searchScope());
+    if(currentEditor()){
+        LatexDocument *doc=edView->getDocument();
+        QFileInfo fi=doc->getFileInfo();
+        query->setSearchFolder(fi);
+    }
+
 	searchResultWidget()->setQuery(query);
 	outputView->showPage(outputView->SEARCH_RESULT_PAGE);
 	runSearch(query);
@@ -11236,7 +11355,10 @@ void Texstudio::changeSecondaryIconSize(int value)
 	int iconWidth=qRound(value*scale);
 
 	centralToolBar->setIconSize(QSize(iconWidth, iconWidth));
-	leftPanel->setToolbarIconSize(iconWidth);
+    QList<QTabBar*>lst=this->findChildren<QTabBar*>(QString(),Qt::FindDirectChildrenOnly);
+    foreach(QTabBar* tb,lst){
+        tb->setIconSize(QSize(iconWidth, iconWidth));
+    }
 
 	foreach (QObject *c, statusBar()->children()) {
 		QAbstractButton *bt = qobject_cast<QAbstractButton *>(c);
@@ -11279,11 +11401,10 @@ void Texstudio::changeSymbolGridIconSize(int value, bool changePanel)
 	int iconWidth=qRound(value*scale);
 
 	if (changePanel) {
-		QWidget *sympanel = leftPanel->widget("symbols");
-		if ( !leftPanel->hiddenWidgets().split("|").contains(sympanel->property("id").toString()) ) {
-			leftPanel->setCurrentWidget(sympanel);
-			emit leftPanel->titleChanged(sympanel->property("Name").toString());
-		}
+        QDockWidget *dock=findChild<QDockWidget *>("symbols",Qt::FindDirectChildrenOnly);
+        if(dock){
+            dock->raise();
+        }
 	}
 	symbolWidget->setSymbolSize(iconWidth);
 }
@@ -11327,6 +11448,7 @@ void Texstudio::paletteChanged(const QPalette &palette){
         }
         setupMenus(); // reload actions for new icons !
         setupDockWidgets();
+        maniplateDockingTabBars();
         setStructureSectionIcons();
         updateStatusBarIcons();
         updateAllTOCs();
@@ -11388,6 +11510,138 @@ void Texstudio::colorSchemeChanged(Qt::ColorScheme colorScheme)
  */
 void Texstudio::openBugsAndFeatures() {
 	QDesktopServices::openUrl(QUrl("https://github.com/texstudio-org/texstudio/issues/"));
+}
+/*!
+ * \brief manipulate QMainWindowTabBar which contains the tabbed QDockWidget to only show icons
+ */
+void Texstudio::maniplateDockingTabBars() {
+    QList<QTabBar*>lst=this->findChildren<QTabBar*>(QString(),Qt::FindDirectChildrenOnly);
+    const double dpi=QGuiApplication::primaryScreen()->logicalDotsPerInch();
+    const double scale=dpi/96;
+    const int iconSize = qRound(configManager.guiSecondaryToolbarIconSize*scale);
+    foreach(QTabBar* tb,lst){
+        int n=tb->count();
+        if(n==0) continue;
+        tb->setIconSize(QSize(iconSize, iconSize));
+        for(int i=0;i<n;++i){
+            qulonglong ptr_int=tb->tabData(i).toULongLong();
+            QDockWidget *dw=reinterpret_cast<QDockWidget*>(ptr_int);
+            if(dw==nullptr) continue;
+
+            QString txt=dw->objectName();
+            QString iconName=m_dockIcons.value(txt);
+            if(!iconName.isEmpty()){
+                tb->setTabIcon(i,getRealIcon(iconName));
+            }
+        }
+    }
+}
+/*!
+ * \brief add widget as a dock on the left side
+ * register icon and name.
+ */
+void Texstudio::addDock(const QString &name,const QString &iconName,const QString &title,QWidget *wgt)
+{
+    QDockWidget *dock = new QDockWidget("", this);
+    dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
+    dock->setFeatures(QDockWidget::DockWidgetMovable);
+    dock->setWidget(wgt);
+    dock->setObjectName(name);
+    connect(dock,&QDockWidget::visibilityChanged,this,&Texstudio::updateDockVisibility);
+    QLabel *lbl=new QLabel(title);
+    dock->setTitleBarWidget(lbl);
+    m_dockIcons.insert(name,iconName);
+    addDockWidget(Qt::LeftDockWidgetArea, dock);
+    if(m_firstDockWidget){
+        tabifyDockWidget(m_firstDockWidget,dock);
+        m_docksOrder.append(dock);
+    } else {
+        m_firstDockWidget=dock;
+    }
+    connect(dock,SIGNAL(visibilityChanged(bool)),this,SLOT(maniplateDockingTabBars()));
+}
+/*!
+ * \brief toggle visibility of all docks
+ * Former leftPanel
+ * \param visible
+ */
+void Texstudio::toggleDocks(bool visible)
+{
+    QList<QDockWidget*>lst=this->findChildren<QDockWidget*>(QString(),Qt::FindDirectChildrenOnly);
+    const QStringList hiddenDocks=hiddenLeftPanelWidgets.split("|");
+    QList<QDockWidget*>tobeRaised;
+    QStringList collectDocksToBeRaised;
+    foreach(QDockWidget* dw,lst){
+        if(hiddenDocks.contains(dw->objectName())){
+            dw->setVisible(false);
+        }else{
+            if(!visible){
+                dw->setProperty("toBeRaised",dw->property("isVisible").toBool());
+                if(dw->property("isVisible").toBool()){
+                    collectDocksToBeRaised<<dw->objectName();
+                }
+            }
+            dw->setVisible(visible);
+            if(visible && dw->property("toBeRaised").toBool()){
+                tobeRaised<<dw;
+            }
+        }
+    }
+    foreach(QDockWidget* dw,tobeRaised){
+        dw->raise();
+    }
+    if(visible){
+        // force update of TOC
+        updateTOCs();
+    }else{
+        // store docks to be raised in config
+        // to handle restart correctly
+        docksToBeRaised=collectDocksToBeRaised.join("|");
+    }
+}
+/*!
+ * \brief reset docks to default order (tabified,left hand side)
+ */
+void Texstudio::resetDocks()
+{
+    addDockWidget(Qt::LeftDockWidgetArea, m_firstDockWidget);
+    foreach(QDockWidget* dw,m_docksOrder){
+        tabifyDockWidget(m_firstDockWidget,dw);
+    }
+    m_firstDockWidget->raise();
+}
+/*!
+ * \brief toggle visibility of dock
+ * search for dock with name and toggle visibility
+ */
+void Texstudio::toggleDockVisibility()
+{
+    QAction *act = qobject_cast<QAction *>(sender());
+    bool visible=act->isChecked();
+    QString name=act->data().toString();
+    QList<QDockWidget*>lst=this->findChildren<QDockWidget*>(QString(),Qt::FindDirectChildrenOnly);
+    QStringList hiddenDocks=hiddenLeftPanelWidgets.split("|");
+    foreach(QDockWidget* dw,lst){
+        if(name != dw->objectName()) continue;
+        dw->setVisible(visible);
+        // update hiddenDocks
+        if(visible){
+            hiddenDocks.removeAll(name);
+        }else{
+            hiddenDocks.append(name);
+        }
+        hiddenLeftPanelWidgets=hiddenDocks.join("|");
+        break;
+    }
+
+}
+
+void Texstudio::updateDockVisibility(bool visible)
+{
+    QDockWidget *dock = qobject_cast<QDockWidget *>(sender());
+    if (dock) {
+        dock->setProperty("isVisible",visible);
+    }
 }
 /*!
     \brief call updateTOC & updateStructureLocally as only one call works with a signal
@@ -11464,42 +11718,59 @@ void Texstudio::updateTOC(){
     }
     root->setExpanded(true);
     root->setSelected(false);
-    updateCurrentPosInTOC(nullptr,nullptr,selectedEntry);
+    updateCurrentPosInTOC(nullptr,selectedEntry);
 }
 /*!
  * \brief update marking of current position in global TOC
- *
- * Works recursively.
  * \param root nullptr at the start, treewidgetitem of which the children need to be checked later.
  * \param old  previously marked section of which the mark needs to be removed
  * \param selected  selected section
  */
-void Texstudio::updateCurrentPosInTOC(QTreeWidgetItem* root, StructureEntry *old, StructureEntry *selected)
+void Texstudio::updateCurrentPosInTOC(StructureEntry *old, StructureEntry *selected)
 {
-    if(!topTOCTreeWidget->isVisible() && !structureTreeWidget->isVisible()) return; // don't update if TOC is not shown, save unnecessary effort
-    const QColor activeItemColor(UtilsUi::mediumLightColor(QPalette().color(QPalette::Highlight), 75));
-    bool tocMode=topTOCTreeWidget->isVisible();
-    if(!root){
-        if(topTOCTreeWidget->isVisible()){
-            root=topTOCTreeWidget->topLevelItem(0);
-        }else{
-            root=nullptr;
-            for(int i=0;i<structureTreeWidget->topLevelItemCount();++i){
-                QTreeWidgetItem* item=structureTreeWidget->topLevelItem(i);
-                LatexDocument *doc = static_cast<LatexDocument*>(item->data(0,Qt::UserRole).value<void*>());
-                if(old && old->document!=documents.getCurrentDocument() && doc==old->document){
-                    // remove cursor mark from structureView of not current document (after document switch)
-                    updateCurrentPosInTOC(item,old);
-                    if(root)
-                        break; // no need to search further
-                }
-                if(doc == documents.getCurrentDocument()){
-                    root=item;
-                }
-            }
+    QTreeWidgetItem* root=topTOCTreeWidget->topLevelItem(0);
+    if(root){
+        updateCurrentPosInTOCHelper(root,old,selected,true);
+    }
+}
+/*!
+ * \brief update marking of current position in structure view
+ * \param root nullptr at the start, treewidgetitem of which the children need to be checked later.
+ * \param old  previously marked section of which the mark needs to be removed
+ * \param selected  selected section
+ */
+void Texstudio::updateCurrentPosInStructure(StructureEntry *old, StructureEntry *selected)
+{
+    QTreeWidgetItem* root=nullptr;
+    for(int i=0;i<structureTreeWidget->topLevelItemCount();++i){
+        QTreeWidgetItem* item=structureTreeWidget->topLevelItem(i);
+        LatexDocument *doc = static_cast<LatexDocument*>(item->data(0,Qt::UserRole).value<void*>());
+        if(old && old->document!=documents.getCurrentDocument() && doc==old->document){
+            // remove cursor mark from structureView of not current document (after document switch)
+            updateCurrentPosInTOCHelper(item,old);
+            if(root)
+                break; // no need to search further
+        }
+        if(doc == documents.getCurrentDocument()){
+            root=item;
         }
     }
-    if(!root) return;
+    if(root){
+        updateCurrentPosInTOCHelper(root,old,selected,false);
+    }
+}
+/*!
+ * \brief update marking of current position in global TOC or structure view
+ * \param root nullptr at the start, treewidgetitem of which the children need to be checked later.
+ * \param old  previously marked section of which the mark needs to be removed
+ * \param selected  selected section
+ */
+void Texstudio::updateCurrentPosInTOCHelper(QTreeWidgetItem* root, StructureEntry *old, StructureEntry *selected,bool tocMode)
+{
+    const QColor activeItemColor(UtilsUi::mediumLightColor(QPalette().color(QPalette::Highlight), 75));
+    if(!root){
+        return;
+    }
     for(int i=0;i<root->childCount();++i){
         QTreeWidgetItem *item=root->child(i);
         StructureEntry *se = item->data(0,Qt::UserRole).value<StructureEntry *>();
@@ -11526,7 +11797,7 @@ void Texstudio::updateCurrentPosInTOC(QTreeWidgetItem* root, StructureEntry *old
                 }
             }
         }
-        updateCurrentPosInTOC(item,old);
+        updateCurrentPosInTOCHelper(item,old,nullptr,tocMode);
     }
 }
 /*!
@@ -11656,7 +11927,7 @@ void Texstudio::syncCollapsed(QTreeWidgetItem *item){
  * \param pos mouse position when clicked
  */
 void Texstudio::customMenuStructure(const QPoint &pos){
-    QTreeWidget* w = structureTreeWidget->isVisible() ? structureTreeWidget : topTOCTreeWidget ;
+    QTreeWidget* w = qobject_cast<QTreeWidget*>(sender());
     QTreeWidgetItem *item = w->itemAt(pos);
     if(!item) return;
     StructureEntry *contextEntry = item->data(0,Qt::UserRole).value<StructureEntry *>();
@@ -11723,17 +11994,25 @@ void Texstudio::customMenuStructure(const QPoint &pos){
             menu.addSeparator();
         }
 
-        menu.addAction(tr("Cut"), this, SLOT(editSectionCut()));
-        menu.addAction(tr("Copy"), this, SLOT(editSectionCopy()));
-        menu.addAction(tr("Paste Before"), this, SLOT(editSectionPasteBefore()));
-        menu.addAction(tr("Paste After"), this, SLOT(editSectionPasteAfter()));
+        QAction *act=menu.addAction(tr("Cut"), this, SLOT(editSectionCut()));
+        act->setData(QVariant::fromValue(contextEntry));
+        act=menu.addAction(tr("Copy"), this, SLOT(editSectionCopy()));
+        act->setData(QVariant::fromValue(contextEntry));
+        act=menu.addAction(tr("Paste Before"), this, SLOT(editSectionPasteBefore()));
+        act->setData(QVariant::fromValue(contextEntry));
+        act=menu.addAction(tr("Paste After"), this, SLOT(editSectionPasteAfter()));
+        act->setData(QVariant::fromValue(contextEntry));
         menu.addSeparator();
-        menu.addAction(tr("Indent Section"), this, SLOT(editIndentSection()));
-        menu.addAction(tr("Unindent Section"), this, SLOT(editUnIndentSection()));
+        act=menu.addAction(tr("Indent Section"), this, SLOT(editIndentSection()));
+        act->setData(QVariant::fromValue(contextEntry));
+        act=menu.addAction(tr("Unindent Section"), this, SLOT(editUnIndentSection()));
+        act->setData(QVariant::fromValue(contextEntry));
         if (item->childCount()>0) {
             menu.addSeparator();
-            menu.addAction(tr("Expand Subitems"), this, SLOT(expandSubitems()));
-            menu.addAction(tr("Collapse Subitems"), this, SLOT(collapseSubitems()));
+            act=menu.addAction(tr("Expand Subitems"), this, SLOT(expandSubitems()));
+            act->setData(QVariant::fromValue(contextEntry));
+            act=menu.addAction(tr("Collapse Subitems"), this, SLOT(collapseSubitems()));
+            act->setData(QVariant::fromValue(contextEntry));
         }
 
         menu.exec(w->mapToGlobal(pos));
@@ -11846,16 +12125,11 @@ void Texstudio::toggleMasterDocument()
  */
 void Texstudio::editSectionCopy()
 {
-    // called by action
-    QTreeWidgetItem *item = nullptr;
-    if(topTOCTreeWidget->isVisible()){
-        item = topTOCTreeWidget->currentItem();
-    }else{
-        item = structureTreeWidget->currentItem();
-    }
-    if(!item) return;
-    StructureEntry *entry = item->data(0,Qt::UserRole).value<StructureEntry *>();
-    if(!entry) return;
+    QAction *action = qobject_cast<QAction *>(sender());
+    if (!action) return;
+    StructureEntry *entry = qvariant_cast<StructureEntry *>(action->data());
+    if (!entry || !entry->document) return;
+
     LatexEditorView *edView = entry->document->getEditorView();
     if(entry->document->isIncompleteInMemory()){
         edView = openExternalFile(entry->document->getFileName(),"tex",entry->document);
@@ -11880,16 +12154,11 @@ void Texstudio::editSectionCopy()
  */
 void Texstudio::editSectionCut()
 {
-    // called by action
-    QTreeWidgetItem *item = nullptr;
-    if(topTOCTreeWidget->isVisible()){
-        item = topTOCTreeWidget->currentItem();
-    }else{
-        item = structureTreeWidget->currentItem();
-    }
-    if(!item) return;
-    StructureEntry *entry = item->data(0,Qt::UserRole).value<StructureEntry *>();
-    if (!entry) return;
+    QAction *action = qobject_cast<QAction *>(sender());
+    if (!action) return;
+    StructureEntry *entry = qvariant_cast<StructureEntry *>(action->data());
+    if (!entry || !entry->document) return;
+
     LatexEditorView *edView = entry->document->getEditorView();
     if(entry->document->isIncompleteInMemory()){
         edView = openExternalFile(entry->document->getFileName(),"tex",entry->document);
@@ -11914,15 +12183,11 @@ void Texstudio::editSectionCut()
  */
 void Texstudio::editSectionPasteBefore()
 {
-    QTreeWidgetItem *item = nullptr;
-    if(topTOCTreeWidget->isVisible()){
-        item = topTOCTreeWidget->currentItem();
-    }else{
-        item = structureTreeWidget->currentItem();
-    }
-    if(!item) return;
-    StructureEntry *entry = item->data(0,Qt::UserRole).value<StructureEntry *>();
-    if (!entry) return;
+    QAction *action = qobject_cast<QAction *>(sender());
+    if (!action) return;
+    StructureEntry *entry = qvariant_cast<StructureEntry *>(action->data());
+    if (!entry || !entry->document) return;
+
     LatexEditorView *edView = entry->document->getEditorView();
     if(entry->document->isIncompleteInMemory()){
         edView = openExternalFile(entry->document->getFileName(),"tex",entry->document);
@@ -11943,15 +12208,11 @@ void Texstudio::editSectionPasteBefore()
  */
 void Texstudio::editSectionPasteAfter()
 {
-    QTreeWidgetItem *item = nullptr;
-    if(topTOCTreeWidget->isVisible()){
-        item = topTOCTreeWidget->currentItem();
-    }else{
-        item = structureTreeWidget->currentItem();
-    }
-    if(!item) return;
-    StructureEntry *entry = item->data(0,Qt::UserRole).value<StructureEntry *>();
-    if (!entry) return;
+    QAction *action = qobject_cast<QAction *>(sender());
+    if (!action) return;
+    StructureEntry *entry = qvariant_cast<StructureEntry *>(action->data());
+    if (!entry || !entry->document) return;
+
     LatexEditorView *edView = entry->document->getEditorView();
     if(entry->document->isIncompleteInMemory()){
         edView = openExternalFile(entry->document->getFileName(),"tex",entry->document);
@@ -11984,15 +12245,11 @@ void Texstudio::editSectionPasteAfter()
  */
 void Texstudio::editIndentSection()
 {
-    QTreeWidgetItem *item = nullptr;
-    if(topTOCTreeWidget->isVisible()){
-        item = topTOCTreeWidget->currentItem();
-    }else{
-        item = structureTreeWidget->currentItem();
-    }
-    if(!item) return;
-    StructureEntry *entry = item->data(0,Qt::UserRole).value<StructureEntry *>();
-    if (!entry) return;
+    QAction *action = qobject_cast<QAction *>(sender());
+    if (!action) return;
+    StructureEntry *entry = qvariant_cast<StructureEntry *>(action->data());
+    if (!entry || !entry->document) return;
+
     LatexEditorView *edView = entry->document->getEditorView();
     if(entry->document->isIncompleteInMemory()){
         edView = openExternalFile(entry->document->getFileName(),"tex",entry->document);
@@ -12032,15 +12289,11 @@ void Texstudio::editIndentSection()
  */
 void Texstudio::editUnIndentSection()
 {
-    QTreeWidgetItem *item = nullptr;
-    if(topTOCTreeWidget->isVisible()){
-        item = topTOCTreeWidget->currentItem();
-    }else{
-        item = structureTreeWidget->currentItem();
-    }
-    if(!item) return;
-    StructureEntry *entry = item->data(0,Qt::UserRole).value<StructureEntry *>();
-    if (!entry) return;
+    QAction *action = qobject_cast<QAction *>(sender());
+    if (!action) return;
+    StructureEntry *entry = qvariant_cast<StructureEntry *>(action->data());
+    if (!entry || !entry->document) return;
+
     LatexEditorView *edView = entry->document->getEditorView();
     if(entry->document->isIncompleteInMemory()){
         edView = openExternalFile(entry->document->getFileName(),"tex",entry->document);
@@ -12295,7 +12548,7 @@ void Texstudio::updateStructureLocally(bool updateAll){
 
         root->setExpanded(true);
         root->setSelected(false);
-        updateCurrentPosInTOC(nullptr,nullptr,selectedEntry);
+        updateCurrentPosInStructure(nullptr,selectedEntry);
     }
 }
 

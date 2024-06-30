@@ -1,5 +1,5 @@
 # simpleicons package
-# Matthew Bertucci 2024/01/26 for v11.2.0
+# Matthew Bertucci 2024/06/21 for v12.3.0
 
 #include:iftex
 
@@ -8,8 +8,11 @@
 #keyvals:\simpleicon
 42
 1001tracklists
+1panel
 1password
+2fas
 2k
+365datascience
 3m
 4chan
 4d
@@ -22,6 +25,7 @@ abbrobotstudio
 abbvie
 aboutdotme
 abstract
+abusedotch
 academia
 accenture
 accusoft
@@ -30,6 +34,7 @@ acm
 actigraph
 activision
 activitypub
+actix
 acura
 adafruit
 adblock
@@ -56,6 +61,7 @@ adp
 adroll
 adventofcode
 adyen
+aegisauthenticator
 aerlingus
 aeroflot
 aeromexico
@@ -75,7 +81,7 @@ aiohttp
 aiqfome
 airasia
 airbnb
-airbrakedotio
+airbrake
 airbus
 airbyte
 aircall
@@ -91,6 +97,7 @@ airtransat
 ajv
 akamai
 akaunting
+akiflow
 alacritty
 alamy
 albertheijn
@@ -117,16 +124,18 @@ alpinelinux
 alteryx
 altiumdesigner
 alwaysdata
+alx
 amazon
 amazonalexa
 amazonapigateway
-amazonaws
 amazoncloudwatch
+amazoncognito
 amazondocumentdb
 amazondynamodb
 amazonec2
 amazonecs
 amazoneks
+amazonelasticache
 amazonfiretv
 amazongames
 amazoniam
@@ -141,6 +150,7 @@ amazonroute53
 amazons3
 amazonsimpleemailservice
 amazonsqs
+amazonwebservices
 amd
 ameba
 americanairlines
@@ -158,13 +168,18 @@ androidstudio
 angular
 anilist
 animalplanet
+ankermake
+anki
 ansible
 answer
 ansys
 anta
 antdesign
 antena3
+anthropic
+anycubic
 anydesk
+anytype
 aol
 apache
 apacheairflow
@@ -176,9 +191,11 @@ apachecouchdb
 apachedruid
 apacheecharts
 apacheflink
+apachefreemarker
 apachegroovy
 apacheguacamole
 apachehadoop
+apachehbase
 apachehive
 apachejmeter
 apachekafka
@@ -192,6 +209,7 @@ apacherocketmq
 apachesolr
 apachespark
 apachestorm
+apachesuperset
 apachetomcat
 aparat
 apifox
@@ -199,6 +217,7 @@ apmterminals
 apollographql
 apostrophe
 appian
+appium
 apple
 applearcade
 applemusic
@@ -241,7 +260,10 @@ asda
 aseprite
 askfm
 assemblyscript
+asterisk
 astonmartin
+astra
+astral
 astro
 asus
 atandt
@@ -251,12 +273,14 @@ auchan
 audacity
 audi
 audible
+audiobookshelf
 audioboom
 audiomack
 audiotechnica
 aurelia
 auth0
 authelia
+authentik
 authy
 autocad
 autodesk
@@ -266,6 +290,7 @@ autohotkey
 autoit
 automattic
 autoprefixer
+autozone
 avajs
 avast
 avianca
@@ -273,9 +298,12 @@ avira
 awesomelists
 awesomewm
 awsamplify
+awselasticloadbalancing
 awsfargate
 awslambda
 awsorganizations
+awssecretsmanager
+awwwards
 axios
 azureartifacts
 azuredataexplorer
@@ -284,6 +312,7 @@ azurefunctions
 azurepipelines
 babel
 babelio
+babylondotjs
 backblaze
 backbonedotjs
 backendless
@@ -292,6 +321,7 @@ badoo
 baidu
 bakalari
 bamboo
+bambulab
 bandcamp
 bandlab
 bandrautomation
@@ -303,11 +333,14 @@ barmenia
 basecamp
 basicattentiontoken
 bastyon
+bat
 bata
 battledotnet
+bazel
 beatport
 beats
 beatsbydre
+beatstars
 behance
 beijingsubway
 bem
@@ -317,6 +350,7 @@ bentobox
 bentoml
 bereal
 betfair
+betterstack
 bevy
 bigbasket
 bigbluebutton
@@ -352,11 +386,13 @@ blogger
 bloglovin
 blueprint
 bluesky
+bluesound
 bluetooth
 bmcsoftware
 bmw
 bnbchain
 boardgamegeek
+boat
 boehringeringelheim
 boeing
 bombardier
@@ -377,6 +413,7 @@ boulanger
 bower
 box
 boxysvg
+braintree
 brandfolder
 brave
 breaker
@@ -386,6 +423,7 @@ brex
 bricks
 britishairways
 broadcom
+bruno
 bsd
 bspwm
 bt
@@ -396,14 +434,18 @@ buffer
 bugatti
 bugcrowd
 bugsnag
+buhl
 buildkite
 bukalapak
 bulma
 bun
+bungie
 bunq
 burgerking
+burpsuite
 burton
 buymeacoffee
+buysellads
 buzzfeed
 bvg
 byjus
@@ -417,8 +459,11 @@ caffeine
 cairographics
 cairometro
 cakephp
+caldotcom
 calendly
+calibreweb
 campaignmonitor
+camunda
 canonical
 canva
 canvas
@@ -458,8 +503,10 @@ checkio
 checkmarx
 checkmk
 chedraui
+cheerio
 chef
 chemex
+chessdotcom
 chevrolet
 chianetwork
 chinaeasternairlines
@@ -498,10 +545,13 @@ cloudcannon
 cloudera
 cloudflare
 cloudflarepages
+cloudflareworkers
 cloudfoundry
 cloudinary
+cloudron
 cloudsmith
 cloudways
+clubforce
 clubhouse
 clyp
 cmake
@@ -524,6 +574,7 @@ codeclimate
 codecov
 codefactor
 codeforces
+codefresh
 codeigniter
 codeium
 codemagic
@@ -532,6 +583,7 @@ codemirror
 codenewbie
 codepen
 codeproject
+coder
 codersrank
 coderwall
 codesandbox
@@ -549,6 +601,7 @@ coil
 coinbase
 coinmarketcap
 comicfury
+comma
 commerzbank
 commitlint
 commodore
@@ -569,13 +622,16 @@ containerd
 contao
 contentful
 contentstack
+contributorcovenant
 conventionalcommits
 convertio
 cookiecutter
 coolermaster
 coop
+copaairlines
 coppel
 cora
+coreldraw
 coronaengine
 coronarenderer
 corsair
@@ -604,9 +660,11 @@ crowdsource
 crunchbase
 crunchyroll
 cryengine
+cryptpad
 crystal
 csharp
 css3
+cssdesignawards
 cssmodules
 csswizardry
 cts
@@ -645,9 +703,11 @@ dataiku
 datastax
 dataverse
 datefns
+datev
 datocms
 datto
 davinciresolve
+dazhongdianping
 dazn
 dbeaver
 dblp
@@ -655,6 +715,7 @@ dbt
 dcentertainment
 debian
 decapcms
+decentraland
 dedge
 deepcool
 deepgram
@@ -688,6 +749,7 @@ dhl
 diagramsdotnet
 dialogflow
 diaspora
+dictionarydotcom
 digg
 digikeyelectronics
 digitalocean
@@ -709,17 +771,20 @@ dm
 docker
 docsdotrs
 docsify
+doctrine
 docusaurus
 docusign
 dogecoin
 doi
 dolby
 doordash
+dota2
 dotenv
 dotnet
 douban
 doubanread
 dovecot
+dovetail
 doxygen
 dpd
 dragonframe
@@ -741,6 +806,7 @@ dungeonsanddragons
 dunked
 dunzo
 duolingo
+duplicati
 dvc
 dwavesystems
 dwm
@@ -760,6 +826,7 @@ eclipseide
 eclipsejetty
 eclipsemosquitto
 eclipsevertdotx
+ecovacs
 edeka
 edgeimpulse
 editorconfig
@@ -768,6 +835,7 @@ educative
 edx
 egghead
 egnyte
+eight
 eightsleep
 ejs
 elastic
@@ -778,6 +846,7 @@ elavon
 electron
 electronbuilder
 electronfiddle
+elegoo
 element
 elementary
 elementor
@@ -795,6 +864,7 @@ emby
 emirates
 emlakjet
 empirekred
+endeavouros
 engadget
 enpass
 enterprisedb
@@ -804,6 +874,7 @@ epel
 epicgames
 epson
 equinixmetal
+eraser
 ericsson
 erlang
 erpnext
@@ -817,12 +888,14 @@ espressif
 esri
 etcd
 ethereum
+ethers
 ethiopianairlines
 etihadairways
 etsy
 eventbrite
 eventstore
 evernote
+excalidraw
 exercism
 exordo
 exoscale
@@ -848,6 +921,7 @@ fandango
 fandom
 fanfou
 fantom
+farcaster
 fareharbor
 farfetch
 fastapi
@@ -874,6 +948,7 @@ fig
 figma
 figshare
 fila
+filedotio
 files
 filezilla
 fineco
@@ -886,15 +961,16 @@ firefoxbrowser
 fireship
 firewalla
 first
+fishshell
 fitbit
-fite
 fivem
 fiverr
+fizz
+flashforge
 flask
 flat
 flathub
 flatpak
-flattr
 flickr
 flightaware
 flipboard
@@ -915,14 +991,18 @@ fonoma
 fontawesome
 fontbase
 fontforge
+foobar2000
 foodpanda
 ford
 forgejo
+formik
+formspree
 formstack
 fortinet
 fortran
 fossa
 fossilscm
+foundryvirtualtabletop
 foursquare
 foursquarecityguide
 fox
@@ -935,9 +1015,11 @@ franprix
 frappe
 fraunhofergesellschaft
 freebsd
+freecad
 freecodecamp
 freedesktopdotorg
 freelancer
+freelancermap
 freenas
 freepik
 frontendmentor
@@ -945,15 +1027,18 @@ frontify
 fsecure
 fsharp
 fubo
+fueler
 fugacloud
 fujifilm
 fujitsu
 funimation
 furaffinity
 furrynetwork
+fusionauth
 futurelearn
 g2
 g2a
+g2g
 galaxus
 gameandwatch
 gamebanana
@@ -964,6 +1049,7 @@ gamemaker
 garmin
 gatling
 gatsby
+gcore
 gdal
 geant
 geeksforgeeks
@@ -972,6 +1058,8 @@ generalmotors
 genius
 gentoo
 geocaching
+geode
+geopandas
 gerrit
 getx
 ghost
@@ -997,6 +1085,7 @@ gitlfs
 gitpod
 gitter
 glassdoor
+glide
 glitch
 globus
 glovo
@@ -1015,6 +1104,7 @@ godaddy
 godotengine
 gofundme
 gogdotcom
+gojek
 goland
 goldenline
 goldmansachs
@@ -1026,7 +1116,7 @@ googleadsense
 googleanalytics
 googleappsscript
 googleassistant
-googlebard
+googleauthenticator
 googlebigquery
 googlebigtable
 googlecalendar
@@ -1034,6 +1124,7 @@ googlecampaignmanager360
 googlecardboard
 googlechat
 googlechrome
+googlechronicle
 googleclassroom
 googlecloud
 googlecloudcomposer
@@ -1044,6 +1135,7 @@ googlecontaineroptimizedos
 googledataflow
 googledataproc
 googledatastudio
+googledisplayandvideo360
 googledocs
 googledomains
 googledrive
@@ -1052,6 +1144,7 @@ googleearthengine
 googlefit
 googlefonts
 googleforms
+googlegemini
 googlehangouts
 googlehome
 googlekeep
@@ -1156,6 +1249,7 @@ hepsiemlak
 here
 heroku
 hetzner
+hevy
 hexlet
 hexo
 hey
@@ -1166,11 +1260,14 @@ hiltonhotelsandresorts
 hitachi
 hive
 hiveblockchain
+hivemq
+homarr
 homeadvisor
 homeassistant
 homeassistantcommunitystore
 homebrew
 homebridge
+homepage
 homify
 honda
 honey
@@ -1188,10 +1285,12 @@ hp
 hsbc
 html5
 htmlacademy
+htmx
 htop
 httpie
 huawei
 hubspot
+huggingface
 hugo
 humblebundle
 hungryjacks
@@ -1204,6 +1303,7 @@ i18next
 i3
 iata
 ibeacon
+iberia
 ibm
 ibmcloud
 ibmwatson
@@ -1224,21 +1324,27 @@ ifixit
 ifood
 ifttt
 igdb
+ign
 iheartradio
 ikea
 iledefrancemobilites
+imagedotsc
 imagej
 imdb
+imessage
 imgur
 immer
 immich
 imou
 improvmx
 indeed
+indiansuperleague
+indiehackers
 indigo
 inertia
 infiniti
 influxdb
+infomaniak
 infoq
 informatica
 infosys
@@ -1246,6 +1352,7 @@ infracost
 ingress
 inkdrop
 inkscape
+inoreader
 insomnia
 inspire
 insta360
@@ -1255,7 +1362,6 @@ instapaper
 instatus
 instructables
 instructure
-integromat
 intel
 intellijidea
 interactiondesignfoundation
@@ -1277,6 +1383,7 @@ ios
 iota
 ipfs
 iris
+irobot
 isc2
 issuu
 istio
@@ -1307,6 +1414,7 @@ jetbrains
 jetpackcompose
 jfrog
 jfrogpipelines
+jhipster
 jinja
 jira
 jirasoftware
@@ -1316,6 +1424,7 @@ johndeere
 joomla
 joplin
 jordan
+jouav
 jovian
 jpeg
 jquery
@@ -1324,6 +1433,7 @@ jsdelivr
 jsfiddle
 json
 jsonwebtokens
+jsr
 jss
 juce
 juejin
@@ -1337,6 +1447,7 @@ justgiving
 k3s
 k6
 kaggle
+kagi
 kahoot
 kaios
 kakao
@@ -1354,12 +1465,14 @@ kaufland
 kde
 kdenlive
 kedro
+keenetic
 keepachangelog
 keepassxc
 kentico
 keras
 keybase
 keycdn
+keycloak
 keystone
 kfc
 khanacademy
@@ -1381,6 +1494,8 @@ klm
 klook
 knative
 knexdotjs
+knime
+knip
 knowledgebase
 known
 koa
@@ -1398,11 +1513,13 @@ kotlin
 koyeb
 krita
 ktm
+ktor
 kuaishou
 kubernetes
 kubuntu
 kucoin
 kuma
+kununu
 kuula
 kx
 kyocera
@@ -1410,6 +1527,7 @@ labview
 lada
 lamborghini
 landrover
+langchain
 lapce
 laragon
 laravel
@@ -1420,6 +1538,7 @@ lastpass
 latex
 launchpad
 lazarus
+lazyvim
 lbry
 leaderprice
 leaflet
@@ -1429,6 +1548,7 @@ leetcode
 legacygames
 leica
 lemmy
+lemonsqueezy
 lenovo
 lens
 leptos
@@ -1459,14 +1579,17 @@ lifx
 lightburn
 lighthouse
 lightning
+limesurvey
 line
 lineageos
 linear
+lining
 linkedin
 linkerd
 linkfire
 linksys
 linktree
+lintcode
 linux
 linuxcontainers
 linuxfoundation
@@ -1475,6 +1598,7 @@ linuxprofessionalinstitute
 linuxserver
 lionair
 liquibase
+listmonk
 lit
 litecoin
 litiengine
@@ -1500,6 +1624,8 @@ lotpolishairlines
 ltspice
 lua
 lubuntu
+lucia
+lucid
 ludwig
 lufthansa
 lumen
@@ -1521,9 +1647,12 @@ maildotcom
 maildotru
 mailgun
 mailtrap
+mainwp
 majorleaguehacking
 make
 makerbot
+malt
+malwarebytes
 mambaui
 mamp
 man
@@ -1573,6 +1702,7 @@ meetup
 mega
 meilisearch
 meituan
+meizu
 mendeley
 mentorcruise
 mercadopago
@@ -1620,7 +1750,9 @@ microsoftword
 microstation
 microstrategy
 midi
+migadu
 mikrotik
+milanote
 milvus
 minds
 minecraft
@@ -1641,6 +1773,7 @@ mobx
 mobxstatetree
 mocha
 mockserviceworker
+modal
 modin
 modrinth
 modx
@@ -1690,11 +1823,16 @@ myob
 myspace
 mysql
 n26
+n8n
 namebase
 namecheap
+namemc
+namesilo
+namuwiki
 nano
 nasa
 nationalgrid
+nationalrail
 nativescript
 natsdotio
 naver
@@ -1706,10 +1844,12 @@ near
 nec
 neo4j
 neovim
+neptune
 nestjs
 netapp
 netbsd
 netcup
+netdata
 neteasecloudmusic
 netflix
 netgear
@@ -1729,13 +1869,14 @@ nextdoor
 nextdotjs
 nextra
 nextui
+nexusmods
 nfc
 nginx
 nginxproxymanager
 ngrok
 ngrx
 nhl
-niantic
+nicehash
 niconico
 nike
 nikon
@@ -1743,7 +1884,6 @@ nim
 nintendo
 nintendo3ds
 nintendogamecube
-nintendonetwork
 nintendoswitch
 nissan
 nixos
@@ -1767,6 +1907,7 @@ now
 npm
 nrwl
 nsis
+ntfy
 nubank
 nucleo
 nuget
@@ -1774,9 +1915,11 @@ nuke
 numba
 numpy
 nunjucks
+nushell
 nutanix
 nuxtdotjs
 nvidia
+nvm
 nx
 nxp
 nzxt
@@ -1818,7 +1961,9 @@ opengl
 openhab
 openid
 openjdk
+openjsfoundation
 openlayers
+openmediavault
 openmined
 opennebula
 openproject
@@ -1845,6 +1990,7 @@ opnsense
 oppo
 opsgenie
 opslevel
+optimism
 oracle
 orange
 orcid
@@ -1883,9 +2029,12 @@ panasonic
 pandas
 pandora
 pantheon
+paperlessngx
 paperspace
+paperswithcode
 paramountplus
 paritysubstrate
+parrotsecurity
 parsedotly
 passport
 pastebin
@@ -1911,6 +2060,7 @@ penpot
 percy
 perforce
 perl
+perplexity
 persistent
 personio
 petsathome
@@ -1924,6 +2074,7 @@ phonepe
 phosphoricons
 photobucket
 photocrowd
+photon
 photopea
 php
 phpmyadmin
@@ -1934,6 +2085,7 @@ picardsurgeles
 picartodottv
 picnic
 picpay
+picrew
 picxy
 pihole
 pimcore
@@ -1941,6 +2093,7 @@ pinboard
 pinescript
 pinetwork
 pingdom
+pino
 pinterest
 pioneerdj
 piped
@@ -1949,7 +2102,9 @@ pivotaltracker
 piwigo
 pix
 pixabay
+pixelfed
 pixiv
+pixlr
 pkgsrc
 planet
 planetscale
@@ -1996,9 +2151,11 @@ polymerproject
 polywork
 pond5
 popos
+porkbun
 porsche
 portainer
 portswigger
+posit
 postcss
 postgresql
 posthog
@@ -2029,6 +2186,7 @@ primevideo
 printables
 prisma
 prismic
+privatedivision
 privateinternetaccess
 probot
 processingfoundation
@@ -2037,6 +2195,7 @@ producthunt
 progate
 progress
 prometheus
+pronounsdotpage
 prosieben
 proteus
 protocolsdotio
@@ -2066,6 +2225,7 @@ pushbullet
 pusher
 pwa
 pycharm
+pycqa
 pydantic
 pyg
 pypi
@@ -2080,6 +2240,7 @@ pyup
 qantas
 qase
 qatarairways
+qbittorrent
 qemu
 qgis
 qi
@@ -2088,6 +2249,7 @@ qiskit
 qiwi
 qlik
 qmk
+qnap
 qt
 qualcomm
 qualtrics
@@ -2095,6 +2257,7 @@ qualys
 quantcast
 quantconnect
 quarkus
+quarto
 quasar
 qubesos
 quest
@@ -2103,8 +2266,10 @@ quicklook
 quicktime
 quicktype
 quip
+quizlet
 quora
 qwant
+qwik
 qwiklabs
 qzone
 r
@@ -2112,6 +2277,7 @@ r3
 rabbitmq
 racket
 radar
+radarr
 radiopublic
 radixui
 radstudio
@@ -2130,7 +2296,9 @@ raycast
 raylib
 razer
 razorpay
+rclone
 react
+reactbootstrap
 reacthookform
 reactiveresume
 reactivex
@@ -2146,6 +2314,7 @@ reason
 reasonstudios
 recoil
 red
+redash
 redbubble
 redbull
 reddit
@@ -2162,7 +2331,9 @@ refine
 relay
 relianceindustrieslimited
 remark
+remedyentertainment
 remix
+removedotbg
 renault
 render
 renovatebot
@@ -2188,8 +2359,10 @@ revue
 rewe
 rezgo
 rhinoceros
+rich
 rider
 rimacautomobili
+rime
 ring
 riotgames
 ripple
@@ -2203,14 +2376,16 @@ robinhood
 roblox
 robloxstudio
 robotframework
+rocket
 rocketdotchat
 rocksdb
 rockstargames
+rockwellautomation
 rockylinux
 roku
+roll20
 rollsroyce
 rollupdotjs
-rome
 roon
 rootme
 roots
@@ -2223,7 +2398,7 @@ rottentomatoes
 roundcube
 rsocket
 rss
-rstudio
+rstudioide
 rte
 rtl
 rtlzwei
@@ -2231,15 +2406,18 @@ rtm
 rubocop
 ruby
 rubygems
+rubymine
 rubyonrails
 rubysinatra
 ruff
+rumahweb
 rumble
 rundeck
 runkeeper
 runkit
 runrundotit
 rust
+rustdesk
 rxdb
 ryanair
 rye
@@ -2262,6 +2440,7 @@ sanic
 sanity
 saopaulometro
 sap
+sartorius
 sass
 sat1
 satellite
@@ -2273,6 +2452,7 @@ scaleway
 scania
 schneiderelectric
 scikitlearn
+scilab
 scipy
 scopus
 scpfoundation
@@ -2330,11 +2510,11 @@ shopee
 shopify
 shopware
 shortcut
-shotcut
 showpad
 showtime
 showwcase
 shutterstock
+sidekiq
 sidequest
 siemens
 sifive
@@ -2358,7 +2538,6 @@ sketchup
 skillshare
 skoda
 sky
-skynet
 skypack
 skype
 skypeforbusiness
@@ -2379,6 +2558,7 @@ smugmug
 snapchat
 snapcraft
 sncf
+snort
 snowflake
 snowpack
 snyk
@@ -2396,6 +2576,7 @@ sonar
 sonarcloud
 sonarlint
 sonarqube
+sonarr
 sonatype
 songkick
 songoda
@@ -2411,6 +2592,7 @@ sourcehut
 sourcetree
 southwestairlines
 spacemacs
+spaceship
 spacex
 spacy
 sparkar
@@ -2467,6 +2649,7 @@ starship
 startrek
 starz
 statamic
+statista
 statuspage
 statuspal
 steam
@@ -2478,6 +2661,7 @@ steem
 steemit
 steinberg
 stellar
+stencil
 stencyl
 stimulus
 stitcher
@@ -2508,6 +2692,7 @@ subtitleedit
 subversion
 suckless
 sumologic
+sunrise
 supabase
 supercrease
 supermicro
@@ -2532,6 +2717,7 @@ symbolab
 symfony
 symphony
 sympy
+syncthing
 synology
 system76
 tabelog
@@ -2542,10 +2728,13 @@ tado
 taichigraphics
 taichilang
 tails
+tailscale
 tailwindcss
+taipy
 taketwointeractivesoftware
 talend
 talenthouse
+talos
 tamiya
 tampermonkey
 taobao
@@ -2557,6 +2746,7 @@ tata
 tauri
 taxbuzz
 tcs
+teal
 teamcity
 teamspeak
 teamviewer
@@ -2586,6 +2776,7 @@ textpattern
 tga
 thangs
 thealgorithms
+theboringcompany
 theconversation
 thefinals
 theirishtimes
@@ -2600,6 +2791,7 @@ thespritersresource
 thewashingtonpost
 thingiverse
 thinkpad
+thirdweb
 threadless
 threads
 threedotjs
@@ -2624,8 +2816,10 @@ tina
 tinder
 tindie
 tinkercad
+tinygrad
 tinyletter
 tistory
+tldraw
 tmobile
 tmux
 todoist
@@ -2642,10 +2836,13 @@ toptal
 torbrowser
 torproject
 toshiba
+totvs
 tourbox
+tower
 toyota
 tplink
 tqdm
+traccar
 tradingview
 traefikmesh
 traefikproxy
@@ -2673,6 +2870,7 @@ trivy
 trove
 trpc
 truenas
+trueup
 trulia
 trustedshops
 trustpilot
@@ -2689,13 +2887,18 @@ turbosquid
 turkishairlines
 turso
 tutanota
+tv4play
 tvtime
 twilio
+twinkly
+twinmotion
 twitch
-twitter
 typeform
+typeorm
+typer
 typescript
 typo3
+typst
 uber
 ubereats
 ubiquiti
@@ -2707,6 +2910,7 @@ udacity
 udemy
 ufc
 uikit
+uipath
 ulule
 umami
 umbraco
@@ -2724,6 +2928,7 @@ unitednations
 unity
 unlicense
 unocss
+unpkg
 unraid
 unrealengine
 unsplash
@@ -2756,6 +2961,7 @@ vectary
 vectorlogozone
 vectorworks
 veeam
+veed
 veepee
 vega
 vegas
@@ -2787,13 +2993,16 @@ visualbasic
 visualstudio
 visualstudioappcenter
 visualstudiocode
+visx
 vite
+vitepress
 vitess
 vitest
 vivaldi
 vivawallet
 vivino
 vivint
+vivo
 vk
 vlcmediaplayer
 vmware
@@ -2816,6 +3025,7 @@ vultr
 vyond
 w3schools
 wacom
+wagmi
 wagtail
 wails
 wakatime
@@ -2830,6 +3040,7 @@ warp
 wasabi
 wasmcloud
 wasmer
+watchtower
 wattpad
 wayland
 waze
@@ -2860,8 +3071,10 @@ wellfound
 wellsfargo
 wemo
 westerndigital
+westernunion
 wetransfer
 wezterm
+wgpu
 whatsapp
 wheniwork
 wii
@@ -2870,6 +3083,7 @@ wikidata
 wikidotgg
 wikidotjs
 wikimediacommons
+wikimediafoundation
 wikipedia
 wikiquote
 wikivoyage
@@ -2892,6 +3106,7 @@ wolfram
 wolframlanguage
 wolframmathematica
 wondershare
+wondersharefilmora
 woo
 woocommerce
 wordpress
@@ -2915,6 +3130,7 @@ xdotorg
 xendit
 xero
 xfce
+xiaohongshu
 xiaomi
 xing
 xmpp
@@ -2922,6 +3138,7 @@ xo
 xrp
 xsplit
 xstate
+yabai
 yale
 yamahacorporation
 yamahamotorcorporation
@@ -2942,7 +3159,9 @@ youtubestudio
 youtubetv
 yr
 yubico
+yunohost
 zabka
+zaim
 zalando
 zalo
 zap
@@ -2950,9 +3169,11 @@ zapier
 zara
 zazzle
 zcash
+zcool
 zdf
 zebpay
 zebratechnologies
+zedindustries
 zelle
 zend
 zendesk
@@ -2965,6 +3186,7 @@ zettlr
 zhihu
 zig
 zigbee
+zigbee2mqtt
 ziggo
 zilch
 zillow
@@ -2994,3 +3216,4 @@ zyte
 \simpleiconsmaponezero#S
 \simpleiconsmaponeone#S
 \simpleiconsmaponetwo#S
+\simpleiconsmaponethree#S

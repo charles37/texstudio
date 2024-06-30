@@ -1,11 +1,11 @@
 # bithesis class
-# Matthew Bertucci 2023/10/01 for v3.6.0
+# Matthew Bertucci 2024/06/02 for v3.7.8
 
 #include:l3keys2e
 #include:class-ctexbook
 #include:geometry
 #include:xcolor
-# loads table option of xcolot
+# loads table option of xcolor
 #include:colortbl
 #include:xeCJK
 #include:titletoc
@@ -61,6 +61,7 @@ cover/valueAlign=#c,l,r
 cover/underlineThickness=##L
 cover/underlineOffset=##L
 cover/hideCoverInPeerReview#true,false
+cover/showSpecialTypeBox#true,false
 info={%<键值列表%>}
 info/title=%<字符串%>
 info/titleEn=%<字符串%>
@@ -91,6 +92,8 @@ info/instituteEn=%<字符串%>
 info/defenseDate=%<字符串%>
 info/defenseDateEn=%<字符串%>
 info/classifiedLevel=%<字符串%>
+info/crossResearch#true,false
+info/internationalStudentUGP#true,false
 info/teacher=%<字符串%>
 info/semester=%<字符串%>
 style={%<键值列表%>}
@@ -102,6 +105,9 @@ style/mathFont=#asana,bonum,cm,concrete,dejavu,erewhon,euler,fira,garamond,gfsne
 style/windowsSimSunFakeBold#true,false
 style/unicodeMathOptions=%<任意选项%>
 style/hyphen#true,false
+style/mathAboveDisplaySkip=##L
+style/mathBelowDisplaySkip=##L
+style/betterTimesNewRoman#true,false
 TOC={%<键值列表%>}
 TOC/abstract#true,false
 TOC/abstractEn#true,false
@@ -120,6 +126,9 @@ misc/arialFont=%<字符串%>
 misc/tabularFontSize=%<其他字号%>
 misc/autoref={%<键值列表%>}
 misc/hideLinks#true,false
+misc/floatSeparation=%<实数%>
+misc/algorithmSeparation=%<实数%>
+misc/tabularRowSeparation=%<实数%>
 const={%<键值列表%>}
 const/autoref={%<键值列表%>}
 const/style/substituteSymbol=%<字符串%>

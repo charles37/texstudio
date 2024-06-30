@@ -1,16 +1,109 @@
 <?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="br">
 <context>
+    <name>AIChatAssistant</name>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="16"/>
+        <source>Search in previous conversations</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="20"/>
+        <source>Search in conversations</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="44"/>
+        <source>Enter your query here</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="47"/>
+        <location filename="../src/aichatassistant.cpp" line="135"/>
+        <location filename="../src/aichatassistant.cpp" line="358"/>
+        <location filename="../src/aichatassistant.cpp" line="404"/>
+        <source>Send Query to AI provider</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="54"/>
+        <source>Insert response</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="60"/>
+        <source>Options</source>
+        <translation>Dibarzhioù</translation>
+    </message>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="87"/>
+        <source>AI chat assistant</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="210"/>
+        <source>Stop current query !</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="286"/>
+        <source>System prompt</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="300"/>
+        <source>Values between 0 and %1</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="307"/>
+        <source>Stream results</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="396"/>
+        <location filename="../src/aichatassistant.cpp" line="433"/>
+        <source>Execute as macro</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="398"/>
+        <location filename="../src/aichatassistant.cpp" line="435"/>
+        <source>Insert into text</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aichatassistant.cpp" line="302"/>
+        <source>Temperature</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>AIQueryStorageModel</name>
+    <message>
+        <location filename="../src/aiquerystoragemodel.cpp" line="140"/>
+        <location filename="../src/aiquerystoragemodel.cpp" line="142"/>
+        <location filename="../src/aiquerystoragemodel.cpp" line="182"/>
+        <source>Today</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aiquerystoragemodel.cpp" line="182"/>
+        <source>Last Week</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aiquerystoragemodel.cpp" line="182"/>
+        <source>Last Month</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/aiquerystoragemodel.cpp" line="201"/>
+        <source>Older</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
     <name>AboutDialog</name>
-    <message>
-        <location filename="../src/aboutdialog.ui" line="14"/>
-        <source>About TeXstudio</source>
-        <translation>Diwar-benn TeXstudio</translation>
-    </message>
-    <message>
-        <location filename="../src/aboutdialog.ui" line="81"/>
-        <source>OK</source>
-        <translation>Mat eo</translation>
-    </message>
     <message>
         <location filename="../src/aboutdialog.cpp" line="59"/>
         <source>Using Qt Version %1, compiled with Qt %2 %3</source>
@@ -101,9 +194,24 @@
         <source>This program is licensed to you under the terms of the GNU General Public License Version 2 as published by the Free Software Foundation.</source>
         <translation>Ar programm-mañ a vez dasparzhet dindan al lisañs « Lisañs Stumm 2 ar GNU General Public » evel m&apos;eo bet embannet gant Diazezadur ar Meziantoù Frank (Free Software Foundation).</translation>
     </message>
+    <message>
+        <location filename="../src/aboutdialog.ui" line="14"/>
+        <source>About TeXstudio</source>
+        <translation>Diwar-benn TeXstudio</translation>
+    </message>
+    <message>
+        <location filename="../src/aboutdialog.ui" line="81"/>
+        <source>OK</source>
+        <translation>Mat eo</translation>
+    </message>
 </context>
 <context>
     <name>ArrayDialog</name>
+    <message>
+        <location filename="../src/arraydialog.cpp" line="108"/>
+        <source>Quick Array</source>
+        <translation>Skoazeller matris</translation>
+    </message>
     <message>
         <location filename="../src/arraydialog.ui" line="31"/>
         <source>Num of Columns</source>
@@ -162,44 +270,9 @@ Package mathtools supports alignedat, matrix*, pmatrix*, bmatrix*, Bmatrix*, vma
         <source>Right</source>
         <translation>Dehou</translation>
     </message>
-    <message>
-        <location filename="../src/arraydialog.cpp" line="108"/>
-        <source>Quick Array</source>
-        <translation>Skoazeller matris</translation>
-    </message>
 </context>
 <context>
     <name>BibTeXDialog</name>
-    <message>
-        <location filename="../src/bibtexdialog.ui" line="20"/>
-        <source>Insert in File:</source>
-        <translation>Enlakaat ur restr:</translation>
-    </message>
-    <message>
-        <location filename="../src/bibtexdialog.ui" line="27"/>
-        <source>Entry Type:</source>
-        <translation>Doare enmont:</translation>
-    </message>
-    <message>
-        <location filename="../src/bibtexdialog.ui" line="50"/>
-        <source>Fields:</source>
-        <translation>Maeziennoù:</translation>
-    </message>
-    <message>
-        <location filename="../src/bibtexdialog.ui" line="67"/>
-        <source>Field</source>
-        <translation>Maezienn</translation>
-    </message>
-    <message>
-        <location filename="../src/bibtexdialog.ui" line="72"/>
-        <source>Value</source>
-        <translation>Talvoud</translation>
-    </message>
-    <message>
-        <location filename="../src/bibtexdialog.ui" line="80"/>
-        <source>Insert Empty, Optional Fields</source>
-        <translation>Enlakaat maeziennoù goullo ha diret</translation>
-    </message>
     <message>
         <location filename="../src/bibtexdialog.cpp" line="20"/>
         <location filename="../src/bibtexdialog.cpp" line="77"/>
@@ -378,6 +451,36 @@ Package mathtools supports alignedat, matrix*, pmatrix*, bmatrix*, Bmatrix*, vma
         <location filename="../src/bibtexdialog.cpp" line="371"/>
         <source>New BibTeX Entry</source>
         <translation>Daveenn BibTeX nevez</translation>
+    </message>
+    <message>
+        <location filename="../src/bibtexdialog.ui" line="20"/>
+        <source>Insert in File:</source>
+        <translation>Enlakaat ur restr:</translation>
+    </message>
+    <message>
+        <location filename="../src/bibtexdialog.ui" line="27"/>
+        <source>Entry Type:</source>
+        <translation>Doare enmont:</translation>
+    </message>
+    <message>
+        <location filename="../src/bibtexdialog.ui" line="50"/>
+        <source>Fields:</source>
+        <translation>Maeziennoù:</translation>
+    </message>
+    <message>
+        <location filename="../src/bibtexdialog.ui" line="67"/>
+        <source>Field</source>
+        <translation>Maezienn</translation>
+    </message>
+    <message>
+        <location filename="../src/bibtexdialog.ui" line="72"/>
+        <source>Value</source>
+        <translation>Talvoud</translation>
+    </message>
+    <message>
+        <location filename="../src/bibtexdialog.ui" line="80"/>
+        <source>Insert Empty, Optional Fields</source>
+        <translation>Enlakaat maeziennoù goullo ha diret</translation>
     </message>
 </context>
 <context>
@@ -696,6 +799,31 @@ Cheñchit mar plij ho kefluniadur ha termenit ho listenn-urzhiadoù hepken da &a
 <context>
     <name>CleanDialog</name>
     <message>
+        <location filename="../src/cleandialog.cpp" line="57"/>
+        <source>Project (Master file folder and all subfolders)</source>
+        <translation>Raktres (Teuliad mestr pennañ hag an holl is-teuliadoù)</translation>
+    </message>
+    <message>
+        <location filename="../src/cleandialog.cpp" line="63"/>
+        <source>Current File</source>
+        <translation>Restr war implij</translation>
+    </message>
+    <message>
+        <location filename="../src/cleandialog.cpp" line="65"/>
+        <source>Current File Folder</source>
+        <translation>Teuliad ar restr war implij</translation>
+    </message>
+    <message>
+        <location filename="../src/cleandialog.cpp" line="73"/>
+        <source>Open Files</source>
+        <translation>Restroù digoret</translation>
+    </message>
+    <message>
+        <location filename="../src/cleandialog.cpp" line="114"/>
+        <source>For your own safety clean will not delete the files with the following extensions:</source>
+        <translation>Evit ho surentez deoc&apos;h-c&apos;hwi hoc&apos;h-unan, an naetadur na zilamo ket ar restroù gant an astennoù da-heul:</translation>
+    </message>
+    <message>
         <location filename="../src/cleandialog.ui" line="14"/>
         <source>Clean</source>
         <translation>Netaat</translation>
@@ -725,31 +853,6 @@ Cheñchit mar plij ho kefluniadur ha termenit ho listenn-urzhiadoù hepken da &a
         <source>Files to Delete</source>
         <translation>Restroù da zilemel</translation>
     </message>
-    <message>
-        <location filename="../src/cleandialog.cpp" line="57"/>
-        <source>Project (Master file folder and all subfolders)</source>
-        <translation>Raktres (Teuliad mestr pennañ hag an holl is-teuliadoù)</translation>
-    </message>
-    <message>
-        <location filename="../src/cleandialog.cpp" line="63"/>
-        <source>Current File</source>
-        <translation>Restr war implij</translation>
-    </message>
-    <message>
-        <location filename="../src/cleandialog.cpp" line="65"/>
-        <source>Current File Folder</source>
-        <translation>Teuliad ar restr war implij</translation>
-    </message>
-    <message>
-        <location filename="../src/cleandialog.cpp" line="73"/>
-        <source>Open Files</source>
-        <translation>Restroù digoret</translation>
-    </message>
-    <message>
-        <location filename="../src/cleandialog.cpp" line="114"/>
-        <source>For your own safety clean will not delete the files with the following extensions:</source>
-        <translation>Evit ho surentez deoc&apos;h-c&apos;hwi hoc&apos;h-unan, an naetadur na zilamo ket ar restroù gant an astennoù da-heul:</translation>
-    </message>
 </context>
 <context>
     <name>CodeSnippet_PlaceHolder</name>
@@ -774,29 +877,25 @@ Cheñchit mar plij ho kefluniadur ha termenit ho listenn-urzhiadoù hepken da &a
         <translation>Kefluniañ TeXstudio</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4892"/>
-        <source>Show Advanced Options</source>
-        <translation>Diskouez an dibarzhioù araokaet</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4918"/>
-        <source>OK</source>
-        <translation>Mat eo</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4928"/>
-        <source>Cancel</source>
-        <translation>Nullañ</translation>
-    </message>
-    <message>
         <location filename="../src/configdialog.ui" line="166"/>
         <location filename="../src/configdialog.ui" line="2069"/>
         <source>Appearance</source>
         <translation>Neuz</translation>
     </message>
     <message>
+        <location filename="../src/configdialog.ui" line="182"/>
+        <location filename="../src/configdialog.ui" line="4884"/>
+        <source>Color Scheme:</source>
+        <translation>Liv reol:</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="215"/>
+        <source>Style:</source>
+        <translation>Stil:</translation>
+    </message>
+    <message>
         <location filename="../src/configdialog.ui" line="238"/>
-        <location filename="../src/configdialog.ui" line="3724"/>
+        <location filename="../src/configdialog.ui" line="3817"/>
         <source>Language:</source>
         <translation>Yezh:</translation>
     </message>
@@ -804,13 +903,6 @@ Cheñchit mar plij ho kefluniadur ha termenit ho listenn-urzhiadoù hepken da &a
         <location filename="../src/configdialog.ui" line="251"/>
         <source>Font:</source>
         <translation>Skritur:</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="283"/>
-        <location filename="../src/configdialog.ui" line="1808"/>
-        <location filename="../src/configdialog.ui" line="4819"/>
-        <source>Font Size:</source>
-        <translation>Ment ar skritur:</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="259"/>
@@ -823,20 +915,16 @@ Cheñchit mar plij ho kefluniadur ha termenit ho listenn-urzhiadoù hepken da &a
         <translation>Modern</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="215"/>
-        <source>Style:</source>
-        <translation>Stil:</translation>
+        <location filename="../src/configdialog.ui" line="269"/>
+        <source>Modern - dark</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="305"/>
-        <source>Use System Theme Icons</source>
-        <translation>Implijout ikonioù tem ar sistem</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="182"/>
-        <location filename="../src/configdialog.ui" line="4791"/>
-        <source>Color Scheme:</source>
-        <translation>Liv reol:</translation>
+        <location filename="../src/configdialog.ui" line="283"/>
+        <location filename="../src/configdialog.ui" line="1808"/>
+        <location filename="../src/configdialog.ui" line="4912"/>
+        <source>Font Size:</source>
+        <translation>Ment ar skritur:</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="295"/>
@@ -844,13 +932,28 @@ Cheñchit mar plij ho kefluniadur ha termenit ho listenn-urzhiadoù hepken da &a
         <translation>Na ober ouzh ar sistem liv</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="447"/>
-        <source>MRU Document Chooser</source>
-        <translation>Diuzer restroù MRU</translation>
+        <location filename="../src/configdialog.ui" line="305"/>
+        <source>Use System Theme Icons</source>
+        <translation>Implijout ikonioù tem ar sistem</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="269"/>
-        <source>Modern - dark</source>
+        <location filename="../src/configdialog.ui" line="330"/>
+        <source>Icon Theme:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="338"/>
+        <source>Colibre</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="343"/>
+        <source>Oxygen Modern</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="348"/>
+        <source>Oxygen Classic</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -859,9 +962,9 @@ Cheñchit mar plij ho kefluniadur ha termenit ho listenn-urzhiadoù hepken da &a
         <translation>Restroù</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="410"/>
-        <source>Max. Recent Documents:</source>
-        <translation>Teuliadoù nevez maks:</translation>
+        <location filename="../src/configdialog.ui" line="374"/>
+        <source>Max. Recent Root Documents:</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="381"/>
@@ -869,9 +972,24 @@ Cheñchit mar plij ho kefluniadur ha termenit ho listenn-urzhiadoù hepken da &a
         <translation>Derc&apos;hel soñj eus ar sil restroù e-barzh ar voest-kendivizoù digoret/enrollet</translation>
     </message>
     <message>
+        <location filename="../src/configdialog.ui" line="410"/>
+        <source>Max. Recent Documents:</source>
+        <translation>Teuliadoù nevez maks:</translation>
+    </message>
+    <message>
         <location filename="../src/configdialog.ui" line="430"/>
         <source>Use system file dialogs</source>
         <translation>Implijout ar voest-kendivizoù sistem</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="437"/>
+        <source>Always Show Structure of Root Document</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="447"/>
+        <source>MRU Document Chooser</source>
+        <translation>Diuzer restroù MRU</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="460"/>
@@ -970,6 +1088,11 @@ Cheñchit mar plij ho kefluniadur ha termenit ho listenn-urzhiadoù hepken da &a
         <translation>&lt;b&gt;%&lt;/b&gt;: anv-restr hep astenn; &lt;b&gt;@&lt;/b&gt;: niver al linenn; &lt;b&gt;?[diuzer][lodennoù anv-hent][arouezenn fin]&lt;/b&gt;: anv-restr furmadet</translation>
     </message>
     <message>
+        <location filename="../src/configdialog.ui" line="688"/>
+        <source>&lt;i&gt;File selector (Optional. If present include the terminating colon):&lt;/i&gt; If no selector then select root file. &lt;b&gt;c:&lt;/b&gt; select current file, &lt;b&gt;p{ext}:&lt;/b&gt; Find a file with same basename as root file and extension &lt;b&gt;ext&lt;/b&gt;. Search is done in root file directory and additional PDF directories.&lt;br /&gt;&lt;i&gt;Pathname parts:&lt;/i&gt; a combination of &lt;b&gt;a&lt;/b&gt;: absolute path, &lt;b&gt;m&lt;/b&gt;: basefile name without extension,&lt;b&gt;e&lt;/b&gt;: extension, &lt;b&gt;r&lt;/b&gt;: path relative to root, &lt;b&gt;*&lt;/b&gt;: all files matching the following pattern&lt;br/&gt;&lt;i&gt;Terminating chars:&lt;/i&gt;&lt;b&gt;)&lt;/b&gt;: ends selector. The following chars end the selector and have additional meaning&lt;br/&gt;&lt;b&gt;&amp;quot;&lt;/b&gt;: enclose in double-quotes, &lt;b&gt;.&lt;/b&gt; (dot) add a point at the end, (space): add a space at the end&lt;br/&gt;&lt;i&gt;Examples:&lt;/i&gt;&lt;b&gt;?ame&amp;quot;&lt;/b&gt;: complete absolute filename enclosed in double-quotes, &lt;b&gt;?e)&lt;/b&gt; just the extension without leading dot (e.g. tex), &lt;br/&gt;&lt;b&gt;?m&amp;quot;&lt;/b&gt; double-quoted filename without extension (identical to &lt;b&gt;%&lt;/b&gt;), &lt;b&gt;?me&lt;/b&gt; filename with extension (e.g. example.tex), &lt;b&gt;?*.aux&lt;/b&gt;: all .aux files in the current directory</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
         <location filename="../src/configdialog.ui" line="704"/>
         <source>&lt;b&gt;%%&lt;/b&gt;, &lt;b&gt;@@&lt;/b&gt; and &lt;b&gt;?? &lt;/b&gt; become: %, @ or ?
 </source>
@@ -1019,7 +1142,7 @@ Cheñchit mar plij ho kefluniadur ha termenit ho listenn-urzhiadoù hepken da &a
     <message>
         <location filename="../src/configdialog.ui" line="872"/>
         <location filename="../src/configdialog.ui" line="2317"/>
-        <location filename="../src/configdialog.ui" line="4000"/>
+        <location filename="../src/configdialog.ui" line="4093"/>
         <source>Never</source>
         <translation>Morse</translation>
     </message>
@@ -1104,7 +1227,7 @@ An argemmoù a vez skrivet e: $MYVAR. Kizidig e vezont d&apos;al lizherennoù br
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="1073"/>
-        <location filename="../src/configdialog.cpp" line="534"/>
+        <location filename="../src/configdialog.cpp" line="537"/>
         <source>Shortcuts</source>
         <translation>Berradurioù</translation>
     </message>
@@ -1174,7 +1297,7 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="1176"/>
-        <location filename="../src/configdialog.cpp" line="535"/>
+        <location filename="../src/configdialog.cpp" line="538"/>
         <source>Menus</source>
         <translation>Lañserioù</translation>
     </message>
@@ -1190,7 +1313,7 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="1201"/>
-        <location filename="../src/configdialog.cpp" line="523"/>
+        <location filename="../src/configdialog.cpp" line="526"/>
         <source>Command</source>
         <translation>Urzhiad</translation>
     </message>
@@ -1245,9 +1368,19 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
         <translation>An dra-se a ziskouez oberoù hegerz da eren d&apos;ur varrenn-ostilhoù.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="1502"/>
-        <source>Secondary Toolbars</source>
-        <translation>Eil Barrenn-ostilhoù</translation>
+        <location filename="../src/configdialog.ui" line="1379"/>
+        <source>Note: The change of symbols can be monitored live</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="1386"/>
+        <source>This changes the scaling of the symbol grid (for high resolution displays).</source>
+        <translation>An dra-se a cheñch skeulaouiñ gael an arouzioù (evit an diskwel a spisted uhel).</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="1417"/>
+        <source>Main Toolbar</source>
+        <translation>Barrenn-ostilhoù pennañ</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="1424"/>
@@ -1258,14 +1391,9 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
         <translation>Adderaouekaat</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="1495"/>
-        <source>Symbol Grid</source>
-        <translation>Gael an arouezioù</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="1417"/>
-        <source>Main Toolbar</source>
-        <translation>Barrenn-ostilhoù pennañ</translation>
+        <location filename="../src/configdialog.ui" line="1438"/>
+        <source>This changes the scaling of the vertical toolbars (for high resolution displays).</source>
+        <translation>An dra-se a cheñch skeulaouiñ ar barrennoù-ostilhoù a-serzh (evit an diskwel a spisted uhel).</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="1460"/>
@@ -1273,19 +1401,29 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
         <translation>An dra-se a cheñch skeulaouiñ ar barrennoù-ostilhoù a-blaen (evit an diskwel a spisted uhel).</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="1386"/>
-        <source>This changes the scaling of the symbol grid (for high resolution displays).</source>
-        <translation>An dra-se a cheñch skeulaouiñ gael an arouzioù (evit an diskwel a spisted uhel).</translation>
+        <location filename="../src/configdialog.ui" line="1495"/>
+        <source>Symbol Grid</source>
+        <translation>Gael an arouezioù</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="1438"/>
-        <source>This changes the scaling of the vertical toolbars (for high resolution displays).</source>
-        <translation>An dra-se a cheñch skeulaouiñ ar barrennoù-ostilhoù a-serzh (evit an diskwel a spisted uhel).</translation>
+        <location filename="../src/configdialog.ui" line="1502"/>
+        <source>Secondary Toolbars</source>
+        <translation>Eil Barrenn-ostilhoù</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="1509"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This changes the scaling of the toolbar of the embeded pdf viewer (for high resolution displays).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="1534"/>
+        <source>Embedded PDF Toolbar</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="1629"/>
-        <location filename="../src/configdialog.cpp" line="538"/>
-        <location filename="../src/configmanager.cpp" line="1512"/>
+        <location filename="../src/configdialog.cpp" line="541"/>
+        <location filename="../src/configmanager.cpp" line="1522"/>
         <source>Editor</source>
         <translation>Aozer</translation>
     </message>
@@ -1293,6 +1431,26 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
         <location filename="../src/configdialog.ui" line="1641"/>
         <source>Inline Checking:</source>
         <translation>Gwiriadenn enlinenn:</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="1651"/>
+        <source>Show Line Numbers:</source>
+        <translation>Diskouez niveroù al linennoù:</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="1659"/>
+        <source>No Line Numbers</source>
+        <translation>Niver linenn ebet</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="1664"/>
+        <source>All Line Numbers</source>
+        <translation>Holl an niveroù linennoù</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="1669"/>
+        <source>Only Important Line Numbers</source>
+        <translation>An niveroù linennoù a-bouez hepken</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="1677"/>
@@ -1316,7 +1474,7 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="1711"/>
-        <location filename="../src/configdialog.ui" line="4805"/>
+        <location filename="../src/configdialog.ui" line="4898"/>
         <source>Font Family:</source>
         <translation>Familh skriturioù:</translation>
     </message>
@@ -1357,8 +1515,8 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="1789"/>
-        <location filename="../src/configdialog.ui" line="4081"/>
-        <location filename="../src/configdialog.ui" line="4178"/>
+        <location filename="../src/configdialog.ui" line="4174"/>
+        <location filename="../src/configdialog.ui" line="4271"/>
         <source>%</source>
         <translation>%</translation>
     </message>
@@ -1473,11 +1631,6 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
         <translation>Erlec&apos;hiañ an ivinell e-barzh an destenn gant esaouennoù</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="1999"/>
-        <source>Automatically load included files</source>
-        <translation>Em-gargañ ar restroù enklozet</translation>
-    </message>
-    <message>
         <location filename="../src/configdialog.ui" line="1972"/>
         <source>Hide grammar errors in non-text environments</source>
         <translation>Kuzhat ar fazioù yezhadur e-barzh an endroioù all evit an destenn</translation>
@@ -1493,24 +1646,14 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
         <translation>Dilemel ar spasoù fin da vare an enrolladur</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="1651"/>
-        <source>Show Line Numbers:</source>
-        <translation>Diskouez niveroù al linennoù:</translation>
+        <location filename="../src/configdialog.ui" line="1999"/>
+        <source>Automatically load included files</source>
+        <translation>Em-gargañ ar restroù enklozet</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="1659"/>
-        <source>No Line Numbers</source>
-        <translation>Niver linenn ebet</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="1664"/>
-        <source>All Line Numbers</source>
-        <translation>Holl an niveroù linennoù</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="1669"/>
-        <source>Only Important Line Numbers</source>
-        <translation>An niveroù linennoù a-bouez hepken</translation>
+        <location filename="../src/configdialog.ui" line="2009"/>
+        <source>Cache documents for faster reopening</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2092"/>
@@ -1568,9 +1711,59 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
         <translation>Opsionoù ispisial</translation>
     </message>
     <message>
+        <location filename="../src/configdialog.ui" line="2226"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This uses QSaveFile to prevent losing existing data if the writing operation fails. As a drawback, the current user becomes the owner of the file and extended file attributes are lost. Also, there appear to be problems of this method with dropbox folders.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;An dra-se a implij QSaveFile evit tremen e-bioù d&apos;ar c&apos;holl roadennoù a zo anezho, ma c&apos;hwit an oberiadenn skrivadur. Evel ur chastre, an implijer red a zeu da vezañ perc&apos;henn war ar restr hag ar perzhioù restroù astennet a zo kollet. Ouzhpenn da-se, diskouez a ra kaout kudennoù hentennoù gant teuliadoù dropbox.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2229"/>
+        <source>Safe writing of files</source>
+        <translation>Skritur suraet ar restroù</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2236"/>
+        <source>Show preview as tooltip on formulas in editor</source>
+        <translation>Diskouez ar rakwel dindan stumm a lagadennoù-titouriñ war ar formulennoù e-barzh an aozer</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2243"/>
+        <source>Show image tooltip on image files</source>
+        <translation>Diskouez al lagadenn-ditouriñ ar skeudenn war ar restroù skeudenn</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2250"/>
+        <source>Smooth Scrolling</source>
+        <translation>Dibuniñ flour</translation>
+    </message>
+    <message>
         <location filename="../src/configdialog.ui" line="2257"/>
         <source>Show log markers when clicking log entry</source>
         <translation>Diskouez ar merkerioù renabl pa gliker war enmont ar renabl</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2264"/>
+        <source>Overwrite Opening Bracket Followed by a Placeholder</source>
+        <translation>Flastrañ an danevell digeriñ dindan ur spas miret</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2276"/>
+        <source>Silently reload saved files on external changes (discards undo/redo stack)</source>
+        <translation>Adkargadur didrouz ar restroù enrollet war cheñchamantoù diavaez (nullañ a ra berniad nulladurioù/adoberioù)</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2285"/>
+        <source>Monitor open files for external changes</source>
+        <translation>Evezhiañ ar restroù digoret rak ar cheñchamantoù diavaez</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2292"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;External programs (such as Zotero) can push citations into texstudio by calling: &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;texstudio --insert-cite &amp;quot;citation&amp;quot;&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;If the cursor is not already within an citation command, the &amp;quot;command&amp;quot; given here is used as \cite-command.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programoù diavaez (evel da skouer Zotero) a c&apos;hall bountañ ar menegoù e-barzh texstudio en ur c&apos;hervel: &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;texstudio --insert-cite &amp;quot;citation&amp;quot;&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Ma ne vez ket ar reti e-barzh un urzhiad menegoù, an &amp;quot;urzhiad&amp;quot; roet amañ a vez implijet evel \cite-command.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2295"/>
+        <source>Latex Command for pushed citations:</source>
+        <translation>Urzhiad Latex evit ar menegoù bountet:</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2303"/>
@@ -1581,16 +1774,6 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
         <location filename="../src/configdialog.ui" line="2308"/>
         <source>Create Dedicated Submenu</source>
         <translation>Krouiñ un is-teuliad gouestlet</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2528"/>
-        <source>Spellchecking via context menu:</source>
-        <translation>Difaziañ reizhskrivadurel dre al lañser kemperzhel:</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2463"/>
-        <source>Default Log Encoding</source>
-        <translation>Kodañ renabl dre ziouer</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2322"/>
@@ -1623,24 +1806,16 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
         <translation>60 munutennn</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2535"/>
-        <source>Auto Complete Parentheses</source>
-        <translation>Em-glokaat ar c&apos;hromelloù</translation>
+        <location filename="../src/configdialog.ui" line="2355"/>
+        <source>When using unicode characters in the source code, LaTeX still has
+to render the characters. Since unicode is not natively supported by LaTeX, you have to include appropriate packages for unicode characters in your document.</source>
+        <translation>Pa implijer arouezioù unikod e-barzh ar c&apos;hod mammenn, LaTeX en deus da
+da rentañ an arouezioù. Dre ma ne gemer ket e kont LaTeX an unikod en un doare genidik, ret e vo deoc&apos;h ebarzhañ ar pakadurioù dereat evit kaout arouezioù unikod e-barzh ho teul.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2250"/>
-        <source>Smooth Scrolling</source>
-        <translation>Dibuniñ flour</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2373"/>
-        <source>Mouse Wheel Zoom</source>
-        <translation>Rodellig zoum al logodenn</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2470"/>
-        <source>Auto Save All Files:</source>
-        <translation>Em-enrolladur an holl restroù:</translation>
+        <location filename="../src/configdialog.ui" line="2359"/>
+        <source>Insert Symbol as Unicode</source>
+        <translation>Enlakaat un arouez evel unikod</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2366"/>
@@ -1648,19 +1823,34 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
         <translation>Pakadurezh linenn:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2549"/>
-        <source>Double-Click Selection: Include Leading Backslash</source>
-        <translation>Diuzañ gant klik-doubl: enkorfañ ur varrenn a-viziez eilpennet</translation>
+        <location filename="../src/configdialog.ui" line="2373"/>
+        <source>Mouse Wheel Zoom</source>
+        <translation>Rodellig zoum al logodenn</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2276"/>
-        <source>Silently reload saved files on external changes (discards undo/redo stack)</source>
-        <translation>Adkargadur didrouz ar restroù enrollet war cheñchamantoù diavaez (nullañ a ra berniad nulladurioù/adoberioù)</translation>
+        <location filename="../src/configdialog.ui" line="2380"/>
+        <source>This does only have an effect if the width of the document is limited by soft or hard line wrapping.</source>
+        <translation>An dra-se &apos;zo un efed gantañ hepken ma vez bevennet ledander an teuliadoù gant ul linenn eeun pe ul linenn gallet.</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2383"/>
+        <source>Center Document in Editor</source>
+        <translation>Kreizañ teuliad en Aozer</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2393"/>
+        <source>Triple-Click Selection:</source>
+        <translation>Diuzañ tri-c&apos;hlik</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2403"/>
         <source>Show help on commands in internal pdf viewer (texdoc)</source>
         <translation>Diskouez ar skoazell war an urzhiadoù e-barzh al lenner pdf diabarzh (texdoc)</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2410"/>
+        <source>Vertical Overscroll (Scroll below end of file)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2418"/>
@@ -1688,24 +1878,9 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
         <translation>Diuzañ al linenn</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2285"/>
-        <source>Monitor open files for external changes</source>
-        <translation>Evezhiañ ar restroù digoret rak ar cheñchamantoù diavaez</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2393"/>
-        <source>Triple-Click Selection:</source>
-        <translation>Diuzañ tri-c&apos;hlik</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2226"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This uses QSaveFile to prevent losing existing data if the writing operation fails. As a drawback, the current user becomes the owner of the file and extended file attributes are lost. Also, there appear to be problems of this method with dropbox folders.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;An dra-se a implij QSaveFile evit tremen e-bioù d&apos;ar c&apos;holl roadennoù a zo anezho, ma c&apos;hwit an oberiadenn skrivadur. Evel ur chastre, an implijer red a zeu da vezañ perc&apos;henn war ar restr hag ar perzhioù restroù astennet a zo kollet. Ouzhpenn da-se, diskouez a ra kaout kudennoù hentennoù gant teuliadoù dropbox.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2229"/>
-        <source>Safe writing of files</source>
-        <translation>Skritur suraet ar restroù</translation>
+        <location filename="../src/configdialog.ui" line="2446"/>
+        <source>Maximal Characters:</source>
+        <translation>Arouezioù maksimom</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2456"/>
@@ -1713,24 +1888,14 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
         <translation>Flastrañ ar wareg klozañ goude ur spas miret</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2380"/>
-        <source>This does only have an effect if the width of the document is limited by soft or hard line wrapping.</source>
-        <translation>An dra-se &apos;zo un efed gantañ hepken ma vez bevennet ledander an teuliadoù gant ul linenn eeun pe ul linenn gallet.</translation>
+        <location filename="../src/configdialog.ui" line="2463"/>
+        <source>Default Log Encoding</source>
+        <translation>Kodañ renabl dre ziouer</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2383"/>
-        <source>Center Document in Editor</source>
-        <translation>Kreizañ teuliad en Aozer</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2514"/>
-        <source>Show help as tooltip on text in editor</source>
-        <translation>Diskouez ar skoazell evel lagadenn-titouriñ war an destenn en aozer</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2446"/>
-        <source>Maximal Characters:</source>
-        <translation>Arouezioù maksimom</translation>
+        <location filename="../src/configdialog.ui" line="2470"/>
+        <source>Auto Save All Files:</source>
+        <translation>Em-enrolladur an holl restroù:</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2491"/>
@@ -1753,16 +1918,9 @@ A-benn neuze e c&apos;hallit diuzañ ur verradenn nevez gant unan eus an doareo�
         <translation>Troc&apos;h linennoù garv goude un niver a arouezioù maksimom</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2355"/>
-        <source>When using unicode characters in the source code, LaTeX still has
-to render the characters. Since unicode is not natively supported by LaTeX, you have to include appropriate packages for unicode characters in your document.</source>
-        <translation>Pa implijer arouezioù unikod e-barzh ar c&apos;hod mammenn, LaTeX en deus da
-da rentañ an arouezioù. Dre ma ne gemer ket e kont LaTeX an unikod en un doare genidik, ret e vo deoc&apos;h ebarzhañ ar pakadurioù dereat evit kaout arouezioù unikod e-barzh ho teul.</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2359"/>
-        <source>Insert Symbol as Unicode</source>
-        <translation>Enlakaat un arouez evel unikod</translation>
+        <location filename="../src/configdialog.ui" line="2514"/>
+        <source>Show help as tooltip on text in editor</source>
+        <translation>Diskouez ar skoazell evel lagadenn-titouriñ war an destenn en aozer</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2521"/>
@@ -1770,14 +1928,14 @@ da rentañ an arouezioù. Dre ma ne gemer ket e kont LaTeX an unikod en un doare
         <translation>Mont d&apos;ar fazi pa vez diskouezet ar renabl</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2243"/>
-        <source>Show image tooltip on image files</source>
-        <translation>Diskouez al lagadenn-ditouriñ ar skeudenn war ar restroù skeudenn</translation>
+        <location filename="../src/configdialog.ui" line="2528"/>
+        <source>Spellchecking via context menu:</source>
+        <translation>Difaziañ reizhskrivadurel dre al lañser kemperzhel:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2264"/>
-        <source>Overwrite Opening Bracket Followed by a Placeholder</source>
-        <translation>Flastrañ an danevell digeriñ dindan ur spas miret</translation>
+        <location filename="../src/configdialog.ui" line="2535"/>
+        <source>Auto Complete Parentheses</source>
+        <translation>Em-glokaat ar c&apos;hromelloù</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2542"/>
@@ -1785,29 +1943,9 @@ da rentañ an arouezioù. Dre ma ne gemer ket e kont LaTeX an unikod en un doare
         <translation>Aotren ar rinklañ-fiñval</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2292"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;External programs (such as Zotero) can push citations into texstudio by calling: &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;texstudio --insert-cite &amp;quot;citation&amp;quot;&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;If the cursor is not already within an citation command, the &amp;quot;command&amp;quot; given here is used as \cite-command.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Programoù diavaez (evel da skouer Zotero) a c&apos;hall bountañ ar menegoù e-barzh texstudio en ur c&apos;hervel: &lt;span style=&quot; font-family:&apos;monospace&apos;;&quot;&gt;texstudio --insert-cite &amp;quot;citation&amp;quot;&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;Ma ne vez ket ar reti e-barzh un urzhiad menegoù, an &amp;quot;urzhiad&amp;quot; roet amañ a vez implijet evel \cite-command.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="1509"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This changes the scaling of the toolbar of the embeded pdf viewer (for high resolution displays).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="1534"/>
-        <source>Embedded PDF Toolbar</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2295"/>
-        <source>Latex Command for pushed citations:</source>
-        <translation>Urzhiad Latex evit ar menegoù bountet:</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2410"/>
-        <source>Vertical Overscroll (Scroll below end of file)</source>
-        <translation type="unfinished"/>
+        <location filename="../src/configdialog.ui" line="2549"/>
+        <source>Double-Click Selection: Include Leading Backslash</source>
+        <translation>Diuzañ gant klik-doubl: enkorfañ ur varrenn a-viziez eilpennet</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2559"/>
@@ -1815,29 +1953,9 @@ da rentañ an arouezioù. Dre ma ne gemer ket e kont LaTeX an unikod en un doare
         <translation>Panell ar framm</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2590"/>
-        <source>Mark structure elements beyond \end{document}</source>
-        <translation>Merkañ elfennoù ar framm a-drek \end{teuliad}</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2597"/>
-        <source>Reference commands in context menu:</source>
-        <translation>Urzhiadoù daveen e-barzh al lañser kemperzhel:</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2637"/>
-        <source>Mark structure elements in appendix</source>
-        <translation>Merkañ elfennoù ar framm e-barzh ar stagadennoù</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2610"/>
-        <source>Regular expression for TODO comment: </source>
-        <translation>Troienn-reoliataet evit an evezhiadenn TODO:</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2617"/>
-        <source>Keep indentation of includes in structure tree</source>
-        <translation>Mirout endantadur an ebarzhadennoù er framm-gwezenn</translation>
+        <location filename="../src/configdialog.ui" line="2565"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global TOC uses different shades of background color to distinguish different files. The color scheme can be changed here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2569"/>
@@ -1860,9 +1978,24 @@ da rentañ an arouezioù. Dre ma ne gemer ket e kont LaTeX an unikod en un doare
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2634"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Elements like &amp;quot;\section&amp;quot; are highlighted with a different background color to show that they will appear as appendix.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <location filename="../src/configdialog.ui" line="2590"/>
+        <source>Mark structure elements beyond \end{document}</source>
+        <translation>Merkañ elfennoù ar framm a-drek \end{teuliad}</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2597"/>
+        <source>Reference commands in context menu:</source>
+        <translation>Urzhiadoù daveen e-barzh al lañser kemperzhel:</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2610"/>
+        <source>Regular expression for TODO comment: </source>
+        <translation>Troienn-reoliataet evit an evezhiadenn TODO:</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2617"/>
+        <source>Keep indentation of includes in structure tree</source>
+        <translation>Mirout endantadur an ebarzhadennoù er framm-gwezenn</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2624"/>
@@ -1870,59 +2003,19 @@ da rentañ an arouezioù. Dre ma ne gemer ket e kont LaTeX an unikod en un doare
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="330"/>
-        <source>Icon Theme:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="338"/>
-        <source>Colibre</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="343"/>
-        <source>Oxygen Modern</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="348"/>
-        <source>Oxygen Classic</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="374"/>
-        <source>Max. Recent Root Documents:</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="437"/>
-        <source>Always Show Structure of Root Document</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="688"/>
-        <source>&lt;i&gt;File selector (Optional. If present include the terminating colon):&lt;/i&gt; If no selector then select root file. &lt;b&gt;c:&lt;/b&gt; select current file, &lt;b&gt;p{ext}:&lt;/b&gt; Find a file with same basename as root file and extension &lt;b&gt;ext&lt;/b&gt;. Search is done in root file directory and additional PDF directories.&lt;br /&gt;&lt;i&gt;Pathname parts:&lt;/i&gt; a combination of &lt;b&gt;a&lt;/b&gt;: absolute path, &lt;b&gt;m&lt;/b&gt;: basefile name without extension,&lt;b&gt;e&lt;/b&gt;: extension, &lt;b&gt;r&lt;/b&gt;: path relative to root, &lt;b&gt;*&lt;/b&gt;: all files matching the following pattern&lt;br/&gt;&lt;i&gt;Terminating chars:&lt;/i&gt;&lt;b&gt;)&lt;/b&gt;: ends selector. The following chars end the selector and have additional meaning&lt;br/&gt;&lt;b&gt;&amp;quot;&lt;/b&gt;: enclose in double-quotes, &lt;b&gt;.&lt;/b&gt; (dot) add a point at the end, (space): add a space at the end&lt;br/&gt;&lt;i&gt;Examples:&lt;/i&gt;&lt;b&gt;?ame&amp;quot;&lt;/b&gt;: complete absolute filename enclosed in double-quotes, &lt;b&gt;?e)&lt;/b&gt; just the extension without leading dot (e.g. tex), &lt;br/&gt;&lt;b&gt;?m&amp;quot;&lt;/b&gt; double-quoted filename without extension (identical to &lt;b&gt;%&lt;/b&gt;), &lt;b&gt;?me&lt;/b&gt; filename with extension (e.g. example.tex), &lt;b&gt;?*.aux&lt;/b&gt;: all .aux files in the current directory</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="1379"/>
-        <source>Note: The change of symbols can be monitored live</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2009"/>
-        <source>Cache documents for faster reopening</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="2565"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The global TOC uses different shades of background color to distinguish different files. The color scheme can be changed here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
         <location filename="../src/configdialog.ui" line="2627"/>
         <source>Scroll to current cursor position</source>
         <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2634"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Elements like &amp;quot;\section&amp;quot; are highlighted with a different background color to show that they will appear as appendix.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="2637"/>
+        <source>Mark structure elements in appendix</source>
+        <translation>Merkañ elfennoù ar framm e-barzh ar stagadennoù</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="2644"/>
@@ -2091,7 +2184,7 @@ da rentañ an arouezioù. Dre ma ne gemer ket e kont LaTeX an unikod en un doare
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="3019"/>
-        <location filename="../src/configdialog.cpp" line="541"/>
+        <location filename="../src/configdialog.cpp" line="544"/>
         <source>Completion</source>
         <translation>Klokter</translation>
     </message>
@@ -2283,7 +2376,7 @@ anezho amañ.</translation>
     <message>
         <location filename="../src/configdialog.ui" line="3446"/>
         <source>TextLabel</source>
-        <translation>Testennlabel</translation>
+        <translation>Label-testenn</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="3459"/>
@@ -2357,355 +2450,431 @@ anezho amañ.</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="3589"/>
+        <source>Store the conversation with AI provider on disk to allow later retrieval</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3592"/>
+        <source>AI chat assistant</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3637"/>
+        <source>open-mistral-7b</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3642"/>
+        <source>open-mixtral-8x7b</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3647"/>
+        <source>mistral-small-latest</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3652"/>
+        <source>mistral-medium-latest</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3657"/>
+        <source>mistral-large-latest</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3616"/>
+        <source>Mistral AI</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3621"/>
+        <source>OpenAI</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3608"/>
+        <source>AI provider:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3665"/>
+        <source>Preferred model:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3598"/>
+        <source>API key:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3629"/>
+        <source>Record Conversation</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3672"/>
+        <source>Retrieve list of models</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="3682"/>
         <source>LanguageTool</source>
         <translation>LanguageTool</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3595"/>
+        <location filename="../src/configdialog.ui" line="3688"/>
         <source>Path containing the LanguageTool java archive.</source>
         <translation>Hent a endalc&apos;h diell java LanguageTool.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3602"/>
+        <location filename="../src/configdialog.ui" line="3695"/>
         <source>LT Path:</source>
         <translation>Hent LT:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3609"/>
+        <location filename="../src/configdialog.ui" line="3702"/>
         <source>Start LanguageTool if not running</source>
         <translation>Enaouiñ LanguageTool ma ne &apos;z a ket en-dro</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3616"/>
+        <location filename="../src/configdialog.ui" line="3709"/>
         <source>Server URL: </source>
         <translation>URL ar servijer:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3623"/>
+        <location filename="../src/configdialog.ui" line="3716"/>
         <source>Comma separated list of LanguageTool rules which will not be highlighted as errors.</source>
         <translation>Listenn reolennoù LanguageTool skejet gant virgulennoù na vo ket usskedet evel fazioù.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3647"/>
+        <location filename="../src/configdialog.ui" line="3740"/>
         <source>Ignored Rules:</source>
         <translation>Fazioù graet van outo</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3654"/>
-        <location filename="../src/configdialog.ui" line="3664"/>
-        <location filename="../src/configdialog.ui" line="3674"/>
-        <location filename="../src/configdialog.ui" line="3704"/>
+        <location filename="../src/configdialog.ui" line="3747"/>
+        <location filename="../src/configdialog.ui" line="3757"/>
+        <location filename="../src/configdialog.ui" line="3767"/>
+        <location filename="../src/configdialog.ui" line="3797"/>
         <source>Comma separated list of LanguageTool rules which will highlighted in a special format.</source>
         <translation>Listenn reolennoù LanguageTool skejet gant virgulennoù hag a vo usskedet en ur furmad ispisial.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3684"/>
+        <location filename="../src/configdialog.ui" line="3777"/>
         <source>Special Rules 3:</source>
         <translation>Reolennoù ispisial 3:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3694"/>
+        <location filename="../src/configdialog.ui" line="3787"/>
         <source>Special Rules 2:</source>
         <translation>Reolennoù ispisial 2:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3714"/>
+        <location filename="../src/configdialog.ui" line="3807"/>
         <source>Special Rules 1:</source>
         <translation>Reolennoù ispisial 1:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3731"/>
+        <location filename="../src/configdialog.ui" line="3824"/>
         <source>Special Rules 4:</source>
         <translation>Reolennoù ispisial 4:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3741"/>
+        <location filename="../src/configdialog.ui" line="3834"/>
         <source>Will be inferred from the language of the spell checker used in the document.</source>
         <translation>Distaolet e vo diwar yezh an difazier reizhskrivañ implijet e-barzh an teuliad.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3748"/>
+        <location filename="../src/configdialog.ui" line="3841"/>
         <source>Java executable, used to start LanguageTool, if it is not running.</source>
         <translation>Sevenner Java, implijet evit loc&apos;hañ LanguageTool, ma ne &apos;z a ket en-dro.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3755"/>
+        <location filename="../src/configdialog.ui" line="3848"/>
         <source>Java:</source>
         <translation>Java:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3762"/>
-        <location filename="../src/configdialog.ui" line="3810"/>
+        <location filename="../src/configdialog.ui" line="3855"/>
+        <location filename="../src/configdialog.ui" line="3903"/>
         <source>Arguments passed when starting LanguageTool. This option does only have an effect if LanguageTool is started from TeXstudio (i.e. not for an already running server).</source>
         <translation>Arguzennoù tremenet da vare loc&apos;hadur LanguageTool. An dibarzh-mañ n&apos;eus efed ebet ma vez loc&apos;het LanguageTool adalek TeXstudio (d.l.e neket evit ur servijer hag az a en-dro).</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3765"/>
+        <location filename="../src/configdialog.ui" line="3858"/>
         <source>LT Arguments:</source>
         <translation>Arguzennoù LT:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3789"/>
-        <location filename="../src/configdialog.ui" line="3817"/>
+        <location filename="../src/configdialog.ui" line="3882"/>
+        <location filename="../src/configdialog.ui" line="3910"/>
         <source>Restore Default</source>
         <translation>Adlakaat dre-ziouer</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3803"/>
+        <location filename="../src/configdialog.ui" line="3896"/>
         <source>Url to connect to LanguageTool. </source>
         <translation>Url da gevreañ ouzh LanguageTool.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3900"/>
+        <location filename="../src/configdialog.ui" line="3993"/>
         <source>Command:</source>
         <translation>Urzhiad:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3911"/>
+        <location filename="../src/configdialog.ui" line="4004"/>
         <source>Preview with dvipng</source>
         <translation>Rakwel gant dvipng</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3916"/>
+        <location filename="../src/configdialog.ui" line="4009"/>
         <source>Preview with dvipng --follow (parallel)</source>
         <translation>Rakwel gant dvipng --heuliañ (kenstur)</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3921"/>
+        <location filename="../src/configdialog.ui" line="4014"/>
         <source>Preview with dvips/ghostscript</source>
         <translation>Rakwel gant dvips/ghostscript</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3926"/>
+        <location filename="../src/configdialog.ui" line="4019"/>
         <source>Preview with pdflatex</source>
         <translation>Rakwel gant pdflatex</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3931"/>
+        <location filename="../src/configdialog.ui" line="4024"/>
         <source>Preview with lualatex</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3939"/>
+        <location filename="../src/configdialog.ui" line="4032"/>
         <source>Display Mode:</source>
         <translation>Mod diskouez:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3952"/>
+        <location filename="../src/configdialog.ui" line="4042"/>
         <source>When the mode is changed, the preview on formulas is displayed accordingly (but for Inline it&apos;s still a tooltip).</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3956"/>
+        <location filename="../src/configdialog.ui" line="4049"/>
         <source>Show preview as tooltip if panel is hidden</source>
         <translation>Diskouez ar rakwel evel ul lagadenn ditouriñ ma vez kuzhet ar banell</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3961"/>
+        <location filename="../src/configdialog.ui" line="4054"/>
         <source>Always show preview in preview panel</source>
         <translation>Diskouez ar rakwel e-barzh panell ar rakweloù dalc&apos;hmat</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3966"/>
+        <location filename="../src/configdialog.ui" line="4059"/>
         <source>Always show preview as tool tip</source>
         <translation>Diskouez ar rakwel evel ul lagadenn-ditouriñ dalc&apos;hmat</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3971"/>
+        <location filename="../src/configdialog.ui" line="4064"/>
         <source>Always show both</source>
         <translation>Diskouez an daou atav</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3976"/>
+        <location filename="../src/configdialog.ui" line="4069"/>
         <source>Inline</source>
         <translation>Enlinenn</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3981"/>
+        <location filename="../src/configdialog.ui" line="4074"/>
         <source>Show in embedded viewer</source>
         <extracomment>Only available if pdflatex is used for compilation</extracomment>
         <translation>Diskouez e-barzh al lenner ambarket</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3989"/>
+        <location filename="../src/configdialog.ui" line="4082"/>
         <source>Update the preview on text change</source>
         <translation>Hizivaat ar rakwel d&apos;ar cheñchamant testenn</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3992"/>
+        <location filename="../src/configdialog.ui" line="4085"/>
         <source>Auto Update:</source>
         <translation>Em-hizivaat:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4005"/>
+        <location filename="../src/configdialog.ui" line="4098"/>
         <source>Previously previewed text</source>
         <translation>Testenn rakwelet kent</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4013"/>
+        <location filename="../src/configdialog.ui" line="4106"/>
         <source>Auto Update Delay:</source>
         <translation>Em-hizivaat an amzer-c&apos;hortoz:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4023"/>
+        <location filename="../src/configdialog.ui" line="4116"/>
         <source> ms</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4039"/>
+        <location filename="../src/configdialog.ui" line="4132"/>
         <source>Replace beamer class by article</source>
         <translation>Erlec&apos;hiañ klas ar banner dre bennad</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4052"/>
+        <location filename="../src/configdialog.ui" line="4145"/>
         <source>Precompile Preamble</source>
         <translation>Rak-ober ar rak-kempunañ</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="2236"/>
-        <source>Show preview as tooltip on formulas in editor</source>
-        <translation>Diskouez ar rakwel dindan stumm a lagadennoù-titouriñ war ar formulennoù e-barzh an aozer</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4068"/>
-        <location filename="../src/configdialog.ui" line="4191"/>
+        <location filename="../src/configdialog.ui" line="4161"/>
+        <location filename="../src/configdialog.ui" line="4284"/>
         <source>Scaling:</source>
         <translation>Skeulaouiñ:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4163"/>
-        <location filename="../src/configdialog.cpp" line="544"/>
+        <location filename="../src/configdialog.ui" line="4256"/>
+        <location filename="../src/configdialog.cpp" line="547"/>
         <source>Internal PDF Viewer</source>
         <translation>Lenner PDF diabarzh</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4314"/>
-        <source>Specify as hexadecimal RGBA value. Note: The transparency is required because the highlighting is drawn on top of the text due to technical limitations.</source>
-        <translation>Spisait evel talvoudegezh RGBA c&apos;hwec&apos;hdekvedennel. Notenn: an dreuzwelusted a zo rekiset, rak an usskediñ a zo treset e-laez an destenn abalamour da vevennoù teknikel.</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4317"/>
-        <source>\#HHHHHHHH;_</source>
-        <translation>\#HHHHHHHH;_</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4331"/>
-        <source>Rectangle</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4399"/>
-        <source>Shadow</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4422"/>
-        <source>Original Size</source>
-        <translation>Ment orin</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4427"/>
-        <source>Fit to Window Width</source>
-        <translation>Keidañ da ledanded ar prenestr</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4432"/>
-        <source>Fit to Window Size</source>
-        <translation>Keidañ da ment ar prenestr</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4437"/>
-        <source>Scaled Size</source>
-        <translation>Ment ar skeul</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4442"/>
-        <source>Fit to Text Width</source>
-        <translation>Keidañ da ledanded an destenn</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4247"/>
-        <source>Infinite</source>
-        <translation>Difin</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4532"/>
-        <source>Scale Option:</source>
-        <translation>Dibarzhioù ar skeul:</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4569"/>
-        <source>Magnifier Size:</source>
-        <translation>Ment ar werenn-greskiñ:</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4266"/>
-        <source> dpi</source>
-        <translation> dpi</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4336"/>
-        <source>Circle</source>
-        <translation>Kelc&apos;h</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4304"/>
-        <source>Highlight Duration</source>
-        <translation>Usskediñ ar badelezh</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4522"/>
-        <source>Disable horizontal scrolling for &quot;Fit to Text Width&quot;</source>
-        <translation>Lazhañ an dibunañ a-blaen evit &quot;Keidañ da Ledanded an Destenn&quot;</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4392"/>
-        <source>Border</source>
-        <translation>Bevenn</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4539"/>
-        <source>Magnifier Shape:</source>
-        <translation>Stumm ar werenn-greskiñ:</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4576"/>
-        <source>Auto-hide Toolbars in Embedded Mode</source>
-        <translation>Em-guzhaat ar barrennoù-ostilhoù er mod ambarket</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4357"/>
-        <source>Highlight Color</source>
-        <translation>Liv an usskediñ</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4276"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines how a PDF is loaded:&lt;/p&gt;&lt;p&gt;&lt;b&gt;Buffered:&lt;/b&gt; Load the file into a buffer and check for completeness. Then pass the data on to poppler. This was primarily introduced as a speedup for old poppler versions (&amp;lt;0.24) which were not thread-safe. It has been reported that poppler may crash when loading large buffers. Therefore this option is deprecated.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Direct:&lt;/b&gt; Use native poppler file loading. This is fastest, but does not allow checking for incomplete files.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Hybrid (recommended):&lt;/b&gt; First load file into buffer and check for completeness. Use that buffer for small documents (&amp;lt; 50MB). Large files are loaded using native poppler file loading. This combines file-checking while preventing problems with large PDF files.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Termenit penaos e vez karget PDF:&lt;/p&gt;&lt;p&gt;&lt;b&gt;Skurzeret:&lt;/b&gt; Kargañ ar restr e-barzh ur skurzer ha gwiriañ evit ar glokted. Tremenit neuze ar roadennoù da boppliñ. An dra-se a zo bet ebarzhet evel ur fonnusaer evit ar stummoù poppler kozh (&amp;lt;0.24) ha na vezont ket orjal-sur. Poppler a c&apos;hall bezañ stanket da vare kargadur ar skurzerioù ledan. Dre-se, an dibarzhioù-se a vez diamzeriet.&lt;/p&gt;&lt;p&gt;&lt;b&gt;War-eeun:&lt;/b&gt; Implijit kargadur ar restr poppler genedek. An dra-se ez eo ar fonnusañ, met ne ro ket an tu da glask war-lerc&apos;h ar restroù diglok.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Hiron (aliet):&lt;/b&gt; Krogit da gargañ ar restr e-barzh ar skurzer ha gwiriekait ar glokted. Implijit ar skurzer evit ar restroù teuliadoù (&amp;lt; 50MB). Ar restroù bras a vez karget en ur implij restroù poppler genetek. An dra-se a endalc&apos;h gwiriekadenn ar restroù en ur dremen ar c&apos;hudennoù liammet ouzh ar restroù PDF turum.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4286"/>
-        <source>Buffered</source>
-        <translation>Skurzeret</translation>
-    </message>
-    <message>
         <location filename="../src/configdialog.ui" line="4291"/>
-        <source>Direct</source>
-        <translation>War-eeun</translation>
+        <source>Load Strategy:</source>
+        <translation>Kargañ ur strategiezh:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4296"/>
-        <source>Hybrid</source>
-        <translation>Hiron</translation>
+        <location filename="../src/configdialog.ui" line="4301"/>
+        <source>Auto-recompile document on changes</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4215"/>
+        <location filename="../src/configdialog.ui" line="4308"/>
         <source>Cache Size:</source>
         <translation>Ment ar c&apos;hrubuilh:</translation>
     </message>
     <message>
+        <location filename="../src/configdialog.ui" line="4318"/>
+        <location filename="../src/configdialog.ui" line="4683"/>
+        <source> px</source>
+        <translation> px</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4340"/>
+        <source>Infinite</source>
+        <translation>Difin</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4359"/>
+        <source> dpi</source>
+        <translation> dpi</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4369"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Defines how a PDF is loaded:&lt;/p&gt;&lt;p&gt;&lt;b&gt;Buffered:&lt;/b&gt; Load the file into a buffer and check for completeness. Then pass the data on to poppler. This was primarily introduced as a speedup for old poppler versions (&amp;lt;0.24) which were not thread-safe. It has been reported that poppler may crash when loading large buffers. Therefore this option is deprecated.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Direct:&lt;/b&gt; Use native poppler file loading. This is fastest, but does not allow checking for incomplete files.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Hybrid (recommended):&lt;/b&gt; First load file into buffer and check for completeness. Use that buffer for small documents (&amp;lt; 50MB). Large files are loaded using native poppler file loading. This combines file-checking while preventing problems with large PDF files.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Termenit penaos e vez karget PDF:&lt;/p&gt;&lt;p&gt;&lt;b&gt;Skurzeret:&lt;/b&gt; Kargañ ar restr e-barzh ur skurzer ha gwiriañ evit ar glokted. Tremenit neuze ar roadennoù da boppliñ. An dra-se a zo bet ebarzhet evel ur fonnusaer evit ar stummoù poppler kozh (&amp;lt;0.24) ha na vezont ket orjal-sur. Poppler a c&apos;hall bezañ stanket da vare kargadur ar skurzerioù ledan. Dre-se, an dibarzhioù-se a vez diamzeriet.&lt;/p&gt;&lt;p&gt;&lt;b&gt;War-eeun:&lt;/b&gt; Implijit kargadur ar restr poppler genedek. An dra-se ez eo ar fonnusañ, met ne ro ket an tu da glask war-lerc&apos;h ar restroù diglok.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Hiron (aliet):&lt;/b&gt; Krogit da gargañ ar restr e-barzh ar skurzer ha gwiriekait ar glokted. Implijit ar skurzer evit ar restroù teuliadoù (&amp;lt; 50MB). Ar restroù bras a vez karget en ur implij restroù poppler genetek. An dra-se a endalc&apos;h gwiriekadenn ar restroù en ur dremen ar c&apos;hudennoù liammet ouzh ar restroù PDF turum.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4379"/>
+        <source>Buffered</source>
+        <translation>Skurzeret</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4384"/>
+        <source>Direct</source>
+        <translation>War-eeun</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4389"/>
+        <source>Hybrid</source>
+        <translation>Hiron</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4397"/>
+        <source>Highlight Duration</source>
+        <translation>Usskediñ ar badelezh</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4407"/>
+        <source>Specify as hexadecimal RGBA value. Note: The transparency is required because the highlighting is drawn on top of the text due to technical limitations.</source>
+        <translation>Spisait evel talvoudegezh RGBA c&apos;hwec&apos;hdekvedennel. Notenn: an dreuzwelusted a zo rekiset, rak an usskediñ a zo treset e-laez an destenn abalamour da vevennoù teknikel.</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4410"/>
+        <source>\#HHHHHHHH;_</source>
+        <translation>\#HHHHHHHH;_</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4424"/>
+        <source>Rectangle</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4429"/>
+        <source>Circle</source>
+        <translation>Kelc&apos;h</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4450"/>
+        <source>Highlight Color</source>
+        <translation>Liv an usskediñ</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4460"/>
+        <source>Default background color. Specify as hexadecimal RGB value. Note: This will only affect PDFs loaded after the change of the option. The paper color of already open PDFs is not modified.</source>
+        <translation>Liv drekleur dre-ziouer. Spisait evel talvoudegezh RVB c&apos;hwec&apos;hdekvedennel. Notenn: An dra-se a vo un efed war ar PDFoù karget goude kargadur an dibarzh. Liv paper ar PDFoù digor er mare-mañ na vezont ket kemmet.</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4485"/>
+        <source>Border</source>
+        <translation>Bevenn</translation>
+    </message>
+    <message>
         <location filename="../src/configdialog.ui" line="4492"/>
-        <location filename="../src/configdialog.ui" line="4546"/>
+        <source>Shadow</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4515"/>
+        <source>Original Size</source>
+        <translation>Ment orin</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4520"/>
+        <source>Fit to Window Width</source>
+        <translation>Keidañ da ledanded ar prenestr</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4525"/>
+        <source>Fit to Window Size</source>
+        <translation>Keidañ da ment ar prenestr</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4530"/>
+        <source>Scaled Size</source>
+        <translation>Ment ar skeul</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4535"/>
+        <source>Fit to Text Width</source>
+        <translation>Keidañ da ledanded an destenn</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4543"/>
+        <source> MB</source>
+        <translation> MB</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4565"/>
+        <source>Synchronized Files Types:</source>
+        <translation>Doareoù restr sinkronelaet:</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4575"/>
+        <source>Paper Color</source>
+        <translation>Liv ar paper</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4585"/>
+        <location filename="../src/configdialog.ui" line="4639"/>
         <source>The Render Backend used by the PDF library poppler.
 'Splash' is the default and suitable for most situations.
 If there are rendering issues, you may try the alternative 'Arthur' backend.
@@ -2716,129 +2885,133 @@ Ma &apos;z eus kudennoù rentaoù, gellout a rit klask ar backend eilpennet &apo
 Notenn: Cheñch an arventenn-mañ a vo un efed war an teuliadoù digoret war-lerc&apos;h.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4225"/>
-        <location filename="../src/configdialog.ui" line="4590"/>
-        <source> px</source>
-        <translation> px</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4472"/>
-        <source>Synchronized Files Types:</source>
-        <translation>Doareoù restr sinkronelaet:</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4498"/>
+        <location filename="../src/configdialog.ui" line="4591"/>
         <source>Render Backend:</source>
         <translation>Rentañ ar backend:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4198"/>
-        <source>Load Strategy:</source>
-        <translation>Kargañ ur strategiezh:</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4450"/>
-        <source> MB</source>
-        <translation> MB</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4515"/>
-        <source>Note: Windowed/embedded mode is configured at Build -&gt; PDF Viewer</source>
-        <translation>Notenn: Mod prenestret/entoueziet a zo kefluniet e Sevel -&gt; Lenner PDFoù</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4482"/>
-        <source>Paper Color</source>
-        <translation>Liv ar paper</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4367"/>
-        <source>Default background color. Specify as hexadecimal RGB value. Note: This will only affect PDFs loaded after the change of the option. The paper color of already open PDFs is not modified.</source>
-        <translation>Liv drekleur dre-ziouer. Spisait evel talvoudegezh RVB c&apos;hwec&apos;hdekvedennel. Notenn: An dra-se a vo un efed war ar PDFoù karget goude kargadur an dibarzh. Liv paper ar PDFoù digor er mare-mañ na vezont ket kemmet.</translation>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4208"/>
-        <source>Auto-recompile document on changes</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/configdialog.ui" line="4508"/>
+        <location filename="../src/configdialog.ui" line="4601"/>
         <source>Presentation Laser Pointer Size:</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4583"/>
+        <location filename="../src/configdialog.ui" line="4608"/>
+        <source>Note: Windowed/embedded mode is configured at Build -&gt; PDF Viewer</source>
+        <translation>Notenn: Mod prenestret/entoueziet a zo kefluniet e Sevel -&gt; Lenner PDFoù</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4615"/>
+        <source>Disable horizontal scrolling for &quot;Fit to Text Width&quot;</source>
+        <translation>Lazhañ an dibunañ a-blaen evit &quot;Keidañ da Ledanded an Destenn&quot;</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4625"/>
+        <source>Scale Option:</source>
+        <translation>Dibarzhioù ar skeul:</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4632"/>
+        <source>Magnifier Shape:</source>
+        <translation>Stumm ar werenn-greskiñ:</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4662"/>
+        <source>Magnifier Size:</source>
+        <translation>Ment ar werenn-greskiñ:</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4669"/>
+        <source>Auto-hide Toolbars in Embedded Mode</source>
+        <translation>Em-guzhaat ar barrennoù-ostilhoù er mod ambarket</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="4676"/>
         <source>Presentation Laser Pointer Color:</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4673"/>
+        <location filename="../src/configdialog.ui" line="4766"/>
         <source>Use SVN</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4678"/>
+        <location filename="../src/configdialog.ui" line="4771"/>
         <source>Use GIT</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4686"/>
+        <location filename="../src/configdialog.ui" line="4779"/>
         <source>Select how txs checks in saved files</source>
         <translation>Diuzit penaos e rank gwiriañ txs ar restroù enrollet</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4690"/>
+        <location filename="../src/configdialog.ui" line="4783"/>
         <source>No automatic check-in after save</source>
         <translation>Em-enrolladur ebet goude an enrolladur</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4695"/>
+        <location filename="../src/configdialog.ui" line="4788"/>
         <source>Check-in after File/Save only</source>
         <translation>Enrolladur goude Restr/Enrolladur hepken</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4700"/>
+        <location filename="../src/configdialog.ui" line="4793"/>
         <source>Check-in after all save operations, i.e. also before compiles.</source>
         <translation>Enrolladur goude an holl oberiadurioù enrollañ, d.l.e a-raok ar c&apos;hen-dastumad.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4708"/>
+        <location filename="../src/configdialog.ui" line="4801"/>
         <source>Use SVN/GIT revisions to undo before last saved version</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4715"/>
+        <location filename="../src/configdialog.ui" line="4808"/>
         <source>on svn add executes svn propset svn:keywords &quot;Date Author Revision HeadURL&quot;</source>
         <translation>war svn ouzhpennit sevenniñ svn propset svn: gerioù-alc&apos;hwez &quot;Deiziad aozer Adweladur TalbennURL&quot;</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4718"/>
+        <location filename="../src/configdialog.ui" line="4811"/>
         <source>Substitute Keywords with Properties (on svn add)</source>
         <translation>Gerioù-alc&apos;hwez erlec&apos;hiañ gant Dibarzhioù (war svn ouzhpennañ)</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4727"/>
+        <location filename="../src/configdialog.ui" line="4820"/>
         <source>SVN Directory Search Depth: </source>
         <translation>Donnder enklaskoù e-barzh ar c&apos;havlec&apos;h SVN:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4785"/>
-        <location filename="../src/configdialog.cpp" line="547"/>
+        <location filename="../src/configdialog.ui" line="4878"/>
+        <location filename="../src/configdialog.cpp" line="550"/>
         <source>Internal Terminal</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4836"/>
+        <location filename="../src/configdialog.ui" line="4929"/>
         <source>Shell:</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="202"/>
+        <location filename="../src/configdialog.ui" line="4985"/>
+        <source>Show Advanced Options</source>
+        <translation>Diskouez an dibarzhioù araokaet</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="5011"/>
+        <source>OK</source>
+        <translation>Mat eo</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.ui" line="5021"/>
+        <source>Cancel</source>
+        <translation>Nullañ</translation>
+    </message>
+    <message>
+        <location filename="../src/configdialog.cpp" line="205"/>
         <source>The shortcut you entered is invalid.</source>
         <translation>Ar verradenn ho peus ebarzhet neket talvoudus.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="208"/>
+        <location filename="../src/configdialog.cpp" line="211"/>
         <source>The shortcut you entered is a standard character key.
 You will not be able to type this character. Do you wish
 to set the key anyway?</source>
@@ -2847,256 +3020,256 @@ N&apos;oc&apos;h ket aotreet da skrivañ an arouezenn-mañ. Ha fellout a ra deoc
 termeniñ an alc&apos;hwez n&apos;eus forzh penaos?</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="249"/>
+        <location filename="../src/configdialog.cpp" line="252"/>
         <source>The shortcut &lt;%1&gt; is already assigned to the command:</source>
         <translation>Ar verradenn &lt;%1&gt; a zo afektet d&apos;an urzhiad:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="249"/>
+        <location filename="../src/configdialog.cpp" line="252"/>
         <source>Do you wish to remove the old assignment and bind the shortcut to the new command?</source>
         <translation>Ha fellout a ra deoc&apos;h dilemel an asinadur kozh ha liammañ ar verradenn d&apos;an urzhiad nevez?</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="309"/>
+        <location filename="../src/configdialog.cpp" line="312"/>
         <source>Do you really want to delete this row?</source>
         <translation>Ha fellout a ra deoc&apos;h dilemel da vat al linenn-mañ?</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="403"/>
+        <location filename="../src/configdialog.cpp" line="406"/>
         <source>Screen Resolution (System: %1 dpi):</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="482"/>
+        <location filename="../src/configdialog.cpp" line="485"/>
         <source>Download additional dictionaries from %1 or %2</source>
         <translation>Pellgargañ geriadurioù ouzhpenn adalek %1 pe %2</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="494"/>
+        <location filename="../src/configdialog.cpp" line="497"/>
         <source>Here the syntax highlighting for various commands, environments and selections can be changed.</source>
         <translation>Amañ, livadur sintaksel urzhiadoù a bep seurt, endroioù ha diuzadurioù a c&apos;hall bezañ cheñchet.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="495"/>
+        <location filename="../src/configdialog.cpp" line="498"/>
         <source>Basic highlighting</source>
         <translation>Usskediñ diazez</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="496"/>
+        <location filename="../src/configdialog.cpp" line="499"/>
         <source>LaTeX checking</source>
         <translation>Gwiriadenn LaTeX</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="497"/>
+        <location filename="../src/configdialog.cpp" line="500"/>
         <source>Language checking</source>
         <translation>Gwiriadenn yezh</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="498"/>
+        <location filename="../src/configdialog.cpp" line="501"/>
         <source>Line highlighting</source>
         <translation>Usskediñ al linenn</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="499"/>
+        <location filename="../src/configdialog.cpp" line="502"/>
         <source>Search</source>
         <translation>Klask</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="500"/>
+        <location filename="../src/configdialog.cpp" line="503"/>
         <source>Diff</source>
         <translation>Diff</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="3894"/>
-        <location filename="../src/configdialog.cpp" line="501"/>
-        <location filename="../src/configdialog.cpp" line="543"/>
+        <location filename="../src/configdialog.ui" line="3987"/>
+        <location filename="../src/configdialog.cpp" line="504"/>
+        <location filename="../src/configdialog.cpp" line="546"/>
         <source>Preview</source>
         <translation>Rakwel</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="502"/>
+        <location filename="../src/configdialog.cpp" line="505"/>
         <source>DTX files</source>
         <translation>Restroù DTX</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="503"/>
+        <location filename="../src/configdialog.cpp" line="506"/>
         <source>Sweave / Pweave</source>
         <translation>Sweave / Pweave</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="504"/>
+        <location filename="../src/configdialog.cpp" line="507"/>
         <source>Asymptote</source>
         <translation>Asymptote</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="505"/>
+        <location filename="../src/configdialog.cpp" line="508"/>
         <source>Lua</source>
         <translation>Lua</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="506"/>
+        <location filename="../src/configdialog.cpp" line="509"/>
         <source>QtScript</source>
         <translation>QtScript</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="523"/>
+        <location filename="../src/configdialog.cpp" line="526"/>
         <source>Default Shortcut</source>
         <translation>Berradurioù dre ziouer</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="523"/>
+        <location filename="../src/configdialog.cpp" line="526"/>
         <source>Current Shortcut</source>
         <translation>Berradurioù red</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="523"/>
+        <location filename="../src/configdialog.cpp" line="526"/>
         <source>Additional Shortcut</source>
         <translation>Berradurioù ouzhpenn</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="531"/>
+        <location filename="../src/configdialog.cpp" line="534"/>
         <source>General</source>
         <translation>Hollek</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="532"/>
+        <location filename="../src/configdialog.cpp" line="535"/>
         <source>Commands</source>
         <translation>Urzhiadoù</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="533"/>
+        <location filename="../src/configdialog.cpp" line="536"/>
         <source>Build</source>
         <translation>Savet</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="536"/>
+        <location filename="../src/configdialog.cpp" line="539"/>
         <source>Toolbars</source>
         <translation>Barrenn-ostilhoù</translation>
     </message>
     <message>
         <location filename="../src/configdialog.ui" line="1370"/>
-        <location filename="../src/configdialog.cpp" line="537"/>
+        <location filename="../src/configdialog.cpp" line="540"/>
         <source>GUI Scaling</source>
         <translation>Skeulaouiñ GUI</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="539"/>
+        <location filename="../src/configdialog.cpp" line="542"/>
         <source>Adv. Editor</source>
         <translation>Aozer Adv.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="540"/>
+        <location filename="../src/configdialog.cpp" line="543"/>
         <source>Syntax Highlighting</source>
         <translation>Usskediñ ar Sintaks</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="542"/>
+        <location filename="../src/configdialog.cpp" line="545"/>
         <source>Language Checking</source>
         <translation>Gwiriadenn yezh</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.ui" line="4666"/>
-        <location filename="../src/configdialog.cpp" line="545"/>
+        <location filename="../src/configdialog.ui" line="4759"/>
+        <location filename="../src/configdialog.cpp" line="548"/>
         <source>SVN/GIT</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="585"/>
+        <location filename="../src/configdialog.cpp" line="588"/>
         <source>(option filter)</source>
         <translation>(dibarzh sil)</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="728"/>
+        <location filename="../src/configdialog.cpp" line="831"/>
         <source>Select thesaurus database</source>
         <translation>Diuzañ diaz-roadennoù thesaurus:</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="733"/>
+        <location filename="../src/configdialog.cpp" line="836"/>
         <source>Select the grammar word lists dir</source>
         <translation>Diuzañ al listennadoù gerioù yezhadurel dir</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="738"/>
+        <location filename="../src/configdialog.cpp" line="841"/>
         <source>Select the LanguageTool jar</source>
         <translation>Diuzañ LanguageTool jar</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="743"/>
+        <location filename="../src/configdialog.cpp" line="846"/>
         <source>Select java</source>
         <translation>Diuzañ java</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="756"/>
+        <location filename="../src/configdialog.cpp" line="859"/>
         <source>Select dictionary directory</source>
         <translation>Diuzit kavlec&apos;h ur geriadur</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="761"/>
+        <location filename="../src/configdialog.cpp" line="864"/>
         <source>Search Path for Logs</source>
         <translation>Diuzañ an hent evit ar renabloù</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="766"/>
+        <location filename="../src/configdialog.cpp" line="869"/>
         <source>Search Path .bib Files</source>
         <translation>Klask hent restroù .bib</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="771"/>
+        <location filename="../src/configdialog.cpp" line="874"/>
         <source>Search Path for Images</source>
         <translation>Klask an hent evit ar skeudennoù</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="776"/>
+        <location filename="../src/configdialog.cpp" line="879"/>
         <source>Search Path for PDFs</source>
         <translation>Klask an hent evit ar PDFoù</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="781"/>
+        <location filename="../src/configdialog.cpp" line="884"/>
         <source>Search Path for Commands</source>
         <translation>Klask an hent evit urzhiadoù</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="827"/>
+        <location filename="../src/configdialog.cpp" line="930"/>
         <source>&lt;unknown&gt;</source>
         <translation>&lt;unknown&gt;</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="1107"/>
+        <location filename="../src/configdialog.cpp" line="1210"/>
         <source>Load Other Icon</source>
         <translation>Kargañ Ikonioù all</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="1108"/>
+        <location filename="../src/configdialog.cpp" line="1211"/>
         <source>Insert Separator</source>
         <translation>Enlakaat dispartier</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="1116"/>
+        <location filename="../src/configdialog.cpp" line="1219"/>
         <source>You need to add an action to the toolbar (from the list of actions on the right side), before you can load an icon for that item.</source>
         <translation>Gellout a rit ouzhpennañ un oberiadenn d&apos;ar varrenn-ostilhoù (adalek al listenn oberioù war an tu-dehoù) a-raok gellet kargañ un arlun evit an elfenn-mañ.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="1119"/>
+        <location filename="../src/configdialog.cpp" line="1222"/>
         <source>Select a File</source>
         <translation>Diuzañ ur restr</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="1119"/>
+        <location filename="../src/configdialog.cpp" line="1222"/>
         <source>Images</source>
         <translation>Skeudennoù</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="1177"/>
+        <location filename="../src/configdialog.cpp" line="1280"/>
         <source>Import Dictionary</source>
         <translation>Emporzhiañ ar geriadur</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="1177"/>
+        <location filename="../src/configdialog.cpp" line="1280"/>
         <source>OpenOffice Dictionary</source>
         <translation>Geriadur OpenOffice</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="1188"/>
+        <location filename="../src/configdialog.cpp" line="1291"/>
         <source>The dictionary files have been imported to
 %1.
 However this path is not contained in the dictionary path list. Do you want to add it?</source>
@@ -3105,14 +3278,14 @@ However this path is not contained in the dictionary path list. Do you want to a
 Koulskoude an hent-mañ na vez ket endalc&apos;het e-barzh listenn hent ar geriadurioù. Ha fellout a ra deoc&apos;h ouzhpennañ anezhañ?</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="1286"/>
+        <location filename="../src/configdialog.cpp" line="1389"/>
         <source>You have enabled the advanced options. This allows one to
 configure TXS in great detail. Disable the advanced
 options again to only view the most common settings.</source>
         <translation>Ouzhpennet ho peus an dibarzhioù araokaet. An dra-se a ro an aotre da-unan da gefluniañ TXS gant kalz a vunudoù. Dilemel an dibarzhioù araokaet adarre evit gwelet an arventennoù ordinalañ.</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1513"/>
+        <location filename="../src/configmanager.cpp" line="1523"/>
         <source>Basic Key Mapping</source>
         <translation>Kartennaouiñ diazez</translation>
     </message>
@@ -4248,165 +4421,165 @@ options again to only view the most common settings.</source>
         <translation>pageref</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1084"/>
-        <location filename="../src/configmanager.cpp" line="1090"/>
-        <location filename="../src/configmanager.cpp" line="1106"/>
-        <location filename="../src/configmanager.cpp" line="1111"/>
+        <location filename="../src/configmanager.cpp" line="1094"/>
+        <location filename="../src/configmanager.cpp" line="1100"/>
+        <location filename="../src/configmanager.cpp" line="1116"/>
+        <location filename="../src/configmanager.cpp" line="1121"/>
         <source>Key replacement: %1 %2</source>
         <translation>Erlec&apos;hiañ an alc&apos;hwez: %1 %2</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1084"/>
-        <location filename="../src/configmanager.cpp" line="1106"/>
+        <location filename="../src/configmanager.cpp" line="1094"/>
+        <location filename="../src/configmanager.cpp" line="1116"/>
         <source>before word</source>
         <translation>a-raok ar ger</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1090"/>
-        <location filename="../src/configmanager.cpp" line="1111"/>
+        <location filename="../src/configmanager.cpp" line="1100"/>
+        <location filename="../src/configmanager.cpp" line="1121"/>
         <source>after word</source>
         <translation>war-lerc&apos;h ar ger</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1432"/>
-        <location filename="../src/configmanager.cpp" line="1433"/>
-        <location filename="../src/configmanager.cpp" line="1611"/>
-        <location filename="../src/configmanager.cpp" line="1617"/>
-        <location filename="../src/configmanager.cpp" line="1889"/>
-        <location filename="../src/configmanager.cpp" line="1897"/>
+        <location filename="../src/configmanager.cpp" line="1442"/>
+        <location filename="../src/configmanager.cpp" line="1443"/>
+        <location filename="../src/configmanager.cpp" line="1621"/>
+        <location filename="../src/configmanager.cpp" line="1627"/>
+        <location filename="../src/configmanager.cpp" line="1899"/>
+        <location filename="../src/configmanager.cpp" line="1907"/>
         <source>default</source>
         <translation>dre-ziouer</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1490"/>
+        <location filename="../src/configmanager.cpp" line="1500"/>
         <source>Menus</source>
         <translation>Lañserioù</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1498"/>
+        <location filename="../src/configmanager.cpp" line="1508"/>
         <source>Menus PDF-Viewer</source>
         <translation>Lañserioù Lenner-PDFoù</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1534"/>
-        <location filename="../src/configmanager.cpp" line="2769"/>
+        <location filename="../src/configmanager.cpp" line="1544"/>
+        <location filename="../src/configmanager.cpp" line="2779"/>
         <source>&lt;none&gt;</source>
         <translation>&lt;none&gt;</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1580"/>
+        <location filename="../src/configmanager.cpp" line="1590"/>
         <source>Insert New Menu Item (before)</source>
         <translation>Enlakaat un Elfenn nevez el lañser (a-raok)</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1583"/>
+        <location filename="../src/configmanager.cpp" line="1593"/>
         <source>Insert New Sub Menu (before)</source>
         <translation>Enlakaat un is-lañser (a-raok)</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1586"/>
+        <location filename="../src/configmanager.cpp" line="1596"/>
         <source>Revert/Remove User Menu Item</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1604"/>
+        <location filename="../src/configmanager.cpp" line="1614"/>
         <source>Latex/Math menus</source>
         <translation>Lañserioù Latex/Matematik</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1605"/>
+        <location filename="../src/configmanager.cpp" line="1615"/>
         <source>All menus</source>
         <translation>Holl lañserioù</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1606"/>
+        <location filename="../src/configmanager.cpp" line="1616"/>
         <source>Special Tags</source>
         <translation>Balizoù ispisial</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1689"/>
+        <location filename="../src/configmanager.cpp" line="1699"/>
         <source>You have enabled auto quote replacement. However, there are macros with trigger string (?language:latex)(?&lt;=\s|^) or (?language:latex)(?&lt;=\S) which will override the new quote replacement.
 Do you want to remove them?</source>
         <translation>Enaouet ho peus an em-erlec&apos;hiañ klochedigoù. Padal, bez ez eus makroioù gant chadennoù klikedañ (?language:latex)(?&lt;=\s|^) pe c&apos;hoazh (?language:latex)(?&lt;=\S) hag a gemero plas an erlec&apos;hiañ klochedigoù.
 Ha fellout a ra deoc&apos;h dilemel anezho?</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1969"/>
+        <location filename="../src/configmanager.cpp" line="1979"/>
         <source>To fully utilize the internal pdf-viewer, synctex has to be activated. Shall TeXstudio do it now?</source>
         <translation>Evit implijout al lenner PDFoù diabarzh en un doare klok, synctex a rank bezañ enaouet. TeXstudio a rank en ober bremañ?</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1984"/>
+        <location filename="../src/configmanager.cpp" line="1994"/>
         <source>Recent &apos;Master Document&apos; %1</source>
         <translation>&apos;Teuliadoù mestr&apos; nevez %1</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1987"/>
+        <location filename="../src/configmanager.cpp" line="1997"/>
         <source>Recent File %1</source>
         <translation>Restr nevez %1</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1988"/>
+        <location filename="../src/configmanager.cpp" line="1998"/>
         <source>Clear file list</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1989"/>
+        <location filename="../src/configmanager.cpp" line="1999"/>
         <source>File list</source>
         <translation>Listenn restroù</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1990"/>
+        <location filename="../src/configmanager.cpp" line="2000"/>
         <source>Open first non-open file</source>
         <translation>Digeriñ ar restr gentañ nann-digor</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="1991"/>
+        <location filename="../src/configmanager.cpp" line="2001"/>
         <source>&amp;* Open all files</source>
         <translation>&amp;* Digeriñ an holl restroù</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="2001"/>
+        <location filename="../src/configmanager.cpp" line="2011"/>
         <source>Root Document: </source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="2770"/>
+        <location filename="../src/configmanager.cpp" line="2780"/>
         <source>&lt;default&gt;</source>
         <translation>&lt;default&gt;</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="3029"/>
+        <location filename="../src/configmanager.cpp" line="3039"/>
         <source>Configure</source>
         <translation>Kefluniañ</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="3036"/>
+        <location filename="../src/configmanager.cpp" line="3046"/>
         <source>Select Program</source>
         <translation>Diuzañ ur programm</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="3043"/>
+        <location filename="../src/configmanager.cpp" line="3053"/>
         <source>Restore Default</source>
         <translation>Adlakaat dre-ziouer</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="3090"/>
+        <location filename="../src/configmanager.cpp" line="3100"/>
         <source>Repeat contained compilation commands</source>
         <translation>Adober an urzhiadoù kempunañ endalc&apos;het</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="3138"/>
+        <location filename="../src/configmanager.cpp" line="3148"/>
         <source>Add</source>
         <translation>Ouzhpennañ</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="3221"/>
+        <location filename="../src/configmanager.cpp" line="3231"/>
         <source>Browse program</source>
         <translation>Merdeiñ a-dreuz ar program</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="3560"/>
+        <location filename="../src/configmanager.cpp" line="3570"/>
         <source>text is restored after restart</source>
         <translation type="unfinished"/>
     </message>
@@ -4550,6 +4723,27 @@ Ha fellout a ra deoc&apos;h dilemel anezho?</translation>
 <context>
     <name>EncodingDialog</name>
     <message>
+        <location filename="../src/encodingdialog.cpp" line="35"/>
+        <source>Select Encoding for</source>
+        <translation>Diuzañ an enkodañ evit</translation>
+    </message>
+    <message>
+        <location filename="../src/encodingdialog.cpp" line="52"/>
+        <source>If the new and old encodings are incompatible, some characters may be destroyed.
+Are you sure you want accept data loss?</source>
+        <translation>Ma ne genglot ket an enkodoù kozh ha nevez an eil gant egile, arouezioù &apos;zo a c&apos;hall bezañ distrujet.
+Ha sur oc&apos;h ho peus c&apos;hoant da goll roadennoù?</translation>
+    </message>
+    <message>
+        <location filename="../src/encodingdialog.cpp" line="69"/>
+        <source>The document has been changed.
+These changes will be lost, if you reload it with the new encoding.
+Are you sure you want to undo all changes?</source>
+        <translation>Cheñchet eo bet an teuliad.
+Ar cheñchamantoù-se a vo kollet, ma adkargit an enkodañ nevez.
+Ha sur oc&apos;h ho peus c&apos;hoant da zizober an holl cheñchamantoù?</translation>
+    </message>
+    <message>
         <location filename="../src/encodingdialog.ui" line="14"/>
         <source>Select File Encoding</source>
         <translation>Diuzañ enkodañ ar restr</translation>
@@ -4596,30 +4790,14 @@ You have to make sure yourself that the file encoding and the value passed to th
         <translation>An anvioù kodek evel ar pakad enmont-enk a c&apos;hortoz anezho. Ne vez roet an anvioù nemet evel titl daveen.
 Bez ho peus da vezañ sur e kenglot ar restr enkodañ hag an dalvoudegezh a dremen en enmont-enk.</translation>
     </message>
-    <message>
-        <location filename="../src/encodingdialog.cpp" line="35"/>
-        <source>Select Encoding for</source>
-        <translation>Diuzañ an enkodañ evit</translation>
-    </message>
-    <message>
-        <location filename="../src/encodingdialog.cpp" line="52"/>
-        <source>If the new and old encodings are incompatible, some characters may be destroyed.
-Are you sure you want accept data loss?</source>
-        <translation>Ma ne genglot ket an enkodoù kozh ha nevez an eil gant egile, arouezioù &apos;zo a c&apos;hall bezañ distrujet.
-Ha sur oc&apos;h ho peus c&apos;hoant da goll roadennoù?</translation>
-    </message>
-    <message>
-        <location filename="../src/encodingdialog.cpp" line="69"/>
-        <source>The document has been changed.
-These changes will be lost, if you reload it with the new encoding.
-Are you sure you want to undo all changes?</source>
-        <translation>Cheñchet eo bet an teuliad.
-Ar cheñchamantoù-se a vo kollet, ma adkargit an enkodañ nevez.
-Ha sur oc&apos;h ho peus c&apos;hoant da zizober an holl cheñchamantoù?</translation>
-    </message>
 </context>
 <context>
     <name>FileChooser</name>
+    <message>
+        <location filename="../src/filechooser.cpp" line="51"/>
+        <source>Select a File</source>
+        <translation>Diuzañ ur restr</translation>
+    </message>
     <message>
         <location filename="../src/filechooser.ui" line="55"/>
         <source>File</source>
@@ -4634,11 +4812,6 @@ Ha sur oc&apos;h ho peus c&apos;hoant da zizober an holl cheñchamantoù?</trans
         <location filename="../src/filechooser.ui" line="137"/>
         <source>Cancel</source>
         <translation>Nullañ</translation>
-    </message>
-    <message>
-        <location filename="../src/filechooser.cpp" line="51"/>
-        <source>Select a File</source>
-        <translation>Diuzañ ur restr</translation>
     </message>
 </context>
 <context>
@@ -4725,6 +4898,81 @@ Ha sur oc&apos;h ho peus c&apos;hoant da zizober an holl cheñchamantoù?</trans
 <context>
     <name>InsertGraphics</name>
     <message>
+        <location filename="../src/insertgraphics.cpp" line="50"/>
+        <source>Insert Graphics</source>
+        <comment>Wizard</comment>
+        <translation>Enlakaat grafikoù</translation>
+    </message>
+    <message>
+        <location filename="../src/insertgraphics.cpp" line="81"/>
+        <source>Placement preferences for the figure
+
+[t] Top: At the top of the page
+[b] Bottom: At the bottom of the page
+[p] Page: On a page dedicated to figures
+[h] Here: At this position in the text
+[H] Here: Strictly at this position in the text (requires float package)
+[!]: Override internal parameters LaTeX uses for determining `good' float positions.
+
+Note: The first 4 placement preferences are just suggestions. If the resulting page layout would look bad, LaTeX may ignore this.</source>
+        <translation>Lec&apos;hiadur karetañ evit al lun:
+
+[t] Laez: E laez ar bajenn (top)
+[b] Traoñ: E traoñ ar bajenn (bottom)
+[p] Pajenn: War ur bajenn dediet d&apos;al lunioù (page)
+[h] Amañ: D&apos;al lec&apos;hiadur-mañ e-barzh an destenn (here)
+[H] Amañ da vat: D&apos;al lec&apos;hiadur resis-mañ e-barzh an destenn (goulenn a ra ur pakadur flod)
+[!]: Na ober van an arventennoù diabarzh implijet gant LaTeX evit  terminañ al lec&apos;hiadoù flod &apos;mat&apos;.
+
+Notenn: Ar peder arventenn lec&apos;hiadur na vezont ken nemet kinnigoù. Ar bajenn-aozañ disoc&apos;h a seblant bezañ fall, LaTeX a c&apos;hall chom hep ober van ouzh an dra-se.</translation>
+    </message>
+    <message>
+        <location filename="../src/insertgraphics.cpp" line="262"/>
+        <source>Could not parse graphics inclusion code:
+Insufficient number of arguments to </source>
+        <translation>N&apos;heller ket analizañ kod an enklozañ grafikoù:
+Niver a arguzennoù skort evit</translation>
+    </message>
+    <message>
+        <location filename="../src/insertgraphics.cpp" line="279"/>
+        <source>Could not parse graphics inclusion code:
+The wizard does not support environment </source>
+        <translation>N&apos;haller ket analizañ kod an enklozañ grafikoù:
+Ne vez ket kemeret e kont an endro gant ar Skoazeller.</translation>
+    </message>
+    <message>
+        <location filename="../src/insertgraphics.cpp" line="288"/>
+        <source>Could not parse graphics inclusion code:
+Invalid \caption command.</source>
+        <translation>N&apos;heller ket analizañ kod an enklozañ grafikoù:
+\urzhiad analizañ direizh.</translation>
+    </message>
+    <message>
+        <location filename="../src/insertgraphics.cpp" line="302"/>
+        <source>Could not parse graphics inclusion code:
+Missing \includegraphics options.</source>
+        <translation>N&apos;heller ket analizañ kod an enklozañ grafikoù:
+\dibarzhioù enklozañ-grafikoù a vank.</translation>
+    </message>
+    <message>
+        <location filename="../src/insertgraphics.cpp" line="319"/>
+        <source>Could not parse graphics inclusion code:
+The wizard does not support command </source>
+        <translation>N&apos;haller ket analizañ kod an enklozañ grafikoù:
+Ne vez ket kemeret e kont an urzhiad gant ar Skoazeller</translation>
+    </message>
+    <message>
+        <location filename="../src/insertgraphics.cpp" line="421"/>
+        <source>Images</source>
+        <translation>Skeudennoù</translation>
+    </message>
+    <message>
+        <location filename="../src/insertgraphics.cpp" line="423"/>
+        <source>Select a File</source>
+        <comment>Wizard</comment>
+        <translation>Diuzañ ur restr</translation>
+    </message>
+    <message>
         <location filename="../src/insertgraphics.ui" line="40"/>
         <source>File</source>
         <translation>Restr</translation>
@@ -4791,11 +5039,6 @@ Ha sur oc&apos;h ho peus c&apos;hoant da zizober an holl cheñchamantoù?</trans
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/insertgraphics.ui" line="324"/>
-        <source>Caption to be displayed in the list of figures (if wanted different from the long caption)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
         <location filename="../src/insertgraphics.ui" line="278"/>
         <source>Label</source>
         <translation>Label</translation>
@@ -4814,6 +5057,11 @@ Ha sur oc&apos;h ho peus c&apos;hoant da zizober an holl cheñchamantoù?</trans
         <location filename="../src/insertgraphics.ui" line="299"/>
         <source>Position</source>
         <translation>Lec&apos;hiadur</translation>
+    </message>
+    <message>
+        <location filename="../src/insertgraphics.ui" line="324"/>
+        <source>Caption to be displayed in the list of figures (if wanted different from the long caption)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/insertgraphics.ui" line="331"/>
@@ -4875,91 +5123,11 @@ Ha sur oc&apos;h ho peus c&apos;hoant da zizober an holl cheñchamantoù?</trans
         <source>Cancel</source>
         <translation>Nullañ</translation>
     </message>
-    <message>
-        <location filename="../src/insertgraphics.cpp" line="50"/>
-        <source>Insert Graphic</source>
-        <translation>Enlakaat ur grafik</translation>
-    </message>
-    <message>
-        <location filename="../src/insertgraphics.cpp" line="78"/>
-        <source>Insert Graphics</source>
-        <comment>Wizard</comment>
-        <translation>Enlakaat grafikoù</translation>
-    </message>
-    <message>
-        <location filename="../src/insertgraphics.cpp" line="82"/>
-        <source>Placement preferences for the figure
-
-[t] Top: At the top of the page
-[b] Bottom: At the bottom of the page
-[p] Page: On a page dedicated to figures
-[h] Here: At this position in the text
-[H] Here: Strictly at this position in the text (requires float package)
-[!]: Override internal parameters LaTeX uses for determining `good' float positions.
-
-Note: The first 4 placement preferences are just suggestions. If the resulting page layout would look bad, LaTeX may ignore this.</source>
-        <translation>Lec&apos;hiadur karetañ evit al lun:
-
-[t] Laez: E laez ar bajenn (top)
-[b] Traoñ: E traoñ ar bajenn (bottom)
-[p] Pajenn: War ur bajenn dediet d&apos;al lunioù (page)
-[h] Amañ: D&apos;al lec&apos;hiadur-mañ e-barzh an destenn (here)
-[H] Amañ da vat: D&apos;al lec&apos;hiadur resis-mañ e-barzh an destenn (goulenn a ra ur pakadur flod)
-[!]: Na ober van an arventennoù diabarzh implijet gant LaTeX evit  terminañ al lec&apos;hiadoù flod &apos;mat&apos;.
-
-Notenn: Ar peder arventenn lec&apos;hiadur na vezont ken nemet kinnigoù. Ar bajenn-aozañ disoc&apos;h a seblant bezañ fall, LaTeX a c&apos;hall chom hep ober van ouzh an dra-se.</translation>
-    </message>
-    <message>
-        <location filename="../src/insertgraphics.cpp" line="263"/>
-        <source>Could not parse graphics inclusion code:
-Insufficient number of arguments to </source>
-        <translation>N&apos;heller ket analizañ kod an enklozañ grafikoù:
-Niver a arguzennoù skort evit</translation>
-    </message>
-    <message>
-        <location filename="../src/insertgraphics.cpp" line="280"/>
-        <source>Could not parse graphics inclusion code:
-The wizard does not support environment </source>
-        <translation>N&apos;haller ket analizañ kod an enklozañ grafikoù:
-Ne vez ket kemeret e kont an endro gant ar Skoazeller.</translation>
-    </message>
-    <message>
-        <location filename="../src/insertgraphics.cpp" line="289"/>
-        <source>Could not parse graphics inclusion code:
-Invalid \caption command.</source>
-        <translation>N&apos;heller ket analizañ kod an enklozañ grafikoù:
-\urzhiad analizañ direizh.</translation>
-    </message>
-    <message>
-        <location filename="../src/insertgraphics.cpp" line="303"/>
-        <source>Could not parse graphics inclusion code:
-Missing \includegraphics options.</source>
-        <translation>N&apos;heller ket analizañ kod an enklozañ grafikoù:
-\dibarzhioù enklozañ-grafikoù a vank.</translation>
-    </message>
-    <message>
-        <location filename="../src/insertgraphics.cpp" line="320"/>
-        <source>Could not parse graphics inclusion code:
-The wizard does not support command </source>
-        <translation>N&apos;haller ket analizañ kod an enklozañ grafikoù:
-Ne vez ket kemeret e kont an urzhiad gant ar Skoazeller</translation>
-    </message>
-    <message>
-        <location filename="../src/insertgraphics.cpp" line="422"/>
-        <source>Images</source>
-        <translation>Skeudennoù</translation>
-    </message>
-    <message>
-        <location filename="../src/insertgraphics.cpp" line="424"/>
-        <source>Select a File</source>
-        <comment>Wizard</comment>
-        <translation>Diuzañ ur restr</translation>
-    </message>
 </context>
 <context>
     <name>LabelSearchQuery</name>
     <message>
-        <location filename="../src/searchquery.cpp" line="161"/>
+        <location filename="../src/searchquery.cpp" line="282"/>
         <source>Label Search</source>
         <translation>Klask label</translation>
     </message>
@@ -4967,52 +5135,52 @@ Ne vez ket kemeret e kont an urzhiad gant ar Skoazeller</translation>
 <context>
     <name>LatexCompleter</name>
     <message>
-        <location filename="../src/latexcompleter.cpp" line="1474"/>
-        <location filename="../src/latexcompleter.cpp" line="1484"/>
+        <location filename="../src/latexcompleter.cpp" line="1478"/>
+        <location filename="../src/latexcompleter.cpp" line="1488"/>
         <source>typical</source>
         <translation>a-skouer</translation>
     </message>
     <message>
-        <location filename="../src/latexcompleter.cpp" line="1475"/>
-        <location filename="../src/latexcompleter.cpp" line="1485"/>
+        <location filename="../src/latexcompleter.cpp" line="1479"/>
+        <location filename="../src/latexcompleter.cpp" line="1489"/>
         <source>most used</source>
         <translation>implijetañ</translation>
     </message>
     <message>
-        <location filename="../src/latexcompleter.cpp" line="1476"/>
-        <location filename="../src/latexcompleter.cpp" line="1486"/>
+        <location filename="../src/latexcompleter.cpp" line="1480"/>
+        <location filename="../src/latexcompleter.cpp" line="1490"/>
         <source>fuzzy</source>
         <translation>displann</translation>
     </message>
     <message>
-        <location filename="../src/latexcompleter.cpp" line="1477"/>
-        <location filename="../src/latexcompleter.cpp" line="1487"/>
+        <location filename="../src/latexcompleter.cpp" line="1481"/>
+        <location filename="../src/latexcompleter.cpp" line="1491"/>
         <source>all</source>
         <translation>pep-tra</translation>
     </message>
     <message>
-        <location filename="../src/latexcompleter.cpp" line="1478"/>
-        <location filename="../src/latexcompleter.cpp" line="1488"/>
+        <location filename="../src/latexcompleter.cpp" line="1482"/>
+        <location filename="../src/latexcompleter.cpp" line="1492"/>
         <source>press shift+space to change view</source>
         <translation>pouezit war Lkd+esaouenn evit cheñch gwel</translation>
     </message>
     <message>
-        <location filename="../src/latexcompleter.cpp" line="1689"/>
+        <location filename="../src/latexcompleter.cpp" line="1693"/>
         <source> (Usertag)</source>
         <translation>(Baliz-implijer)</translation>
     </message>
     <message>
-        <location filename="../src/latexcompleter.cpp" line="2051"/>
+        <location filename="../src/latexcompleter.cpp" line="2055"/>
         <source>label missing!</source>
         <translation>mankout a ra ul label!</translation>
     </message>
     <message>
-        <location filename="../src/latexcompleter.cpp" line="2053"/>
+        <location filename="../src/latexcompleter.cpp" line="2057"/>
         <source>label defined multiple times!</source>
         <translation>label termenet meur a wech!</translation>
     </message>
     <message>
-        <location filename="../src/latexcompleter.cpp" line="2063"/>
+        <location filename="../src/latexcompleter.cpp" line="2067"/>
         <source>&lt;p style='white-space:pre'&gt;&lt;b&gt;Filename: %1&lt;/b&gt;
 </source>
         <translation>&lt;p style=&apos;white-space:pre&apos;&gt;&lt;b&gt;Anv-restr: %1&lt;/b&gt;
@@ -5027,17 +5195,17 @@ Ne vez ket kemeret e kont an urzhiad gant ar Skoazeller</translation>
         <translation>Fazi direizh. Flastradur gallus. Aliet eo adloc&apos;hañ TeXstudio</translation>
     </message>
     <message>
-        <location filename="../src/latexdocument.cpp" line="2607"/>
+        <location filename="../src/latexdocument.cpp" line="2627"/>
         <source>Invalid codec</source>
         <translation>Kodek direizh</translation>
     </message>
     <message>
-        <location filename="../src/latexdocument.cpp" line="2621"/>
+        <location filename="../src/latexdocument.cpp" line="2641"/>
         <source>Missing value for -job-name</source>
         <translation>Talouvedegezh a vank evit -anv-labour</translation>
     </message>
     <message>
-        <location filename="../src/latexdocument.cpp" line="2624"/>
+        <location filename="../src/latexdocument.cpp" line="2644"/>
         <source>Unknown magic comment</source>
         <translation>Evezhiadenn hud dizanv</translation>
     </message>
@@ -5380,46 +5548,46 @@ Ne vez ket kemeret e kont an urzhiad gant ar Skoazeller</translation>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/latexrepository.cpp" line="160"/>
+        <location filename="../src/latexrepository.cpp" line="161"/>
         <source>- Version : </source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/latexrepository.cpp" line="161"/>
+        <location filename="../src/latexrepository.cpp" line="162"/>
         <source>- Documentation : 
 </source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/latexrepository.cpp" line="162"/>
+        <location filename="../src/latexrepository.cpp" line="163"/>
         <source>- Copyright : 
 </source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/latexrepository.cpp" line="163"/>
+        <location filename="../src/latexrepository.cpp" line="164"/>
         <source>- License : 
 </source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/latexrepository.cpp" line="164"/>
+        <location filename="../src/latexrepository.cpp" line="165"/>
         <source>- MikTex : </source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/latexrepository.cpp" line="165"/>
+        <location filename="../src/latexrepository.cpp" line="166"/>
         <source>- TexLive : </source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/latexrepository.cpp" line="166"/>
+        <location filename="../src/latexrepository.cpp" line="167"/>
         <source>- Topics : 
 </source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/latexrepository.cpp" line="167"/>
+        <location filename="../src/latexrepository.cpp" line="168"/>
         <source>- Link : </source>
         <translation type="unfinished"/>
     </message>
@@ -5427,9 +5595,14 @@ Ne vez ket kemeret e kont an urzhiad gant ar Skoazeller</translation>
 <context>
     <name>LetterDialog</name>
     <message>
+        <location filename="../src/letterdialog.cpp" line="56"/>
+        <source>Quick Letter</source>
+        <translation>Skoazeller skrivañ-lizhiri</translation>
+    </message>
+    <message>
         <location filename="../src/letterdialog.ui" line="42"/>
         <source>Typeface Size</source>
-        <translation>Ment an doarefas</translation>
+        <translation>Ment an doare-fas</translation>
     </message>
     <message>
         <location filename="../src/letterdialog.ui" line="57"/>
@@ -5456,47 +5629,44 @@ Ne vez ket kemeret e kont an urzhiad gant ar Skoazeller</translation>
         <source>Cancel</source>
         <translation>Nullañ</translation>
     </message>
-    <message>
-        <location filename="../src/letterdialog.cpp" line="56"/>
-        <source>Quick Letter</source>
-        <translation>Skoazeller skrivañ-lizhiri</translation>
-    </message>
 </context>
 <context>
     <name>MacroBrowserUI</name>
     <message>
-        <location filename="../src/macrobrowserui.cpp" line="11"/>
-        <source>Macro name</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/macrobrowserui.cpp" line="15"/>
+        <location filename="../src/macrobrowserui.cpp" line="19"/>
         <source>Name</source>
         <translation>Anv</translation>
     </message>
     <message>
-        <location filename="../src/macrobrowserui.cpp" line="17"/>
+        <location filename="../src/macrobrowserui.cpp" line="21"/>
         <source>Description</source>
         <translation>Deskrivadur</translation>
     </message>
     <message>
-        <location filename="../src/macrobrowserui.cpp" line="41"/>
+        <location filename="../src/macrobrowserui.cpp" line="43"/>
         <source>Browse macros from repository</source>
         <translation>Merdeiñ a-dreuz ar makroioù adalek ar mirva</translation>
     </message>
     <message>
-        <location filename="../src/macrobrowserui.cpp" line="151"/>
-        <source>Browse macro repository</source>
-        <translation>Merdeiñ a-dreuz makro ar mirva</translation>
+        <location filename="../src/macrobrowserui.cpp" line="200"/>
+        <source>&lt;loading...&gt;</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/macrobrowserui.cpp" line="152"/>
+        <location filename="../src/macrobrowserui.cpp" line="124"/>
         <source>Repository not found. Network error:%1</source>
         <translation>Neket bet kavet ar mirva. Fazi kenrouedad: %1</translation>
     </message>
 </context>
 <context>
     <name>MakeTemplateDialog</name>
+    <message>
+        <location filename="../src/maketemplatedialog.cpp" line="46"/>
+        <source>A template with the given name already exists.
+Do you want to overwrite it?</source>
+        <translation>Ur patrom a zo anezhañ endeo gant an anv-se.
+Ha fellout a ra deoc&apos;h e flastrañ?</translation>
+    </message>
     <message>
         <location filename="../src/maketemplatedialog.ui" line="14"/>
         <source>Make Template</source>
@@ -5541,13 +5711,6 @@ Ne vez ket kemeret e kont an urzhiad gant ar Skoazeller</translation>
         <location filename="../src/maketemplatedialog.ui" line="126"/>
         <source>LaTeX Project Public License (LPPL)</source>
         <translation>Lisañs foran ar raktres LaTeX (LPPL)</translation>
-    </message>
-    <message>
-        <location filename="../src/maketemplatedialog.cpp" line="46"/>
-        <source>A template with the given name already exists.
-Do you want to overwrite it?</source>
-        <translation>Ur patrom a zo anezhañ endeo gant an anv-se.
-Ha fellout a ra deoc&apos;h e flastrañ?</translation>
     </message>
 </context>
 <context>
@@ -5687,7 +5850,7 @@ Ha fellout a ra deoc&apos;h e flastrañ?</translation>
     <message>
         <location filename="../src/pdfviewer/pdfannotation.cpp" line="236"/>
         <source>Type</source>
-        <translation>doare</translation>
+        <translation>Doare</translation>
     </message>
     <message>
         <location filename="../src/pdfviewer/pdfannotation.cpp" line="238"/>
@@ -6247,7 +6410,7 @@ Gellout a rit ebarzhiñ ar ger-tremen bremañ:</translation>
     <message>
         <location filename="../src/pdfviewer/PDFDocks.cpp" line="409"/>
         <source>Type</source>
-        <translation>doare</translation>
+        <translation>Doare</translation>
     </message>
     <message>
         <location filename="../src/pdfviewer/PDFDocks.cpp" line="409"/>
@@ -6559,32 +6722,32 @@ Gellout a rit ebarzhiñ ar ger-tremen bremañ:</translation>
         <translation>An adhenchañ stderr spisaet na vez ket kemeret e kont: &apos;% 1&apos;. Sellit ouzh an dornlevr mar plij evit gouzout hiroc&apos;h.</translation>
     </message>
     <message>
-        <location filename="../src/buildmanager.cpp" line="2503"/>
+        <location filename="../src/buildmanager.cpp" line="2532"/>
         <source>Process started: %1</source>
         <translation>Argerzh loc&apos;het: %1</translation>
     </message>
     <message>
-        <location filename="../src/buildmanager.cpp" line="2509"/>
+        <location filename="../src/buildmanager.cpp" line="2538"/>
         <source>Error: Could not start the command: %1</source>
         <translation>Fazi: N&apos;heller ket loc&apos;hañ an urzhiad: %1</translation>
     </message>
     <message>
-        <location filename="../src/buildmanager.cpp" line="2512"/>
+        <location filename="../src/buildmanager.cpp" line="2541"/>
         <source>&lt;b&gt;Make sure that you have installed a (La)TeX distribution&lt;/b&gt; e.g. MiKTeX or TeX Live, and have set the correct paths to this distribution on the command configuration page.&lt;br&gt;A (La)TeX editor like TeXstudio cannot work without the (La)TeX commands provided by such a distribution.</source>
         <translation>&lt;b&gt;Bezit sur ho peus staliet un dasparzhadur eus (La)TeX&lt;/b&gt; d.sk. MiKTeX pe TeX Live, ha termenet an hentoù mat evit an dasparzhadur-mañ war ar bajenn gefluniañ.&lt;br&gt;Un aozer (La)TeX evel TeXstudio n&apos;hall ket mont hep an urzhiadoù (La)TeX pourvezet gant un dasparzhadur eus ar seurt.</translation>
     </message>
     <message>
-        <location filename="../src/buildmanager.cpp" line="2516"/>
+        <location filename="../src/buildmanager.cpp" line="2545"/>
         <source>Error: Command crashed: %1</source>
         <translation>Fazi: Urzhiad sac&apos;het: %1</translation>
     </message>
     <message>
-        <location filename="../src/buildmanager.cpp" line="2523"/>
+        <location filename="../src/buildmanager.cpp" line="2552"/>
         <source>Process exited with error(s)</source>
         <translation>Argerzh kuitaet gant faz(ioù)</translation>
     </message>
     <message>
-        <location filename="../src/buildmanager.cpp" line="2526"/>
+        <location filename="../src/buildmanager.cpp" line="2555"/>
         <source>Process exited normally</source>
         <translation>Argerzh kuitaet en un doare normal</translation>
     </message>
@@ -6678,16 +6841,6 @@ Adloc&apos;hañ adalek ar penn-kentañ?</translation>
 <context>
     <name>QEditor</name>
     <message>
-        <location filename="../src/qcodeedit/lib/qcodeedit.cpp" line="265"/>
-        <source>Panels</source>
-        <translation>Panelloù</translation>
-    </message>
-    <message>
-        <location filename="../src/qcodeedit/lib/qcodeedit.cpp" line="267"/>
-        <source>&amp;View</source>
-        <translation>&amp;Gwelet</translation>
-    </message>
-    <message>
         <location filename="../src/qcodeedit/lib/qeditor.cpp" line="199"/>
         <location filename="../src/qcodeedit/lib/qeditor.cpp" line="701"/>
         <location filename="../src/qcodeedit/lib/qeditor.cpp" line="1468"/>
@@ -6716,7 +6869,7 @@ Adloc&apos;hañ adalek ar penn-kentañ?</translation>
         <location filename="../src/qcodeedit/lib/qeditor.cpp" line="558"/>
         <location filename="../src/qcodeedit/lib/qeditor.cpp" line="1445"/>
         <source>&amp;Copy</source>
-        <translation>&amp;Eilenn</translation>
+        <translation>&amp;Eilañ</translation>
     </message>
     <message>
         <location filename="../src/qcodeedit/lib/qeditor.cpp" line="569"/>
@@ -7305,6 +7458,16 @@ Notennoù:
         <location filename="../src/qcodeedit/lib/qeditor.cpp" line="4826"/>
         <source>Unknown</source>
         <translation>Dizanv</translation>
+    </message>
+    <message>
+        <location filename="../src/qcodeedit/lib/qcodeedit.cpp" line="265"/>
+        <source>Panels</source>
+        <translation>Panelloù</translation>
+    </message>
+    <message>
+        <location filename="../src/qcodeedit/lib/qcodeedit.cpp" line="267"/>
+        <source>&amp;View</source>
+        <translation>&amp;Gwelet</translation>
     </message>
 </context>
 <context>
@@ -8126,9 +8289,24 @@ Gellout a rit ober gant \1 betek \9 e-barzh an destenn erlec&apos;hiañ da enlak
 <context>
     <name>QuickBeamerDialog</name>
     <message>
+        <location filename="../src/quickbeamerdialog.cpp" line="30"/>
+        <source>Quick Beamer Presentation</source>
+        <translation>Kinnig Beamer prim</translation>
+    </message>
+    <message>
         <location filename="../src/quickbeamerdialog.ui" line="14"/>
         <source>Dialog</source>
         <translation>Diviz</translation>
+    </message>
+    <message>
+        <location filename="../src/quickbeamerdialog.ui" line="22"/>
+        <source>Theme</source>
+        <translation>Tem</translation>
+    </message>
+    <message>
+        <location filename="../src/quickbeamerdialog.ui" line="29"/>
+        <source>Title</source>
+        <translation>Titl</translation>
     </message>
     <message>
         <location filename="../src/quickbeamerdialog.ui" line="39"/>
@@ -8141,143 +8319,18 @@ Gellout a rit ober gant \1 betek \9 e-barzh an destenn erlec&apos;hiañ da enlak
         <translation>Ment an doare-fas</translation>
     </message>
     <message>
-        <location filename="../src/quickbeamerdialog.ui" line="69"/>
-        <source>babel Package</source>
-        <translation>Pakad babel</translation>
-    </message>
-    <message>
-        <location filename="../src/quickbeamerdialog.ui" line="29"/>
-        <source>Title</source>
-        <translation>Titl</translation>
-    </message>
-    <message>
         <location filename="../src/quickbeamerdialog.ui" line="59"/>
         <source>Author</source>
         <translation>Aozer</translation>
     </message>
     <message>
-        <location filename="../src/quickbeamerdialog.ui" line="22"/>
-        <source>Theme</source>
-        <translation>Tem</translation>
-    </message>
-    <message>
-        <location filename="../src/quickbeamerdialog.cpp" line="30"/>
-        <source>Quick Beamer Presentation</source>
-        <translation>Kinnig Beamer prim</translation>
+        <location filename="../src/quickbeamerdialog.ui" line="69"/>
+        <source>babel Package</source>
+        <translation>Pakad babel</translation>
     </message>
 </context>
 <context>
     <name>QuickDocumentDialog</name>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="65"/>
-        <source>Title</source>
-        <translation>Titl</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="94"/>
-        <source>Document Class</source>
-        <translation>Klas teuliad</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="118"/>
-        <source>Typeface Size</source>
-        <translation>Ment an doare-fas</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="131"/>
-        <source>Other Options</source>
-        <translation>Opsionoù all</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="183"/>
-        <source>Paper Size</source>
-        <translation>Ment ar paper</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="205"/>
-        <source>Author</source>
-        <translation>Aozer</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="36"/>
-        <source>&amp;Class Options</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="75"/>
-        <source>Language</source>
-        <translation>Yezh</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="78"/>
-        <source>Adds language support to your document with Babel package</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="212"/>
-        <source>Font Encoding</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="236"/>
-        <source>&amp;Packages</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="254"/>
-        <source>Package</source>
-        <translation>Pakad</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="259"/>
-        <source>Description</source>
-        <translation>Deskrivadur</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="281"/>
-        <source>&amp;Geometry</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="309"/>
-        <source>Page</source>
-        <translation>Pajenn</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="315"/>
-        <source>Width:</source>
-        <translation>Ledanded:</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="406"/>
-        <source>Height:</source>
-        <translation>Uhelder:</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="416"/>
-        <source>Margins</source>
-        <translation>Marzoù</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="422"/>
-        <source>Left:</source>
-        <translation>Kleiz:</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="474"/>
-        <source>Right:</source>
-        <translation>Dehou:</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="571"/>
-        <source>Top:</source>
-        <translation>Laez:</translation>
-    </message>
-    <message>
-        <location filename="../src/quickdocumentdialog.ui" line="578"/>
-        <source>Bottom:</source>
-        <translation>Traoñ:</translation>
-    </message>
     <message>
         <location filename="../src/quickdocumentdialog.cpp" line="59"/>
         <source>Quick Start</source>
@@ -8348,95 +8401,119 @@ Gellout a rit ober gant \1 betek \9 e-barzh an destenn erlec&apos;hiañ da enlak
         <source>All packages that have the checkbox checked will appear in a new document within \usepackage commands after pressing OK.</source>
         <translation type="unfinished"/>
     </message>
-</context>
-<context>
-    <name>RandomTextGenerator</name>
     <message>
-        <location filename="../src/randomtextgenerator.ui" line="14"/>
-        <source>Random Text Generator</source>
-        <translation>Geneler testenn dre-zegouezh</translation>
-    </message>
-    <message>
-        <location filename="../src/randomtextgenerator.ui" line="20"/>
-        <source>Options</source>
-        <translation>Dibarzhioù</translation>
-    </message>
-    <message>
-        <location filename="../src/randomtextgenerator.ui" line="93"/>
-        <source>First Order Word</source>
-        <translation>Ger an urzh kentañ</translation>
-    </message>
-    <message>
-        <location filename="../src/randomtextgenerator.ui" line="145"/>
-        <source>Second Order Words</source>
-        <translation>Ger an eil urzh</translation>
-    </message>
-    <message>
-        <location filename="../src/randomtextgenerator.ui" line="192"/>
-        <source>Third Order Words</source>
-        <translation>Ger an trede urzh</translation>
-    </message>
-    <message>
-        <location filename="../src/randomtextgenerator.ui" line="228"/>
-        <source>Lorem Ipsum</source>
+        <location filename="../src/quickdocumentdialog.ui" line="36"/>
+        <source>&amp;Class Options</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/randomtextgenerator.ui" line="162"/>
-        <source>Length:</source>
-        <translation>Hirded:</translation>
+        <location filename="../src/quickdocumentdialog.ui" line="65"/>
+        <source>Title</source>
+        <translation>Titl</translation>
     </message>
     <message>
-        <location filename="../src/randomtextgenerator.ui" line="59"/>
-        <source>Generate</source>
-        <translation>Genel</translation>
+        <location filename="../src/quickdocumentdialog.ui" line="75"/>
+        <source>Language</source>
+        <translation>Yezh</translation>
     </message>
     <message>
-        <location filename="../src/randomtextgenerator.ui" line="155"/>
-        <source>Close</source>
-        <translation>Serriñ</translation>
+        <location filename="../src/quickdocumentdialog.ui" line="78"/>
+        <source>Adds language support to your document with Babel package</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/randomtextgenerator.ui" line="73"/>
-        <location filename="../src/randomtextgenerator.ui" line="100"/>
-        <source>Higher Order:</source>
-        <translation>Urzh uhelañ:</translation>
+        <location filename="../src/quickdocumentdialog.ui" line="94"/>
+        <source>Document Class</source>
+        <translation>Klas teuliad</translation>
     </message>
     <message>
-        <location filename="../src/randomtextgenerator.ui" line="52"/>
-        <source>First Order Characters</source>
-        <translation>Arouezioù an urzh kentañ</translation>
+        <location filename="../src/quickdocumentdialog.ui" line="118"/>
+        <source>Typeface Size</source>
+        <translation>Ment an doare-fas</translation>
     </message>
     <message>
-        <location filename="../src/randomtextgenerator.ui" line="131"/>
-        <source>Second Order Characters</source>
-        <translation>Arouezioù an eil urzh</translation>
+        <location filename="../src/quickdocumentdialog.ui" line="131"/>
+        <source>Other Options</source>
+        <translation>Opsionoù all</translation>
     </message>
     <message>
-        <location filename="../src/randomtextgenerator.ui" line="124"/>
-        <source>Third Order Characters</source>
-        <translation>Arouezioù an trede urzh</translation>
+        <location filename="../src/quickdocumentdialog.ui" line="183"/>
+        <source>Paper Size</source>
+        <translation>Ment ar paper</translation>
     </message>
     <message>
-        <location filename="../src/randomtextgenerator.ui" line="66"/>
-        <source>Ignore Case</source>
-        <translation>Na ober van ouzh ar c&apos;hombod</translation>
+        <location filename="../src/quickdocumentdialog.ui" line="205"/>
+        <source>Author</source>
+        <translation>Aozer</translation>
     </message>
     <message>
-        <location filename="../src/randomtextgenerator.ui" line="138"/>
-        <source>Punctation</source>
-        <translation>Poentadur</translation>
+        <location filename="../src/quickdocumentdialog.ui" line="212"/>
+        <source>Font Encoding</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/randomtextgenerator.ui" line="182"/>
-        <source>LaTeX Input</source>
-        <translation>Enmont LaTeX</translation>
+        <location filename="../src/quickdocumentdialog.ui" line="236"/>
+        <source>&amp;Packages</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/randomtextgenerator.ui" line="107"/>
-        <source>Save to:</source>
-        <translation>Enrollañ e-barzh:</translation>
+        <location filename="../src/quickdocumentdialog.ui" line="254"/>
+        <source>Package</source>
+        <translation>Pakad</translation>
     </message>
+    <message>
+        <location filename="../src/quickdocumentdialog.ui" line="259"/>
+        <source>Description</source>
+        <translation>Deskrivadur</translation>
+    </message>
+    <message>
+        <location filename="../src/quickdocumentdialog.ui" line="281"/>
+        <source>&amp;Geometry</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/quickdocumentdialog.ui" line="309"/>
+        <source>Page</source>
+        <translation>Pajenn</translation>
+    </message>
+    <message>
+        <location filename="../src/quickdocumentdialog.ui" line="315"/>
+        <source>Width:</source>
+        <translation>Ledanded:</translation>
+    </message>
+    <message>
+        <location filename="../src/quickdocumentdialog.ui" line="406"/>
+        <source>Height:</source>
+        <translation>Uhelder:</translation>
+    </message>
+    <message>
+        <location filename="../src/quickdocumentdialog.ui" line="416"/>
+        <source>Margins</source>
+        <translation>Marzoù</translation>
+    </message>
+    <message>
+        <location filename="../src/quickdocumentdialog.ui" line="422"/>
+        <source>Left:</source>
+        <translation>Kleiz:</translation>
+    </message>
+    <message>
+        <location filename="../src/quickdocumentdialog.ui" line="474"/>
+        <source>Right:</source>
+        <translation>Dehou:</translation>
+    </message>
+    <message>
+        <location filename="../src/quickdocumentdialog.ui" line="571"/>
+        <source>Top:</source>
+        <translation>Laez:</translation>
+    </message>
+    <message>
+        <location filename="../src/quickdocumentdialog.ui" line="578"/>
+        <source>Bottom:</source>
+        <translation>Traoñ:</translation>
+    </message>
+</context>
+<context>
+    <name>RandomTextGenerator</name>
     <message>
         <location filename="../src/randomtextgenerator.cpp" line="50"/>
         <source>No data given</source>
@@ -8476,12 +8553,98 @@ Gellout a rit ober gant \1 betek \9 e-barzh an destenn erlec&apos;hiañ da enlak
         <source>Finished generation</source>
         <translation>Geneladur echuet</translation>
     </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="14"/>
+        <source>Random Text Generator</source>
+        <translation>Geneler testenn dre-zegouezh</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="20"/>
+        <source>Options</source>
+        <translation>Dibarzhioù</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="52"/>
+        <source>First Order Characters</source>
+        <translation>Arouezioù an urzh kentañ</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="59"/>
+        <source>Generate</source>
+        <translation>Genel</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="66"/>
+        <source>Ignore Case</source>
+        <translation>Na ober van ouzh ar c&apos;hombod</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="73"/>
+        <location filename="../src/randomtextgenerator.ui" line="100"/>
+        <source>Higher Order:</source>
+        <translation>Urzh uhelañ:</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="93"/>
+        <source>First Order Word</source>
+        <translation>Ger an urzh kentañ</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="107"/>
+        <source>Save to:</source>
+        <translation>Enrollañ e-barzh:</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="124"/>
+        <source>Third Order Characters</source>
+        <translation>Arouezioù an trede urzh</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="131"/>
+        <source>Second Order Characters</source>
+        <translation>Arouezioù an eil urzh</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="138"/>
+        <source>Punctation</source>
+        <translation>Poentadur</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="145"/>
+        <source>Second Order Words</source>
+        <translation>Ger an eil urzh</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="155"/>
+        <source>Close</source>
+        <translation>Serriñ</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="162"/>
+        <source>Length:</source>
+        <translation>Hirded:</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="182"/>
+        <source>LaTeX Input</source>
+        <translation>Enmont LaTeX</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="192"/>
+        <source>Third Order Words</source>
+        <translation>Ger an trede urzh</translation>
+    </message>
+    <message>
+        <location filename="../src/randomtextgenerator.ui" line="228"/>
+        <source>Lorem Ipsum</source>
+        <translation type="unfinished"/>
+    </message>
 </context>
 <context>
     <name>SearchQuery</name>
     <message>
-        <location filename="../src/searchquery.cpp" line="7"/>
-        <location filename="../src/searchquery.cpp" line="14"/>
+        <location filename="../src/searchquery.cpp" line="8"/>
+        <location filename="../src/searchquery.cpp" line="16"/>
         <source>Search</source>
         <translation>Klask</translation>
     </message>
@@ -8489,17 +8652,17 @@ Gellout a rit ober gant \1 betek \9 e-barzh an destenn erlec&apos;hiañ da enlak
 <context>
     <name>SearchResultModel</name>
     <message>
-        <location filename="../src/searchresultmodel.cpp" line="208"/>
+        <location filename="../src/searchresultmodel.cpp" line="242"/>
         <source>File closed</source>
         <translation>Restr serret</translation>
     </message>
     <message>
-        <location filename="../src/searchresultmodel.cpp" line="212"/>
+        <location filename="../src/searchresultmodel.cpp" line="249"/>
         <source>untitled</source>
         <translation>hep titl ebet</translation>
     </message>
     <message>
-        <location filename="../src/searchresultmodel.cpp" line="371"/>
+        <location filename="../src/searchresultmodel.cpp" line="434"/>
         <source>Results</source>
         <translation>Disoc&apos;hoù</translation>
     </message>
@@ -8522,45 +8685,77 @@ Gellout a rit ober gant \1 betek \9 e-barzh an destenn erlec&apos;hiañ da enlak
         <translation>Raktres</translation>
     </message>
     <message>
-        <location filename="../src/searchresultwidget.cpp" line="29"/>
+        <location filename="../src/searchresultwidget.cpp" line="21"/>
+        <source>Files on disk</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/searchresultwidget.cpp" line="30"/>
         <source>Update Search</source>
         <translation>Hizivaat an enklask</translation>
     </message>
     <message>
-        <location filename="../src/searchresultwidget.cpp" line="33"/>
+        <location filename="../src/searchresultwidget.cpp" line="34"/>
+        <location filename="../src/searchresultwidget.cpp" line="174"/>
         <source>Replace all</source>
         <translation>Erlec&apos;hiañ pep-tra</translation>
     </message>
     <message>
-        <location filename="../src/searchresultwidget.cpp" line="40"/>
+        <location filename="../src/searchresultwidget.cpp" line="35"/>
+        <location filename="../src/searchresultwidget.cpp" line="172"/>
         <source>Replace by:</source>
         <translation>Erlec&apos;hian gant:</translation>
     </message>
     <message>
-        <location filename="../src/searchresultwidget.cpp" line="61"/>
+        <location filename="../src/searchresultwidget.cpp" line="39"/>
+        <source>TeX files</source>
+        <translation>Restroù TeX</translation>
+    </message>
+    <message>
+        <location filename="../src/searchresultwidget.cpp" line="40"/>
+        <source>Bib files</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/searchresultwidget.cpp" line="41"/>
+        <source>All files</source>
+        <translation>An holl restroù</translation>
+    </message>
+    <message>
+        <location filename="../src/searchresultwidget.cpp" line="74"/>
         <source>Expand All</source>
         <translation>Astenn pep-tra</translation>
     </message>
     <message>
-        <location filename="../src/searchresultwidget.cpp" line="64"/>
+        <location filename="../src/searchresultwidget.cpp" line="77"/>
         <source>Collapse All</source>
         <translation>Bihanaat pep-tra</translation>
     </message>
     <message>
-        <location filename="../src/searchresultwidget.cpp" line="67"/>
+        <location filename="../src/searchresultwidget.cpp" line="80"/>
         <source>Clear</source>
         <translation>Flastrañ</translation>
+    </message>
+    <message>
+        <location filename="../src/searchresultwidget.cpp" line="179"/>
+        <source>Search in:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/searchresultwidget.cpp" line="215"/>
+        <source>Select folder where to search</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>ShortcutComboBox</name>
     <message>
-        <location filename="../src/configdialog.cpp" line="42"/>
+        <location filename="../src/configdialog.cpp" line="45"/>
         <source>&lt;default&gt;</source>
         <translation>&lt;default&gt;</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="43"/>
+        <location filename="../src/configdialog.cpp" line="46"/>
         <source>&lt;none&gt;</source>
         <translation>&lt;none&gt;</translation>
     </message>
@@ -8568,98 +8763,33 @@ Gellout a rit ober gant \1 betek \9 e-barzh an destenn erlec&apos;hiañ da enlak
 <context>
     <name>ShortcutDelegate</name>
     <message>
-        <location filename="../src/configdialog.cpp" line="137"/>
+        <location filename="../src/configdialog.cpp" line="140"/>
         <source>To change a shortcut, edit the column &quot;Current Shortcut&quot; or &quot;Additional Shortcut&quot;.</source>
         <translation>Evit cheñch ur verradenn, aozit ar bann &quot;Berradenn a-vremañ&quot; pe &quot;Berradennoù ouzhpenn&quot;.</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="187"/>
+        <location filename="../src/configdialog.cpp" line="190"/>
         <source>Only single characters are allowed as key</source>
         <translation>Aotreet e vez evit an arouezioù eeun evel alc&apos;hwez hepken</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="197"/>
+        <location filename="../src/configdialog.cpp" line="200"/>
         <source>&lt;none&gt;</source>
         <translation>&lt;none&gt;</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="278"/>
+        <location filename="../src/configdialog.cpp" line="281"/>
         <source>delete row</source>
         <translation>Dilemel al linenn</translation>
     </message>
     <message>
-        <location filename="../src/configdialog.cpp" line="284"/>
+        <location filename="../src/configdialog.cpp" line="287"/>
         <source>add row</source>
         <translation>ouzhpennañ ul linenn</translation>
     </message>
 </context>
 <context>
     <name>SpellerDialog</name>
-    <message>
-        <location filename="../src/spellerdialog.ui" line="14"/>
-        <source>Check Spelling</source>
-        <translation>Gwiriañ ar yezh</translation>
-    </message>
-    <message>
-        <location filename="../src/spellerdialog.ui" line="43"/>
-        <source>Unknown Word</source>
-        <translation>Ger dizanv</translation>
-    </message>
-    <message>
-        <location filename="../src/spellerdialog.ui" line="60"/>
-        <source>Replace with</source>
-        <translation>Erlec&apos;hiañ gant</translation>
-    </message>
-    <message>
-        <location filename="../src/spellerdialog.ui" line="67"/>
-        <source>Suggested Words</source>
-        <translation>Gerioù aliet</translation>
-    </message>
-    <message>
-        <location filename="../src/spellerdialog.ui" line="116"/>
-        <source>Add</source>
-        <translation>Ouzhpennañ</translation>
-    </message>
-    <message>
-        <location filename="../src/spellerdialog.ui" line="101"/>
-        <source>User-added Words</source>
-        <translation>Gerioù ouzhpennet gant an implijer</translation>
-    </message>
-    <message>
-        <location filename="../src/spellerdialog.ui" line="77"/>
-        <source>&amp;Replace</source>
-        <translation>&amp;Erlec&apos;hiañ</translation>
-    </message>
-    <message>
-        <location filename="../src/spellerdialog.ui" line="87"/>
-        <source>Ignore &amp;Once</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/spellerdialog.ui" line="127"/>
-        <source>Remove</source>
-        <translation>Dilemel</translation>
-    </message>
-    <message>
-        <location filename="../src/spellerdialog.ui" line="147"/>
-        <source>Close</source>
-        <translation>Serriñ</translation>
-    </message>
-    <message>
-        <location filename="../src/spellerdialog.ui" line="169"/>
-        <source>Hide Added Words</source>
-        <translation>Kuzhat ar gerioù ouzhpennet</translation>
-    </message>
-    <message>
-        <location filename="../src/spellerdialog.ui" line="184"/>
-        <source>Ig&amp;nore All</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/spellerdialog.ui" line="191"/>
-        <source>&amp;Add to dictionary</source>
-        <translation type="unfinished"/>
-    </message>
     <message>
         <location filename="../src/spellerdialog.cpp" line="85"/>
         <source>Check spelling selection...</source>
@@ -8690,6 +8820,71 @@ Gellout a rit ober gant \1 betek \9 e-barzh an destenn erlec&apos;hiañ da enlak
         <source>&lt;new&gt;</source>
         <comment>Placeholder for new added word in ignore list</comment>
         <translation>&lt;new&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/spellerdialog.ui" line="14"/>
+        <source>Check Spelling</source>
+        <translation>Gwiriañ ar yezh</translation>
+    </message>
+    <message>
+        <location filename="../src/spellerdialog.ui" line="43"/>
+        <source>Unknown Word</source>
+        <translation>Ger dizanv</translation>
+    </message>
+    <message>
+        <location filename="../src/spellerdialog.ui" line="60"/>
+        <source>Replace with</source>
+        <translation>Erlec&apos;hiañ gant</translation>
+    </message>
+    <message>
+        <location filename="../src/spellerdialog.ui" line="67"/>
+        <source>Suggested Words</source>
+        <translation>Gerioù aliet</translation>
+    </message>
+    <message>
+        <location filename="../src/spellerdialog.ui" line="77"/>
+        <source>&amp;Replace</source>
+        <translation>&amp;Erlec&apos;hiañ</translation>
+    </message>
+    <message>
+        <location filename="../src/spellerdialog.ui" line="87"/>
+        <source>Ignore &amp;Once</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/spellerdialog.ui" line="101"/>
+        <source>User-added Words</source>
+        <translation>Gerioù ouzhpennet gant an implijer</translation>
+    </message>
+    <message>
+        <location filename="../src/spellerdialog.ui" line="116"/>
+        <source>Add</source>
+        <translation>Ouzhpennañ</translation>
+    </message>
+    <message>
+        <location filename="../src/spellerdialog.ui" line="127"/>
+        <source>Remove</source>
+        <translation>Dilemel</translation>
+    </message>
+    <message>
+        <location filename="../src/spellerdialog.ui" line="147"/>
+        <source>Close</source>
+        <translation>Serriñ</translation>
+    </message>
+    <message>
+        <location filename="../src/spellerdialog.ui" line="169"/>
+        <source>Hide Added Words</source>
+        <translation>Kuzhat ar gerioù ouzhpennet</translation>
+    </message>
+    <message>
+        <location filename="../src/spellerdialog.ui" line="184"/>
+        <source>Ig&amp;nore All</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/spellerdialog.ui" line="191"/>
+        <source>&amp;Add to dictionary</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -8863,178 +9058,98 @@ Gellout a rit ober gant \1 betek \9 e-barzh an destenn erlec&apos;hiañ da enlak
 <context>
     <name>SyntaxCheck</name>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="238"/>
+        <location filename="../src/syntaxcheck.cpp" line="237"/>
         <source>no error</source>
         <translation>fazi ebet</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="239"/>
+        <location filename="../src/syntaxcheck.cpp" line="238"/>
         <source>unrecognized environment</source>
         <translation>endro dianavezet</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="240"/>
+        <location filename="../src/syntaxcheck.cpp" line="239"/>
         <source>unrecognized command</source>
         <translation>urzhiad dianavezet</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="241"/>
+        <location filename="../src/syntaxcheck.cpp" line="240"/>
         <source>unrecognized math command</source>
         <translation>urzhiad matematik dianavezet</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="242"/>
+        <location filename="../src/syntaxcheck.cpp" line="241"/>
         <source>unrecognized tabular command</source>
         <translation>urzhiad taolennata dianevezet</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="243"/>
+        <location filename="../src/syntaxcheck.cpp" line="242"/>
         <source>tabular command outside tabular env</source>
         <translation>urzhiad taolennata en diavaez eus un endro dereat</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="244"/>
+        <location filename="../src/syntaxcheck.cpp" line="243"/>
         <source>math command outside math env</source>
         <translation>urzhiad matematikoù en diavaez eus un endro matematikel</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="245"/>
+        <location filename="../src/syntaxcheck.cpp" line="244"/>
         <source>tabbing command outside tabbing env</source>
         <translation>urzhiad taolennaiñ en diavaez eus un endro dereat</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="246"/>
+        <location filename="../src/syntaxcheck.cpp" line="245"/>
         <source>more cols in tabular than specified</source>
         <translation>muioc&apos;h a vannoù en daolenn evit pezh spisaet</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="247"/>
+        <location filename="../src/syntaxcheck.cpp" line="246"/>
         <source>cols in tabular missing</source>
         <translation>bannoù a vank en daolenn</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="248"/>
+        <location filename="../src/syntaxcheck.cpp" line="247"/>
         <source>\\ missing</source>
         <translation>\\ a vank</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="249"/>
+        <location filename="../src/syntaxcheck.cpp" line="248"/>
         <source>closing environment which has not been opened</source>
         <translation>o serriñ an endro chomet dizigor</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="250"/>
+        <location filename="../src/syntaxcheck.cpp" line="249"/>
         <source>environment not closed</source>
         <translation>endro ket sarret</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="251"/>
+        <location filename="../src/syntaxcheck.cpp" line="250"/>
         <source>unrecognized key in key option</source>
         <translation>alc&apos;hwez dianavezet e perzhioù an alc&apos;hwez</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="252"/>
+        <location filename="../src/syntaxcheck.cpp" line="251"/>
         <source>unrecognized value in key option</source>
         <translation>talvoudegezh dianavezet e perzhioù an alc&apos;hwez</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="253"/>
+        <location filename="../src/syntaxcheck.cpp" line="252"/>
         <source>command outside suitable env</source>
         <translation>urzhiad er-maez eus un endro dereat</translation>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="254"/>
+        <location filename="../src/syntaxcheck.cpp" line="253"/>
         <source>spelling</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/syntaxcheck.cpp" line="257"/>
+        <location filename="../src/syntaxcheck.cpp" line="256"/>
         <source>unknown</source>
         <translation>dizanv</translation>
     </message>
 </context>
 <context>
     <name>TabDialog</name>
-    <message>
-        <location filename="../src/tabdialog.ui" line="37"/>
-        <source>Num of Columns</source>
-        <translation>Nnn a vannoù</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="78"/>
-        <source>Columns</source>
-        <translation>Bannoù</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="86"/>
-        <source>Column :</source>
-        <translation>Bann:</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="113"/>
-        <source>Alignment :</source>
-        <translation>Linennadur</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="127"/>
-        <source>Left Border :</source>
-        <translation>Bevenn gleiz:</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="167"/>
-        <source>Apply to all columns</source>
-        <translation>Lakaat talvezout d&apos;an holl vannoù</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="194"/>
-        <source>Right Border (last column) :</source>
-        <translation>Bevenn dehou (bann diwezhañ)</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="232"/>
-        <source>Num of Rows</source>
-        <translation>Niv</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="263"/>
-        <source>Rows</source>
-        <translation>Linennoù</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="271"/>
-        <source>Row :</source>
-        <translation>Linenn:</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="296"/>
-        <source>Top Border</source>
-        <translation>Bevenn laez</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="305"/>
-        <source>Merge columns :</source>
-        <translation>Kendeuziñ ar bannoù:</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="321"/>
-        <source>-&gt;</source>
-        <translation>-&gt;</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="364"/>
-        <source>Apply to all rows</source>
-        <translation>Arloañ d&apos;an holl linennoù</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="389"/>
-        <source>Bottom Border (last row)</source>
-        <translation>Bevenn draoñ (linenn ziwezhañ)</translation>
-    </message>
-    <message>
-        <location filename="../src/tabdialog.ui" line="396"/>
-        <source>Add vertical margin for each row</source>
-        <translation>Ouzhpennan ur marz a-blom evit pep linenn</translation>
-    </message>
     <message>
         <location filename="../src/tabdialog.cpp" line="59"/>
         <source>Center</source>
@@ -9154,38 +9269,118 @@ Gellout a rit ober gant \1 betek \9 e-barzh an destenn erlec&apos;hiañ da enlak
         <source>Quick Tabular</source>
         <translation>Skoazeller taolenn</translation>
     </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="37"/>
+        <source>Num of Columns</source>
+        <translation>Nvr a vannoù</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="78"/>
+        <source>Columns</source>
+        <translation>Bannoù</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="86"/>
+        <source>Column :</source>
+        <translation>Bann:</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="113"/>
+        <source>Alignment :</source>
+        <translation>Linennadur:</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="127"/>
+        <source>Left Border :</source>
+        <translation>Bevenn gleiz:</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="167"/>
+        <source>Apply to all columns</source>
+        <translation>Lakaat talvezout d&apos;an holl vannoù</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="194"/>
+        <source>Right Border (last column) :</source>
+        <translation>Bevenn dehou (bann diwezhañ)</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="232"/>
+        <source>Num of Rows</source>
+        <translation>Nvr a linennoù</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="263"/>
+        <source>Rows</source>
+        <translation>Linennoù</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="271"/>
+        <source>Row :</source>
+        <translation>Linenn:</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="296"/>
+        <source>Top Border</source>
+        <translation>Bevenn laez</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="305"/>
+        <source>Merge columns :</source>
+        <translation>Kendeuziñ ar bannoù:</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="321"/>
+        <source>-&gt;</source>
+        <translation>-&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="364"/>
+        <source>Apply to all rows</source>
+        <translation>Arloañ d&apos;an holl linennoù</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="389"/>
+        <source>Bottom Border (last row)</source>
+        <translation>Bevenn draoñ (linenn ziwezhañ)</translation>
+    </message>
+    <message>
+        <location filename="../src/tabdialog.ui" line="396"/>
+        <source>Add vertical margin for each row</source>
+        <translation>Ouzhpennan ur marz a-blom evit pep linenn</translation>
+    </message>
 </context>
 <context>
     <name>TabbingDialog</name>
     <message>
-        <location filename="../src/tabbingdialog.ui" line="43"/>
+        <location filename="../src/tabbingdialog.cpp" line="28"/>
+        <source>Quick Tabbing</source>
+        <translation>Skoazeller toalennatadur</translation>
+    </message>
+    <message>
+        <location filename="../src/tabbingdialog.ui" line="44"/>
         <source>OK</source>
         <translation>Mat eo</translation>
     </message>
     <message>
-        <location filename="../src/tabbingdialog.ui" line="50"/>
+        <location filename="../src/tabbingdialog.ui" line="51"/>
         <source>Cancel</source>
         <translation>Nullañ</translation>
     </message>
     <message>
-        <location filename="../src/tabbingdialog.ui" line="75"/>
+        <location filename="../src/tabbingdialog.ui" line="76"/>
         <source>Spacing</source>
         <translation>Esaouiñ</translation>
     </message>
     <message>
-        <location filename="../src/tabbingdialog.ui" line="90"/>
+        <location filename="../src/tabbingdialog.ui" line="91"/>
         <source>Num of Rows</source>
-        <translation>Niv</translation>
+        <translation>Nvr a linennoù</translation>
     </message>
     <message>
-        <location filename="../src/tabbingdialog.ui" line="105"/>
+        <location filename="../src/tabbingdialog.ui" line="106"/>
         <source>Num of Columns</source>
-        <translation>Nnn a vannoù</translation>
-    </message>
-    <message>
-        <location filename="../src/tabbingdialog.cpp" line="28"/>
-        <source>Quick Tabbing</source>
-        <translation>Skoazeller toalennatadur</translation>
+        <translation>Nvr a vannoù</translation>
     </message>
 </context>
 <context>
@@ -9276,102 +9471,134 @@ c&apos;hwitet.</translation>
 <context>
     <name>TemplateSelector</name>
     <message>
-        <location filename="../src/templateselector.cpp" line="46"/>
+        <location filename="../src/templateselector.cpp" line="47"/>
         <source>No Preview</source>
         <translation>Rakwel ebet</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="98"/>
+        <location filename="../src/templateselector.cpp" line="99"/>
         <source>It is recommended to instantiate templates in a new folder. Otherwise, existing files may be overwritten.</source>
         <translation>Aliet e vez instañsiañ e-barzh teuliadoù nevez. A-hent all ar restroù a zo anezho, a zo en arvar da vezañ flastret.</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="129"/>
+        <location filename="../src/templateselector.cpp" line="136"/>
         <source>Online Repository</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="137"/>
-        <location filename="../src/templateselector.cpp" line="318"/>
+        <location filename="../src/templateselector.cpp" line="140"/>
+        <source>Online available template files</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/templateselector.cpp" line="145"/>
+        <location filename="../src/templateselector.cpp" line="336"/>
         <source>&lt;loading...&gt;</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="457"/>
+        <location filename="../src/templateselector.cpp" line="476"/>
         <source>Select Target Folder</source>
         <translation>Diuzañ an teuliad bukenn</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="487"/>
+        <location filename="../src/templateselector.cpp" line="506"/>
         <source>&lt;No Name&gt;</source>
         <translation>&lt;No Name&gt;</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="490"/>
+        <location filename="../src/templateselector.cpp" line="507"/>
+        <source>&lt;No Description&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/templateselector.cpp" line="508"/>
+        <source>&lt;Unknown Author&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/templateselector.cpp" line="509"/>
         <source>Date</source>
         <translation>Deiziad</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="491"/>
+        <location filename="../src/templateselector.cpp" line="510"/>
         <source>Version</source>
         <translation>Stumm</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="492"/>
+        <location filename="../src/templateselector.cpp" line="511"/>
         <source>License</source>
         <translation>Lisañs</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="535"/>
+        <location filename="../src/templateselector.cpp" line="566"/>
         <source>Edit Template</source>
         <translation>Aozañ ar patrom</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="536"/>
+        <location filename="../src/templateselector.cpp" line="567"/>
         <source>Edit Template Info</source>
         <translation>Aozañ titour ar patrom</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="537"/>
+        <location filename="../src/templateselector.cpp" line="568"/>
         <source>Remove</source>
         <translation>Dilemel</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="540"/>
+        <location filename="../src/templateselector.cpp" line="571"/>
         <source>Open Template Location</source>
         <translation>Digeriñ lec&apos;hiadur ar patrom</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="554"/>
-        <location filename="../src/templateselector.cpp" line="565"/>
-        <location filename="../src/templateselector.cpp" line="576"/>
+        <location filename="../src/templateselector.cpp" line="579"/>
+        <source>Editing of multi-file templates is not supported.
+Please open the template location and unzip the
+template to edit individual files.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/templateselector.cpp" line="585"/>
+        <location filename="../src/templateselector.cpp" line="596"/>
+        <location filename="../src/templateselector.cpp" line="607"/>
         <source>This template cannot be edited.</source>
         <translation>Ar patrom-mañ n&apos;hall ket bezañ aozet.</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="581"/>
+        <location filename="../src/templateselector.cpp" line="612"/>
         <source>Please Confirm</source>
         <translation>Kadarnit mar plij</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="581"/>
+        <location filename="../src/templateselector.cpp" line="612"/>
         <source>Are you sure to delete the following template?</source>
         <translation>Ha sur oc&apos;h e fell deoc&apos;h dilemel ar patrom-mañ?</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="588"/>
-        <location filename="../src/templateselector.cpp" line="593"/>
+        <location filename="../src/templateselector.cpp" line="619"/>
+        <location filename="../src/templateselector.cpp" line="624"/>
         <source>You do not have permission to remove this file.</source>
         <translation>N&apos;ho peus ket an aotre evit dilemel ar restr-mañ.</translation>
     </message>
     <message>
-        <location filename="../src/templateselector.cpp" line="603"/>
+        <location filename="../src/templateselector.cpp" line="644"/>
         <source>Could not open location:</source>
         <translation>N&apos;heller ket digeriñ al lec&apos;hiadur:</translation>
+    </message>
+    <message>
+        <location filename="../src/templateselector.cpp" line="655"/>
+        <source>Repository not found. Network error:%1</source>
+        <translation>Neket bet kavet ar mirva. Fazi kenrouedad: %1</translation>
     </message>
 </context>
 <context>
     <name>TexdocDialog</name>
+    <message>
+        <location filename="../src/texdocdialog.cpp" line="256"/>
+        <source>No Documentation Available</source>
+        <translation>N&apos;eus teuliad hegerz ebet</translation>
+    </message>
     <message>
         <location filename="../src/texdocdialog.ui" line="14"/>
         <source>Packages Help (Texdoc)</source>
@@ -9401,11 +9628,6 @@ c&apos;hwitet.</translation>
         <location filename="../src/texdocdialog.ui" line="164"/>
         <source>all packages</source>
         <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/texdocdialog.cpp" line="256"/>
-        <source>No Documentation Available</source>
-        <translation>N&apos;eus teuliad hegerz ebet</translation>
     </message>
 </context>
 <context>
@@ -9457,7 +9679,7 @@ c&apos;hwitet.</translation>
     </message>
     <message>
         <location filename="../src/additionaltranslations.cpp" line="347"/>
-        <location filename="../src/texstudio.cpp" line="286"/>
+        <location filename="../src/texstudio.cpp" line="284"/>
         <source>Central</source>
         <translation>Kreiz</translation>
     </message>
@@ -9546,1657 +9768,1672 @@ c&apos;hwitet.</translation>
         <translation>XML</translation>
     </message>
     <message>
-        <location filename="../src/configmanager.cpp" line="2145"/>
+        <location filename="../src/configmanager.cpp" line="2155"/>
         <source>Edit &amp;Macros...</source>
         <translation>Aozañ ar &amp;makroioù...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="362"/>
-        <location filename="../src/texstudio.cpp" line="6247"/>
+        <location filename="../src/texstudio.cpp" line="363"/>
+        <location filename="../src/texstudio.cpp" line="6299"/>
         <source>Ready</source>
         <translation>Prest</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="436"/>
+        <location filename="../src/texstudio.cpp" line="437"/>
         <source>TeX files</source>
         <translation>Restroù TeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="437"/>
+        <location filename="../src/texstudio.cpp" line="438"/>
         <source>LilyPond files</source>
         <translation>Restroù LilyPond</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="438"/>
+        <location filename="../src/texstudio.cpp" line="439"/>
         <source>Plaintext files</source>
         <translation>Restroù Plaintext</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="439"/>
+        <location filename="../src/texstudio.cpp" line="440"/>
         <source>Pweave files</source>
         <translation>Restroù Pweave</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="440"/>
+        <location filename="../src/texstudio.cpp" line="441"/>
         <source>Sweave files</source>
         <translation>Restroù Sweave</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="441"/>
+        <location filename="../src/texstudio.cpp" line="442"/>
         <source>Asymptote files</source>
         <translation>Restroù Asymptote</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="442"/>
+        <location filename="../src/texstudio.cpp" line="443"/>
         <source>PDF files</source>
         <translation>Restroù PDF</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="443"/>
-        <location filename="../src/texstudio.cpp" line="9772"/>
-        <location filename="../src/texstudio.cpp" line="9779"/>
+        <location filename="../src/texstudio.cpp" line="444"/>
+        <location filename="../src/texstudio.cpp" line="9848"/>
+        <location filename="../src/texstudio.cpp" line="9855"/>
         <source>All files</source>
         <translation>An holl restroù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="633"/>
-        <location filename="../src/texstudio.cpp" line="635"/>
+        <location filename="../src/texstudio.cpp" line="646"/>
         <source>Macros</source>
         <translation>Makroioù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="653"/>
+        <location filename="../src/texstudio.cpp" line="665"/>
         <source>Side Panel</source>
         <translation>Panell-gostez</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="691"/>
-        <location filename="../src/texstudio.cpp" line="693"/>
+        <location filename="../src/texstudio.cpp" line="684"/>
         <source>Structure</source>
         <translation>Framm</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="715"/>
-        <location filename="../src/texstudio.cpp" line="717"/>
+        <location filename="../src/texstudio.cpp" line="703"/>
         <source>Bookmarks</source>
         <translation>Sinedoù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="727"/>
-        <location filename="../src/texstudio.cpp" line="729"/>
+        <location filename="../src/texstudio.cpp" line="713"/>
         <source>Symbols</source>
         <translation>Arouezioù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="735"/>
+        <location filename="../src/texstudio.cpp" line="738"/>
         <source>Left/Right Brackets</source>
         <translation>Bevennerioù Kleiz/Dehou</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="737"/>
+        <location filename="../src/texstudio.cpp" line="740"/>
         <source>MetaPost Commands</source>
         <translation>Urzhiadoù MetaPost</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="736"/>
+        <location filename="../src/texstudio.cpp" line="739"/>
         <source>PSTricks Commands</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="705"/>
-        <location filename="../src/texstudio.cpp" line="707"/>
+        <location filename="../src/texstudio.cpp" line="695"/>
         <source>TOC</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="738"/>
+        <location filename="../src/texstudio.cpp" line="741"/>
         <source>TikZ Commands</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="739"/>
+        <location filename="../src/texstudio.cpp" line="742"/>
         <source>Asymptote Commands</source>
         <translation>Urzhiadoù Asymptote</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="740"/>
+        <location filename="../src/texstudio.cpp" line="743"/>
         <source>Beamer Commands</source>
         <translation>Urzhiadoù Beamer</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="741"/>
+        <location filename="../src/texstudio.cpp" line="744"/>
         <source>XY Commands</source>
         <translation>Urzhiadoù XY</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="886"/>
+        <location filename="../src/texstudio.cpp" line="865"/>
         <source>&amp;File</source>
         <translation>&amp;Restr</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="888"/>
+        <location filename="../src/texstudio.cpp" line="867"/>
         <source>&amp;New</source>
         <translation>&amp;Nevez</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="889"/>
+        <location filename="../src/texstudio.cpp" line="868"/>
         <source>New From &amp;Template...</source>
         <translation>Nevez adalek ar &amp;patrom...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="890"/>
+        <location filename="../src/texstudio.cpp" line="869"/>
         <source>&amp;Open...</source>
         <translation>&amp;Digeriñ...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="892"/>
+        <location filename="../src/texstudio.cpp" line="871"/>
         <source>Open &amp;Recent</source>
         <translation>Digeriñ ar re nevez</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="894"/>
+        <location filename="../src/texstudio.cpp" line="873"/>
         <source>Session</source>
         <translation>Dalc&apos;h</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="895"/>
+        <location filename="../src/texstudio.cpp" line="874"/>
         <source>Load Session...</source>
         <translation>Kargañ un dalc&apos;h...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="896"/>
+        <location filename="../src/texstudio.cpp" line="875"/>
         <source>Save Session...</source>
         <translation>Enrollañ un dalc&apos;h...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="897"/>
+        <location filename="../src/texstudio.cpp" line="876"/>
         <source>Restore Previous Session</source>
         <translation>Adsevel an dalc&apos;h kent</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="906"/>
+        <location filename="../src/texstudio.cpp" line="885"/>
         <source>&amp;Save</source>
         <translation>&amp;Enrollañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="907"/>
+        <location filename="../src/texstudio.cpp" line="886"/>
         <source>Save &amp;As...</source>
         <translation>Enroll&amp;añ evel....</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="908"/>
+        <location filename="../src/texstudio.cpp" line="887"/>
         <source>Save A&amp;ll</source>
         <translation>Enro&amp;llañ pep-tra</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="909"/>
+        <location filename="../src/texstudio.cpp" line="888"/>
         <source>&amp;Make Template...</source>
         <translation>Sevel ur patro&amp;m...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="912"/>
+        <location filename="../src/texstudio.cpp" line="891"/>
         <source>Fifi&amp;x</source>
         <translation>Fifi&amp;x</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="913"/>
+        <location filename="../src/texstudio.cpp" line="892"/>
         <source>Save renamed/&amp;moved file...</source>
         <translation>Enrollañ restr adanvet/fiñvet...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="914"/>
+        <location filename="../src/texstudio.cpp" line="893"/>
         <source>Save copied file...</source>
         <translation>Enrollañ ar restr eilet...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="915"/>
+        <location filename="../src/texstudio.cpp" line="894"/>
         <source>&amp;Delete file</source>
         <translation>&amp;Dilemel ar restr</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="916"/>
+        <location filename="../src/texstudio.cpp" line="895"/>
         <source>Set &amp;permissions...</source>
         <translation>Termeniñ &amp;aotreadurioù....</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="918"/>
+        <location filename="../src/texstudio.cpp" line="897"/>
         <source>&amp;Revert to saved...</source>
         <translation>Dist&amp;reiñ da enrollet...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="920"/>
+        <location filename="../src/texstudio.cpp" line="899"/>
         <source>Copy filename to &amp;clipboard</source>
         <translation>Eilañ an anv-restr er &amp;golver</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="923"/>
+        <location filename="../src/texstudio.cpp" line="902"/>
         <source>S&amp;VN/GIT...</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="924"/>
+        <location filename="../src/texstudio.cpp" line="903"/>
         <source>Check &amp;in...</source>
         <translation>Gw&amp;iriañ e-barzh...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="925"/>
+        <location filename="../src/texstudio.cpp" line="904"/>
         <source>SVN &amp;update...</source>
         <translation>Hizivadur SVN...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="926"/>
+        <location filename="../src/texstudio.cpp" line="905"/>
         <source>SVN update &amp;work directory</source>
         <translation>Kavlec&apos;hioù hizivadur SVN</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="927"/>
+        <location filename="../src/texstudio.cpp" line="906"/>
         <source>Sh&amp;ow old Revisions</source>
         <translation>Gwelet ar stummoù k&amp;ozh</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="928"/>
+        <location filename="../src/texstudio.cpp" line="907"/>
         <source>Lock &amp;PDF</source>
         <translation>Morailhañ ar &amp;PDF</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="929"/>
+        <location filename="../src/texstudio.cpp" line="908"/>
         <source>Check in P&amp;DF</source>
         <translation>Gwiriañ er P&amp;DF</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="930"/>
+        <location filename="../src/texstudio.cpp" line="909"/>
         <source>Show difference between two files</source>
         <translation>Diskouez an diforc&apos;h etre an div restr</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="931"/>
+        <location filename="../src/texstudio.cpp" line="910"/>
         <source>Show difference between two files in relation to base file</source>
         <translation>Diskouez an diforc&apos;h etre div restr e-liamm gant diaz ar restr</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="932"/>
+        <location filename="../src/texstudio.cpp" line="911"/>
         <source>Check SVN Conflict</source>
         <translation>Gwiriañ an dizemglev SVN</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="933"/>
+        <location filename="../src/texstudio.cpp" line="912"/>
         <source>Try to merge differences</source>
         <translation>Klask kendeuziñ an diforc&apos;hioù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="934"/>
+        <location filename="../src/texstudio.cpp" line="913"/>
         <source>Remove Difference-Markers</source>
         <translation>Tennañ merkerien an diforc&apos;hioù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="935"/>
+        <location filename="../src/texstudio.cpp" line="914"/>
         <source>Declare Conflict Resolved</source>
         <translation>Diskleriañ an dizemglevioù dirouestlet</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="936"/>
+        <location filename="../src/texstudio.cpp" line="915"/>
         <source>Jump to next difference</source>
         <translation>Mont d&apos;an diforc&apos;h da-heul</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="937"/>
+        <location filename="../src/texstudio.cpp" line="916"/>
         <source>Jump to previous difference</source>
         <translation>Mont d&apos;an diforc&apos;h kent</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="940"/>
-        <location filename="../src/texstudio.cpp" line="9973"/>
+        <location filename="../src/texstudio.cpp" line="919"/>
+        <location filename="../src/texstudio.cpp" line="10049"/>
         <source>&amp;Close</source>
         <translation>&amp;Serriñ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="941"/>
+        <location filename="../src/texstudio.cpp" line="920"/>
         <source>Clos&amp;e All</source>
         <translation>&amp;Serriñ pep-tra</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="944"/>
+        <location filename="../src/texstudio.cpp" line="923"/>
         <source>Print Source Code...</source>
         <translation>Moullañ ar c&apos;hod mammenn...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="947"/>
+        <location filename="../src/texstudio.cpp" line="926"/>
         <source>Exit</source>
         <translation>Kuitaat</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="950"/>
+        <location filename="../src/texstudio.cpp" line="929"/>
         <source>&amp;Edit</source>
         <translation>&amp;Aozañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="951"/>
+        <location filename="../src/texstudio.cpp" line="930"/>
         <source>&amp;Undo</source>
         <translation>&amp;Dizober</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="952"/>
+        <location filename="../src/texstudio.cpp" line="931"/>
         <source>&amp;Redo</source>
         <translation>&amp;Adober</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="954"/>
+        <location filename="../src/texstudio.cpp" line="933"/>
         <source>Debug undo stack</source>
         <translation>Diveugadur ar bern nulladurioù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="958"/>
+        <location filename="../src/texstudio.cpp" line="937"/>
         <source>&amp;Copy</source>
         <translation>&amp;Eilenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="957"/>
+        <location filename="../src/texstudio.cpp" line="936"/>
         <source>C&amp;ut</source>
         <translation>Troc&apos;hañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="921"/>
+        <location filename="../src/texstudio.cpp" line="730"/>
+        <source>Insert filename</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/texstudio.cpp" line="735"/>
+        <source>Files</source>
+        <translation>Restroù</translation>
+    </message>
+    <message>
+        <location filename="../src/texstudio.cpp" line="900"/>
         <source>Copy root filename to clipboard</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="959"/>
+        <location filename="../src/texstudio.cpp" line="938"/>
         <source>&amp;Paste</source>
         <translation>&amp;Pegañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="961"/>
+        <location filename="../src/texstudio.cpp" line="940"/>
         <source>&amp;Selection</source>
         <translation>&amp;Diuzañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="962"/>
+        <location filename="../src/texstudio.cpp" line="941"/>
         <source>Select &amp;All</source>
         <translation>Diuz&amp;añ pep-tra</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="963"/>
+        <location filename="../src/texstudio.cpp" line="942"/>
         <source>Select All &amp;Occurrences</source>
         <translation>Diuzañ an holl zeg&amp;ouezhioù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="964"/>
+        <location filename="../src/texstudio.cpp" line="943"/>
         <source>Select &amp;Prev Occurrence</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="965"/>
+        <location filename="../src/texstudio.cpp" line="944"/>
         <source>Select &amp;Next Occurrence</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="966"/>
+        <location filename="../src/texstudio.cpp" line="945"/>
         <source>Also Select Prev Occurrence</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="967"/>
+        <location filename="../src/texstudio.cpp" line="946"/>
         <source>Also Select Next Occurrence</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="968"/>
+        <location filename="../src/texstudio.cpp" line="947"/>
         <source>Expand Selection to Word</source>
         <translation>Astenn diuzañ betek ar ger</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="969"/>
+        <location filename="../src/texstudio.cpp" line="948"/>
         <source>Expand Selection to Line</source>
         <translation>Astenn an diuzañ betek al linenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="971"/>
+        <location filename="../src/texstudio.cpp" line="950"/>
         <source>&amp;Line Operations</source>
         <translation>Oberiadurioù &amp;linenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="972"/>
+        <location filename="../src/texstudio.cpp" line="951"/>
         <source>Delete &amp;Line</source>
         <translation>Dilemel al &amp;linenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="975"/>
-        <location filename="../src/texstudio.cpp" line="977"/>
+        <location filename="../src/texstudio.cpp" line="954"/>
+        <location filename="../src/texstudio.cpp" line="956"/>
         <source>Delete To &amp;End Of Line</source>
         <translation>Dilem&amp;el fin al linenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="979"/>
+        <location filename="../src/texstudio.cpp" line="958"/>
         <source>Delete From &amp;Start Of Line</source>
         <translation>Dilemel adalek &amp;Penn-kentañ al linenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="980"/>
+        <location filename="../src/texstudio.cpp" line="959"/>
         <source>Move Line &amp;Up</source>
         <translation>Fiñval al linenn war-&amp;grec&apos;h</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="981"/>
+        <location filename="../src/texstudio.cpp" line="960"/>
         <source>Move Line &amp;Down</source>
         <translation>Fiñval al linenn war-&amp;draoñ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="982"/>
+        <location filename="../src/texstudio.cpp" line="961"/>
         <source>Du&amp;plicate Line</source>
         <translation>Eilañ al linenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="983"/>
+        <location filename="../src/texstudio.cpp" line="962"/>
         <source>S&amp;ort Lines</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="984"/>
+        <location filename="../src/texstudio.cpp" line="963"/>
         <source>&amp;Align Cursors</source>
         <translation>Linenn&amp;añ ar retioù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="986"/>
+        <location filename="../src/texstudio.cpp" line="965"/>
         <source>&amp;Text Operations</source>
         <translation>Oberiadurioù an des&amp;tenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="987"/>
+        <location filename="../src/texstudio.cpp" line="966"/>
         <source>To Lowercase</source>
         <translation>E lizherennoù-munut</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="988"/>
+        <location filename="../src/texstudio.cpp" line="967"/>
         <source>To Uppercase</source>
         <translation>E lizherennoù-bras</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="989"/>
+        <location filename="../src/texstudio.cpp" line="968"/>
         <source>To Titlecase (strict)</source>
         <translation>E titl-lizherennoù (strizh)</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="990"/>
+        <location filename="../src/texstudio.cpp" line="969"/>
         <source>To Titlecase (smart)</source>
         <translation>E titl-lizherennoù (poellek)</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="994"/>
+        <location filename="../src/texstudio.cpp" line="973"/>
         <source>&amp;Searching</source>
         <translation>&amp;O klask</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="995"/>
+        <location filename="../src/texstudio.cpp" line="974"/>
         <source>&amp;Find</source>
         <translation>&amp;Kavout</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="996"/>
+        <location filename="../src/texstudio.cpp" line="975"/>
         <source>Find &amp;Next</source>
         <translation>Kavout &amp;Da-heul</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="997"/>
+        <location filename="../src/texstudio.cpp" line="976"/>
         <source>Find &amp;Prev</source>
         <translation>Kavout &amp;Kent</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="998"/>
+        <location filename="../src/texstudio.cpp" line="977"/>
         <source>Continue F&amp;ind</source>
         <translation>Kendelc&apos;her da &amp;glask</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="999"/>
+        <location filename="../src/texstudio.cpp" line="978"/>
         <source>&amp;Count</source>
         <translation>&amp;Kontañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1000"/>
+        <location filename="../src/texstudio.cpp" line="979"/>
         <source>&amp;Select all matches...</source>
         <translation>&amp;Diuzañ an holl glokterioù...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1002"/>
+        <location filename="../src/texstudio.cpp" line="981"/>
         <source>&amp;Replace</source>
         <translation>&amp;Erlec&apos;hiañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1003"/>
+        <location filename="../src/texstudio.cpp" line="982"/>
         <source>Replace Next</source>
         <translation>Erlerc&apos;hiañ da-heul</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1004"/>
+        <location filename="../src/texstudio.cpp" line="983"/>
         <source>Replace Prev</source>
         <translation>Erlec&apos;hiañ kent</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1005"/>
+        <location filename="../src/texstudio.cpp" line="984"/>
         <source>Replace &amp;All</source>
         <translation>Erlec&apos;hiañ pep-tr&amp;a</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1008"/>
+        <location filename="../src/texstudio.cpp" line="987"/>
         <source>Go to</source>
         <translation>Mont da</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1010"/>
-        <location filename="../src/texstudio.cpp" line="7720"/>
-        <location filename="../src/texstudio.cpp" line="7745"/>
-        <location filename="../src/texstudio.cpp" line="7765"/>
+        <location filename="../src/texstudio.cpp" line="989"/>
+        <location filename="../src/texstudio.cpp" line="7771"/>
+        <location filename="../src/texstudio.cpp" line="7796"/>
+        <location filename="../src/texstudio.cpp" line="7816"/>
         <source>Line</source>
         <translation>Linenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1011"/>
+        <location filename="../src/texstudio.cpp" line="990"/>
         <source>Previous Change</source>
         <translation>Kemm kent</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1013"/>
-        <location filename="../src/texstudio.cpp" line="1015"/>
+        <location filename="../src/texstudio.cpp" line="992"/>
+        <location filename="../src/texstudio.cpp" line="994"/>
         <source>Next Change</source>
         <translation>Kemm da-heul</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1018"/>
+        <location filename="../src/texstudio.cpp" line="997"/>
         <source>Previous mark</source>
         <translation>Mark kent</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1019"/>
+        <location filename="../src/texstudio.cpp" line="998"/>
         <source>Next mark</source>
         <translation>Mark da-heul</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1022"/>
+        <location filename="../src/texstudio.cpp" line="1001"/>
         <source>Go Back</source>
         <translation>Distreiñ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1023"/>
+        <location filename="../src/texstudio.cpp" line="1002"/>
         <source>Go Forward</source>
         <translation>Mont war-raok</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1026"/>
+        <location filename="../src/texstudio.cpp" line="1005"/>
         <source>Goto Bookmark</source>
         <translation>Mont d&apos;ar sined</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1039"/>
-        <location filename="../src/texstudio.cpp" line="1048"/>
-        <location filename="../src/texstudio.cpp" line="1052"/>
+        <location filename="../src/texstudio.cpp" line="1018"/>
+        <location filename="../src/texstudio.cpp" line="1027"/>
+        <location filename="../src/texstudio.cpp" line="1031"/>
         <source>Bookmark %1</source>
         <translation>Sined %1</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1043"/>
+        <location filename="../src/texstudio.cpp" line="1022"/>
         <source>Toggle Bookmark</source>
         <translation>Gwintañ ar sined</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1046"/>
-        <location filename="../src/texstudio.cpp" line="1050"/>
+        <location filename="../src/texstudio.cpp" line="1025"/>
+        <location filename="../src/texstudio.cpp" line="1029"/>
         <source>Unnamed Bookmark</source>
         <translation>Sined hep anv</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1057"/>
+        <location filename="../src/texstudio.cpp" line="1036"/>
         <source>Line Ending</source>
         <translation>Fin linenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1059"/>
+        <location filename="../src/texstudio.cpp" line="1038"/>
         <source>DOS/Windows (CR LF)</source>
         <translation>DOS/Windows (CR LF)</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1063"/>
+        <location filename="../src/texstudio.cpp" line="1042"/>
         <source>Unix (LF)</source>
         <translation>Unix (LF)</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1067"/>
+        <location filename="../src/texstudio.cpp" line="1046"/>
         <source>Old Mac (CR)</source>
         <translation>Mac Kozh (CR)</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1073"/>
+        <location filename="../src/texstudio.cpp" line="1052"/>
         <source>Setup Encoding...</source>
         <translation>Kefluniadur an enkodañ...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1075"/>
-        <location filename="../src/texstudio.cpp" line="1077"/>
+        <location filename="../src/texstudio.cpp" line="1054"/>
+        <location filename="../src/texstudio.cpp" line="1056"/>
         <source>Insert Unicode Character...</source>
         <translation>Enlakaat un arouez Unikod...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1083"/>
+        <location filename="../src/texstudio.cpp" line="1062"/>
         <source>&amp;Idefix</source>
         <translation>&amp;Idefiks</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1084"/>
+        <location filename="../src/texstudio.cpp" line="1063"/>
         <source>Erase &amp;Word/Cmd/Env</source>
         <translation>Flastrañ &amp;Word/Cmd/Endr</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1087"/>
+        <location filename="../src/texstudio.cpp" line="1066"/>
         <source>Pas&amp;te as LaTeX</source>
         <translation>Pegañ e La&amp;TeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1088"/>
+        <location filename="../src/texstudio.cpp" line="1067"/>
         <source>Co&amp;nvert to LaTeX</source>
         <translation>Emdreiñ da LaTeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1091"/>
+        <location filename="../src/texstudio.cpp" line="1070"/>
         <source>Pre&amp;view Selection/Parentheses</source>
         <translation>Rak&amp;welet an diuzañ/kromelloù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1092"/>
+        <location filename="../src/texstudio.cpp" line="1071"/>
         <source>C&amp;lear Inline Preview</source>
         <translation>Spurjañ ar rakwel en&amp;linenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1094"/>
+        <location filename="../src/texstudio.cpp" line="1073"/>
         <source>Preview Dis&amp;play Mode</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1096"/>
+        <location filename="../src/texstudio.cpp" line="1075"/>
         <source>Show preview as tooltip if panel is hidden</source>
         <translation>Diskouez ar rakwel evel ul lagadenn ditouriñ ma vez kuzhet ar banell</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1100"/>
+        <location filename="../src/texstudio.cpp" line="1079"/>
         <source>Always show preview in preview panel</source>
         <translation>Diskouez ar rakwel e-barzh panell ar rakweloù dalc&apos;hmat</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1104"/>
+        <location filename="../src/texstudio.cpp" line="1083"/>
         <source>Always show preview as tool tip</source>
         <translation>Diskouez ar rakwel evel ul lagadenn-ditouriñ dalc&apos;hmat</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1108"/>
+        <location filename="../src/texstudio.cpp" line="1087"/>
         <source>Always show both</source>
         <translation>Diskouez an daou atav</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1112"/>
+        <location filename="../src/texstudio.cpp" line="1091"/>
         <source>Inline</source>
         <translation>Enlinenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1118"/>
+        <location filename="../src/texstudio.cpp" line="1097"/>
         <source>Show in embedded viewer</source>
         <translation>Diskouez e-barzh al lenner ambarket</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1127"/>
+        <location filename="../src/texstudio.cpp" line="1106"/>
         <source>Toggle &amp;Comment</source>
         <translation>Gwintañ &amp;Evezhiadenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1128"/>
+        <location filename="../src/texstudio.cpp" line="1107"/>
         <source>&amp;Comment</source>
         <translation>&amp;Evezhiadenniñ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1129"/>
+        <location filename="../src/texstudio.cpp" line="1108"/>
         <source>&amp;Uncomment</source>
         <translation>&amp;Dievezhiadenniñ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1130"/>
+        <location filename="../src/texstudio.cpp" line="1109"/>
         <source>&amp;Indent</source>
         <translation>&amp;Endantadur</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1131"/>
+        <location filename="../src/texstudio.cpp" line="1110"/>
         <source>Unin&amp;dent</source>
         <translation>&amp;Di-endantadur</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1132"/>
+        <location filename="../src/texstudio.cpp" line="1111"/>
         <source>Hard Line &amp;Break...</source>
         <translation>&amp;Distroioù d&apos;al linenn...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1133"/>
+        <location filename="../src/texstudio.cpp" line="1112"/>
         <source>R&amp;epeat Hard Line Break</source>
         <translation>Adob&amp;er ar cheñchadurioù linennoù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1136"/>
+        <location filename="../src/texstudio.cpp" line="1115"/>
         <source>&amp;Go to</source>
         <translation>&amp;Mont da</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1138"/>
+        <location filename="../src/texstudio.cpp" line="1117"/>
         <source>Previous Error</source>
         <translation>Fazi kent</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1138"/>
-        <location filename="../src/texstudio.cpp" line="1139"/>
+        <location filename="../src/texstudio.cpp" line="1117"/>
+        <location filename="../src/texstudio.cpp" line="1118"/>
         <source>No LaTeX errors detected !</source>
         <translation>Fazi LaTeX ebet diguzhet!</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1139"/>
+        <location filename="../src/texstudio.cpp" line="1118"/>
         <source>Next Error</source>
         <translation>Fazi da-heul</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1140"/>
+        <location filename="../src/texstudio.cpp" line="1119"/>
         <source>Previous Warning</source>
         <translation>Kemenn-diwall kent</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1140"/>
-        <location filename="../src/texstudio.cpp" line="1141"/>
+        <location filename="../src/texstudio.cpp" line="1119"/>
+        <location filename="../src/texstudio.cpp" line="1120"/>
         <source>No LaTeX warnings detected !</source>
         <translation>Kemenn-diwall LaTeX ebet diguzhet!</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1141"/>
+        <location filename="../src/texstudio.cpp" line="1120"/>
         <source>Next Warning</source>
         <translation>Kemenn-diwall da-heul</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1142"/>
+        <location filename="../src/texstudio.cpp" line="1121"/>
         <source>Previous Bad Box</source>
         <translation>Boest fall kent</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1142"/>
-        <location filename="../src/texstudio.cpp" line="1143"/>
+        <location filename="../src/texstudio.cpp" line="1121"/>
+        <location filename="../src/texstudio.cpp" line="1122"/>
         <source>No bad boxes detected !</source>
         <translation>Boest fall ebet diguzhet!</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1143"/>
+        <location filename="../src/texstudio.cpp" line="1122"/>
         <source>Next Bad Box</source>
         <translation>Boest fall da-heul</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1146"/>
+        <location filename="../src/texstudio.cpp" line="1125"/>
         <source>Definition</source>
         <translation>Termenadur</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1149"/>
+        <location filename="../src/texstudio.cpp" line="1128"/>
         <source>Re&amp;name Environment</source>
         <translation>Ade&amp;nvel an endro</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1151"/>
+        <location filename="../src/texstudio.cpp" line="1130"/>
         <source>Parenthesis</source>
         <translation>Kromelloù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1153"/>
-        <location filename="../src/texstudio.cpp" line="1163"/>
+        <location filename="../src/texstudio.cpp" line="1132"/>
+        <location filename="../src/texstudio.cpp" line="1142"/>
         <source>Jump to Match</source>
         <translation>Mont d&apos;ar glokted</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1154"/>
-        <location filename="../src/texstudio.cpp" line="1164"/>
+        <location filename="../src/texstudio.cpp" line="1133"/>
+        <location filename="../src/texstudio.cpp" line="1143"/>
         <source>Select Inner</source>
         <translation>Diuzañ an diabarzher</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1155"/>
-        <location filename="../src/texstudio.cpp" line="1165"/>
+        <location filename="../src/texstudio.cpp" line="1134"/>
+        <location filename="../src/texstudio.cpp" line="1144"/>
         <source>Select Outer</source>
         <translation>Diuzañ an diavaezher</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1156"/>
-        <location filename="../src/texstudio.cpp" line="1166"/>
+        <location filename="../src/texstudio.cpp" line="1135"/>
+        <location filename="../src/texstudio.cpp" line="1145"/>
         <source>Select Command</source>
         <translation>Diuzañ an urzhiad</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1157"/>
-        <location filename="../src/texstudio.cpp" line="1167"/>
+        <location filename="../src/texstudio.cpp" line="1136"/>
+        <location filename="../src/texstudio.cpp" line="1146"/>
         <source>Select Line</source>
         <translation>Diuzañ al linenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1158"/>
-        <location filename="../src/texstudio.cpp" line="1168"/>
+        <location filename="../src/texstudio.cpp" line="1137"/>
+        <location filename="../src/texstudio.cpp" line="1147"/>
         <source>Select Inverting</source>
         <translation>Diuzañ an enep</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1161"/>
-        <location filename="../src/texstudio.cpp" line="1171"/>
+        <location filename="../src/texstudio.cpp" line="1140"/>
+        <location filename="../src/texstudio.cpp" line="1150"/>
         <source>Find Mismatch</source>
         <translation>Kavout an disklotadurioù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1174"/>
+        <location filename="../src/texstudio.cpp" line="1153"/>
         <source>Complete</source>
         <translation>Klok</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1175"/>
+        <location filename="../src/texstudio.cpp" line="1154"/>
         <source>Normal</source>
         <translation>Normal</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1176"/>
+        <location filename="../src/texstudio.cpp" line="1155"/>
         <source>\begin{ Completion</source>
         <translation>\begin{ Klokter</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1177"/>
+        <location filename="../src/texstudio.cpp" line="1156"/>
         <source>Normal Text</source>
         <translation>Testenn normal</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1178"/>
+        <location filename="../src/texstudio.cpp" line="1157"/>
         <source>Close latest open environment</source>
         <translation>Serriñ an endro digoret da ziwezhañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1181"/>
+        <location filename="../src/texstudio.cpp" line="1160"/>
         <source>update TOC</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1182"/>
+        <location filename="../src/texstudio.cpp" line="1161"/>
         <source>Refresh Structure</source>
         <translation>Freskaat ar framm</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1183"/>
+        <location filename="../src/texstudio.cpp" line="1162"/>
         <source>Refresh Language Model</source>
         <translation>Freskaat modal ar yezh</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1184"/>
+        <location filename="../src/texstudio.cpp" line="1163"/>
         <source>Force an update of the dynamic language model used for highlighting and folding. Likely, you do not need to call this because updates are usually automatic.</source>
         <translation>Rediañ un hizivadur patrom yezh dinamek implijet evit usskediñ hag ar plegañ kod. Sur-mat didalvoudus rak an hizivadurioù a vez peurvuiañ en un doare emgefreek.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1185"/>
+        <location filename="../src/texstudio.cpp" line="1164"/>
         <source>Remove Placeholders</source>
         <translation>Dilemel an dibarzhioù-faltaziet</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1186"/>
+        <location filename="../src/texstudio.cpp" line="1165"/>
         <source>Remove Current Placeholder</source>
         <translation>Dilemel an dibarzhioù-faltaziet red</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1191"/>
+        <location filename="../src/texstudio.cpp" line="1170"/>
         <source>&amp;Tools</source>
         <translation>&amp;Ostilhoù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1193"/>
+        <location filename="../src/texstudio.cpp" line="1172"/>
         <source>&amp;Build &amp;&amp; View</source>
         <translation>&amp;Sevel &amp;&amp; Gwelout</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1194"/>
+        <location filename="../src/texstudio.cpp" line="1173"/>
         <source>&amp;Compile</source>
         <translation>&amp;Kempunañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1195"/>
+        <location filename="../src/texstudio.cpp" line="1174"/>
         <source>Stop Compile</source>
         <translation>Paouez da gempunañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1199"/>
-        <location filename="../src/texstudio.cpp" line="1351"/>
+        <location filename="../src/texstudio.cpp" line="1178"/>
+        <location filename="../src/texstudio.cpp" line="1333"/>
         <source>&amp;View</source>
         <translation>&amp;Gwelet</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1200"/>
-        <location filename="../src/texstudio.cpp" line="1298"/>
+        <location filename="../src/texstudio.cpp" line="1179"/>
+        <location filename="../src/texstudio.cpp" line="1280"/>
         <source>&amp;Bibliography</source>
         <translation>&amp;Bibliografiezh</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1201"/>
+        <location filename="../src/texstudio.cpp" line="1180"/>
         <source>&amp;Glossary</source>
         <translation>&amp;Geriaoueg</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1202"/>
+        <location filename="../src/texstudio.cpp" line="1181"/>
         <source>&amp;Index</source>
         <translation>&amp;Indeks</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1205"/>
+        <location filename="../src/texstudio.cpp" line="1184"/>
         <source>&amp;Commands</source>
         <comment>menu</comment>
         <translation>&amp;Urzhiadoù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1206"/>
+        <location filename="../src/texstudio.cpp" line="1185"/>
         <source>&amp;Latexmk</source>
         <translation>&amp;Latexmk</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1208"/>
-        <location filename="../src/texstudio.cpp" line="1258"/>
+        <location filename="../src/texstudio.cpp" line="1187"/>
+        <location filename="../src/texstudio.cpp" line="1237"/>
         <source>&amp;LaTeX</source>
         <translation>&amp;LaTeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1209"/>
+        <location filename="../src/texstudio.cpp" line="1188"/>
         <source>&amp;PDFLaTeX</source>
         <translation>&amp;PDFLaTeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1213"/>
+        <location filename="../src/texstudio.cpp" line="1192"/>
         <source>DVI-&gt;PS</source>
         <translation>DVI-&gt;PS</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1214"/>
+        <location filename="../src/texstudio.cpp" line="1193"/>
         <source>P&amp;S-&gt;PDF</source>
         <translation>P&amp;S-&gt;PDF</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1215"/>
+        <location filename="../src/texstudio.cpp" line="1194"/>
         <source>DV&amp;I-&gt;PDF</source>
         <translation>DV&amp;I-&gt;PDF</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1217"/>
+        <location filename="../src/texstudio.cpp" line="1196"/>
         <source>View &amp;DVI</source>
         <translation>Gwelout &amp;DVI</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1218"/>
+        <location filename="../src/texstudio.cpp" line="1197"/>
         <source>Vie&amp;w PS</source>
         <translation>G&amp;welet PS</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1219"/>
+        <location filename="../src/texstudio.cpp" line="1198"/>
         <source>View PD&amp;F</source>
         <translation>Gwelet PD&amp;F</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1221"/>
+        <location filename="../src/texstudio.cpp" line="1200"/>
         <source>&amp;Bibtex</source>
         <translation>&amp;Bibtex</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1222"/>
+        <location filename="../src/texstudio.cpp" line="1201"/>
         <source>&amp;Bibtex 8-Bit</source>
         <translation>&amp;Bibtex 8-Bit</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1223"/>
+        <location filename="../src/texstudio.cpp" line="1202"/>
         <source>Bibe&amp;r</source>
         <translation>Bibe&amp;r</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1225"/>
+        <location filename="../src/texstudio.cpp" line="1204"/>
         <source>&amp;MakeIndex</source>
         <translation>&amp;Sevel-indeks</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1226"/>
+        <location filename="../src/texstudio.cpp" line="1205"/>
         <source>&amp;TexIndy</source>
         <translation>&amp;TexIndy</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1227"/>
+        <location filename="../src/texstudio.cpp" line="1206"/>
         <source>&amp;Xindex</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1228"/>
+        <location filename="../src/texstudio.cpp" line="1207"/>
         <source>&amp;Makeglossaries</source>
         <translation>&amp;Sevel-geriaouegoù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1230"/>
+        <location filename="../src/texstudio.cpp" line="1209"/>
         <source>&amp;MetaPost</source>
         <translation>&amp;MetaPost</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1231"/>
+        <location filename="../src/texstudio.cpp" line="1210"/>
         <source>&amp;Asymptote</source>
         <translation>&amp;Asymptote</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1233"/>
+        <location filename="../src/texstudio.cpp" line="1212"/>
         <source>&amp;User</source>
         <comment>menu</comment>
         <translation>&amp;Implijer</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1236"/>
+        <location filename="../src/texstudio.cpp" line="1215"/>
         <source>Cle&amp;an Auxiliary Files...</source>
         <translation>Goullonderiñ ar restroù-sko&amp;azell...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1237"/>
+        <location filename="../src/texstudio.cpp" line="1216"/>
         <source>Open External &amp;Terminal</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1239"/>
+        <location filename="../src/texstudio.cpp" line="1218"/>
         <source>View &amp;Log</source>
         <translation>Gwelet ar &amp;renabl</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1240"/>
+        <location filename="../src/texstudio.cpp" line="1219"/>
         <source>Show Log Markers</source>
         <translation>Gwelet merkerioù ar renabl</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1244"/>
+        <location filename="../src/texstudio.cpp" line="1223"/>
         <source>C&amp;onvert to Html...</source>
         <translation>Emdreiñ da Html...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1245"/>
+        <location filename="../src/texstudio.cpp" line="1224"/>
         <source>C&amp;onvert Source to Html...</source>
         <translation>Emdreiñ ar vammenn da Html...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1247"/>
+        <location filename="../src/texstudio.cpp" line="1226"/>
         <source>Convert to Abridged Plaintext</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1248"/>
+        <location filename="../src/texstudio.cpp" line="1227"/>
         <source>A&amp;nalyse Text...</source>
         <translation>A&amp;nalizadur an destenn...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1249"/>
+        <location filename="../src/texstudio.cpp" line="1228"/>
         <source>Generate &amp;Random Text...</source>
         <translation>Genel ha testenn d&amp;re-zegouezh...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1251"/>
+        <location filename="../src/texstudio.cpp" line="1230"/>
         <source>Check Spelling...</source>
         <translation>Gwiriañ ar reizhskrivadur...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1252"/>
+        <location filename="../src/texstudio.cpp" line="1231"/>
         <source>Thesaurus...</source>
         <translation>Thesaurus...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1253"/>
+        <location filename="../src/texstudio.cpp" line="1232"/>
         <source>Find Word Repetitions...</source>
         <translation>Kavout gerioù adlavaret...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1260"/>
+        <location filename="../src/texstudio.cpp" line="1239"/>
         <source>Insert \ref to Next Label</source>
         <translation>Enlakaat \ref d&apos;al Label da zont</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1261"/>
+        <location filename="../src/texstudio.cpp" line="1240"/>
         <source>Insert \ref to Previous Label</source>
         <translation>Enlakaat \ref d&apos;al Label kent</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1262"/>
+        <location filename="../src/texstudio.cpp" line="1241"/>
         <source>Manipulate Tables</source>
         <comment>table</comment>
         <translation>Dazverañ taolennoù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1263"/>
+        <location filename="../src/texstudio.cpp" line="1242"/>
         <source>Add Row</source>
         <comment>table</comment>
         <translation>Ouzhpennañ ul linenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1264"/>
+        <location filename="../src/texstudio.cpp" line="1243"/>
         <source>Add Column</source>
         <comment>table</comment>
         <translation>Ouzhpennañ ur bann</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1265"/>
+        <location filename="../src/texstudio.cpp" line="1244"/>
         <source>Remove Row</source>
         <comment>table</comment>
         <translation>Dilemel al linenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1266"/>
+        <location filename="../src/texstudio.cpp" line="1245"/>
         <source>Remove Column</source>
         <comment>table</comment>
         <translation>Dilemel ar bann</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1267"/>
+        <location filename="../src/texstudio.cpp" line="1246"/>
         <source>Cut Column</source>
         <comment>table</comment>
         <translation>Troc&apos;hañ ar bann</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1268"/>
+        <location filename="../src/texstudio.cpp" line="1247"/>
         <source>Paste Column</source>
         <comment>table</comment>
         <translation>Pegañ ar bann</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1269"/>
+        <location filename="../src/texstudio.cpp" line="1248"/>
         <source>Add \hline</source>
         <comment>table</comment>
         <translation>Ouzhpennañ \hline</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1270"/>
+        <location filename="../src/texstudio.cpp" line="1249"/>
         <source>Remove \hline</source>
         <comment>table</comment>
         <translation>Dilemel \hline</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1271"/>
+        <location filename="../src/texstudio.cpp" line="1250"/>
         <source>Remodel Table Using Template</source>
         <comment>table</comment>
         <translation>Adverañ an daolenn adalek ur patrom</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1272"/>
+        <location filename="../src/texstudio.cpp" line="1251"/>
         <source>Align Columns</source>
         <translation>Linennadur ar bannoù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1273"/>
+        <location filename="../src/texstudio.cpp" line="1252"/>
         <source>Add magic comments ...</source>
         <translation>Ouzhpennañ evezhiadennoù hud</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1274"/>
+        <location filename="../src/texstudio.cpp" line="1253"/>
         <source>Insert root document name as TeX comment</source>
         <translation>Enlakaat un anv teul gwrizienn evel evezhiadenn TeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1275"/>
-        <location filename="../src/texstudio.cpp" line="1659"/>
+        <location filename="../src/texstudio.cpp" line="1254"/>
+        <location filename="../src/texstudio.cpp" line="1642"/>
         <source>Insert language as TeX comment</source>
         <translation>Enlakaat ar yezh evel un evezhiadenn TeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1276"/>
+        <location filename="../src/texstudio.cpp" line="1255"/>
         <source>Insert document coding as TeX comment</source>
         <translation>Enlakaat kodañ teuliadur evel un evezhiadenn TeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1277"/>
+        <location filename="../src/texstudio.cpp" line="1256"/>
         <source>Insert program as TeX comment</source>
         <translation>Enlakaat programm evel evezhiadenn TeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1278"/>
+        <location filename="../src/texstudio.cpp" line="1257"/>
         <source>Insert bibliography tool as TeX comment</source>
         <translation>Enlakaat un ostilh bibliografiezh evel evezhiadenn TeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1280"/>
+        <location filename="../src/texstudio.cpp" line="1259"/>
         <source>&amp;Math</source>
         <translation>&amp;Matematik</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1284"/>
+        <location filename="../src/texstudio.cpp" line="1263"/>
         <source>&amp;Wizards</source>
         <translation>&amp;Skoazellerioù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1285"/>
+        <location filename="../src/texstudio.cpp" line="1264"/>
         <source>Quick &amp;Start...</source>
         <translation>Loc&apos;hañ &amp;prim...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1286"/>
+        <location filename="../src/texstudio.cpp" line="1265"/>
         <source>Quick &amp;Beamer Presentation...</source>
         <translation>Kinnig &amp;Beamer prim...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1287"/>
+        <location filename="../src/texstudio.cpp" line="1266"/>
         <source>Quick &amp;Letter...</source>
         <translation>Skoazeller skrivañ-&amp;lizhiri...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1290"/>
+        <location filename="../src/texstudio.cpp" line="1269"/>
+        <source>AI &amp;Chat...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/texstudio.cpp" line="1272"/>
         <source>Quick &amp;Tabular...</source>
         <translation>Skoazeller &amp;taolenn...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1291"/>
+        <location filename="../src/texstudio.cpp" line="1273"/>
         <source>Quick T&amp;abbing...</source>
         <translation>Skoazeller to&amp;alennatadur...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1292"/>
+        <location filename="../src/texstudio.cpp" line="1274"/>
         <source>Quick &amp;Array...</source>
         <translation>Skoazeller &amp;matris...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1293"/>
+        <location filename="../src/texstudio.cpp" line="1275"/>
         <source>Insert &amp;Graphic...</source>
         <translation>Enlakaat &amp;Grafikoù...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1295"/>
+        <location filename="../src/texstudio.cpp" line="1277"/>
         <source>Math Assistant...</source>
         <translation>Skoazeller matematikel...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1323"/>
+        <location filename="../src/texstudio.cpp" line="1305"/>
         <source>&amp;Clean</source>
         <translation>&amp;Netaat</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1325"/>
+        <location filename="../src/texstudio.cpp" line="1307"/>
         <source>&amp;Insert Bibliography Entry...</source>
         <translation>&amp;Enlakaat un enmont Bibliografiezh...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1327"/>
+        <location filename="../src/texstudio.cpp" line="1309"/>
         <source>Type</source>
         <translation>Doare</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1331"/>
-        <location filename="../src/texstudio.cpp" line="1341"/>
+        <location filename="../src/texstudio.cpp" line="1313"/>
+        <location filename="../src/texstudio.cpp" line="1323"/>
         <source>BibTeX</source>
         <translation>BibTeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1336"/>
-        <location filename="../src/texstudio.cpp" line="1342"/>
+        <location filename="../src/texstudio.cpp" line="1318"/>
+        <location filename="../src/texstudio.cpp" line="1324"/>
         <source>BibLaTeX</source>
         <translation>BibLaTeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1346"/>
+        <location filename="../src/texstudio.cpp" line="1328"/>
         <source>Ma&amp;cros</source>
         <translation>Ma&amp;kroioù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1352"/>
+        <location filename="../src/texstudio.cpp" line="1334"/>
         <source>Previous Document</source>
         <translation>Teuliad kent</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1353"/>
+        <location filename="../src/texstudio.cpp" line="1335"/>
         <source>Next Document</source>
         <translation>Teuliad da-heul</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1354"/>
+        <location filename="../src/texstudio.cpp" line="1336"/>
         <source>Open Documents</source>
         <translation>Digeriñ teuliadoù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1355"/>
+        <location filename="../src/texstudio.cpp" line="1337"/>
         <source>List Of Open Documents</source>
         <translation>Listenn an teuliadoù digoret</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1356"/>
+        <location filename="../src/texstudio.cpp" line="1338"/>
         <source>List Of Hidden Documents</source>
         <translation>Listenn an teuliadoù kuzhet</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1358"/>
+        <location filename="../src/texstudio.cpp" line="1340"/>
         <source>Focus Editor</source>
         <translation>Aozer Fokus</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1359"/>
+        <location filename="../src/texstudio.cpp" line="1341"/>
         <source>Focus Viewer</source>
         <translation>Fokus war al lenner</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1362"/>
+        <location filename="../src/texstudio.cpp" line="1344"/>
         <source>Show</source>
         <translation>Diskouez</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1365"/>
+        <location filename="../src/texstudio.cpp" line="1347"/>
         <source>Statusbar</source>
         <translation>Barrenn-statudoù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1369"/>
+        <location filename="../src/texstudio.cpp" line="1350"/>
+        <source>Reset Sidepanel/docks</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/texstudio.cpp" line="1352"/>
         <source>Show embedded PDF large</source>
         <translation>Diskouez ar PDF bras ambarket</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1370"/>
+        <location filename="../src/texstudio.cpp" line="1353"/>
         <source>Show embedded PDF small</source>
         <translation>Diskouez ar PDF bihan ambarket</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1372"/>
+        <location filename="../src/texstudio.cpp" line="1355"/>
         <source>Close Element</source>
         <translation>Serriñ an elfenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1375"/>
+        <location filename="../src/texstudio.cpp" line="1358"/>
         <source>Collapse</source>
         <translation>Bihanaat</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1376"/>
-        <location filename="../src/texstudio.cpp" line="1381"/>
+        <location filename="../src/texstudio.cpp" line="1359"/>
+        <location filename="../src/texstudio.cpp" line="1364"/>
         <source>Everything</source>
         <translation>Pep-tra</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1377"/>
-        <location filename="../src/texstudio.cpp" line="1382"/>
+        <location filename="../src/texstudio.cpp" line="1360"/>
+        <location filename="../src/texstudio.cpp" line="1365"/>
         <source>Nearest Block</source>
         <translation>Blok nesañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1379"/>
-        <location filename="../src/texstudio.cpp" line="1384"/>
+        <location filename="../src/texstudio.cpp" line="1362"/>
+        <location filename="../src/texstudio.cpp" line="1367"/>
         <source>Level %1</source>
         <translation>Live %1</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1380"/>
+        <location filename="../src/texstudio.cpp" line="1363"/>
         <source>Expand</source>
         <translation>Astenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1386"/>
+        <location filename="../src/texstudio.cpp" line="1369"/>
         <source>Grammar errors</source>
         <translation>Fazioù yezhadur</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1389"/>
+        <location filename="../src/texstudio.cpp" line="1372"/>
         <source>Word Repetition</source>
         <translation>Adlavaradur gerioù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1390"/>
+        <location filename="../src/texstudio.cpp" line="1373"/>
         <source>Long-range Word Repetition</source>
         <translation>Adlavaradur gerioù gant hir-hed</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1391"/>
+        <location filename="../src/texstudio.cpp" line="1374"/>
         <source>Bad words</source>
         <translation>Gerioù fall</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1392"/>
+        <location filename="../src/texstudio.cpp" line="1375"/>
         <source>Grammar Mistake</source>
         <translation>Fazi yezhadur</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1394"/>
+        <location filename="../src/texstudio.cpp" line="1377"/>
         <source>Grammar Mistake Special %1</source>
         <translation>Fazi yezhadur ispisial %1</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1403"/>
+        <location filename="../src/texstudio.cpp" line="1386"/>
         <source>Editor Zoom</source>
         <translation>Aozer Zoum</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1404"/>
+        <location filename="../src/texstudio.cpp" line="1387"/>
         <source>Zoom In</source>
         <translation>Zoumañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1405"/>
+        <location filename="../src/texstudio.cpp" line="1388"/>
         <source>Zoom Out</source>
         <translation>Dizoumañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1406"/>
+        <location filename="../src/texstudio.cpp" line="1389"/>
         <source>Reset Zoom</source>
         <translation>Adderaouekaat ar zoum</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1408"/>
+        <location filename="../src/texstudio.cpp" line="1391"/>
         <source>Full &amp;Screen</source>
         <translation>Skramm &amp;Leun</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1415"/>
+        <location filename="../src/texstudio.cpp" line="1398"/>
         <source>Highlighting</source>
         <translation>Usskediñ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1439"/>
+        <location filename="../src/texstudio.cpp" line="1422"/>
         <source>&amp;Options</source>
         <translation>&amp;Dibarzhioù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1440"/>
+        <location filename="../src/texstudio.cpp" line="1423"/>
         <source>&amp;Configure TeXstudio...</source>
         <translation>&amp;Kefluniañ TeXstudio...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1443"/>
+        <location filename="../src/texstudio.cpp" line="1426"/>
         <source>Load &amp;Profile...</source>
         <translation>Kargañ ar &amp;profil...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1444"/>
+        <location filename="../src/texstudio.cpp" line="1427"/>
         <source>S&amp;ave Profile...</source>
         <translation>Enroll&amp;añ ar profil...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1445"/>
+        <location filename="../src/texstudio.cpp" line="1428"/>
         <source>Save &amp;Current Settings</source>
         <comment>menu</comment>
         <translation>Enrollañ an &amp;arventennoù red</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1446"/>
+        <location filename="../src/texstudio.cpp" line="1429"/>
         <source>Restore &amp;Default Settings...</source>
         <translation>Adlakaat an arventennoù &amp;dre-ziouer...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1449"/>
+        <location filename="../src/texstudio.cpp" line="1432"/>
         <source>Root Document</source>
         <comment>menu</comment>
         <translation>Teuliad gwrizienn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1452"/>
+        <location filename="../src/texstudio.cpp" line="1435"/>
         <source>Detect &amp;Automatically</source>
         <translation>Em-ziguzh&amp;añ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1460"/>
+        <location filename="../src/texstudio.cpp" line="1443"/>
         <source>Set Current Document As Explicit Root</source>
         <translation>Lakaat an teul war implij evel gwrizienn ezpleget</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1463"/>
+        <location filename="../src/texstudio.cpp" line="1446"/>
         <source>&amp;Help</source>
         <translation>&amp;Sikour</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1464"/>
+        <location filename="../src/texstudio.cpp" line="1447"/>
         <source>LaTeX Reference...</source>
         <translation>Daveenn LaTeX...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1465"/>
+        <location filename="../src/texstudio.cpp" line="1448"/>
         <source>User Manual...</source>
         <translation>Dornlevr an implijeer...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1466"/>
+        <location filename="../src/texstudio.cpp" line="1449"/>
         <source>Packages Help...</source>
         <translation>Pakadoù skoazell...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1469"/>
+        <location filename="../src/texstudio.cpp" line="1452"/>
         <source>Check LaTeX Installation</source>
         <translation>Gwiriañ staliadur LaTeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1470"/>
+        <location filename="../src/texstudio.cpp" line="1453"/>
         <source>Check Active Completion Files</source>
         <translation>Gwiriañ ar restroù klokter oberiant</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1471"/>
+        <location filename="../src/texstudio.cpp" line="1454"/>
         <source>Check LanguageTool</source>
         <translation>Gwiriañ LanguageTool</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1472"/>
+        <location filename="../src/texstudio.cpp" line="1455"/>
         <source>Bugs Report/Feature Request</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1473"/>
+        <location filename="../src/texstudio.cpp" line="1456"/>
         <source>About TeXstudio...</source>
         <translation>Diwar-benn TeXstudio...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1642"/>
-        <location filename="../src/texstudio.cpp" line="5759"/>
+        <location filename="../src/texstudio.cpp" line="1625"/>
+        <location filename="../src/texstudio.cpp" line="5812"/>
         <source>show more entries ...</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1650"/>
+        <location filename="../src/texstudio.cpp" line="1633"/>
         <source>Default</source>
         <translation>Dre-ziouer</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1684"/>
+        <location filename="../src/texstudio.cpp" line="1667"/>
         <source>Connected to LanguageTool at %1</source>
         <translation>Kevreet ouzh LanguageTool da %1</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1688"/>
+        <location filename="../src/texstudio.cpp" line="1671"/>
         <source>No LanguageTool server found at %1</source>
         <translation>Servijer LanguageTool ebet kavet da %1</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1692"/>
+        <location filename="../src/texstudio.cpp" line="1675"/>
         <source>LanguageTool status unknown</source>
         <translation>LanguageTool: statud dizanv</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1696"/>
+        <location filename="../src/texstudio.cpp" line="1679"/>
         <source>Inline grammar checking disabled by user!</source>
         <translation>Gwiriañ yezhadur enlinenn lazhet gant an implijer!</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1759"/>
+        <location filename="../src/texstudio.cpp" line="1742"/>
         <source>Language</source>
         <translation>Yezh</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1771"/>
-        <location filename="../src/texstudio.cpp" line="1772"/>
-        <location filename="../src/texstudio.cpp" line="5789"/>
-        <location filename="../src/texstudio.cpp" line="5792"/>
-        <location filename="../src/texstudio.cpp" line="5793"/>
+        <location filename="../src/texstudio.cpp" line="1754"/>
+        <location filename="../src/texstudio.cpp" line="1755"/>
+        <location filename="../src/texstudio.cpp" line="5842"/>
+        <location filename="../src/texstudio.cpp" line="5845"/>
+        <location filename="../src/texstudio.cpp" line="5846"/>
         <source>Encoding</source>
         <translation>Enkodañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1794"/>
+        <location filename="../src/texstudio.cpp" line="1777"/>
         <source>More Encodings...</source>
         <translation>Muioc&apos;h a enkodoù...</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1802"/>
+        <location filename="../src/texstudio.cpp" line="1785"/>
         <source>Insert encoding as TeX comment</source>
         <translation>Enlakaat ar c&apos;hodañ enmont evel evezhiadenn TeX</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1816"/>
+        <location filename="../src/texstudio.cpp" line="1799"/>
         <source>Go to bookmark</source>
         <translation>Mont d&apos;ar sined</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1858"/>
+        <location filename="../src/texstudio.cpp" line="1841"/>
         <source>Automatic</source>
         <translation>Emgefreek</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1859"/>
+        <location filename="../src/texstudio.cpp" line="1842"/>
         <source>Automatic root document detection active</source>
         <translation>Em-ziguzhadur an teuliad gwrizienn war enaou</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1864"/>
+        <location filename="../src/texstudio.cpp" line="1847"/>
         <source>&amp;Explicit</source>
         <translation>&amp;Displegus</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1865"/>
+        <location filename="../src/texstudio.cpp" line="1848"/>
         <source>Root</source>
         <comment>explicit root document</comment>
         <translation>Gwrizienn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="1866"/>
+        <location filename="../src/texstudio.cpp" line="1849"/>
         <source>Explict root document:
 %1</source>
         <translation>Teuliad gwrizienn ezpleget:
 %1</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2166"/>
+        <location filename="../src/texstudio.cpp" line="2157"/>
         <source>Do you want to debug a SyncTeX file?</source>
         <translation>Ha fellout a ra deoc&apos;h diveugiñ ur restr SyncTeX?</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2265"/>
-        <location filename="../src/texstudio.cpp" line="4185"/>
-        <location filename="../src/texstudio.cpp" line="5843"/>
+        <location filename="../src/texstudio.cpp" line="2256"/>
+        <location filename="../src/texstudio.cpp" line="4192"/>
         <location filename="../src/texstudio.cpp" line="5896"/>
-        <location filename="../src/texstudio.cpp" line="6463"/>
-        <location filename="../src/texstudio.cpp" line="6644"/>
-        <location filename="../src/texstudio.cpp" line="6646"/>
-        <location filename="../src/texstudio.cpp" line="6656"/>
-        <location filename="../src/texstudio.cpp" line="6658"/>
-        <location filename="../src/texstudio.cpp" line="10451"/>
+        <location filename="../src/texstudio.cpp" line="5949"/>
+        <location filename="../src/texstudio.cpp" line="6515"/>
+        <location filename="../src/texstudio.cpp" line="6696"/>
+        <location filename="../src/texstudio.cpp" line="6698"/>
+        <location filename="../src/texstudio.cpp" line="6708"/>
+        <location filename="../src/texstudio.cpp" line="6710"/>
+        <location filename="../src/texstudio.cpp" line="10527"/>
         <source>Error</source>
         <translation>Fazi</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2265"/>
+        <location filename="../src/texstudio.cpp" line="2256"/>
         <source>You do not have read permission to the file %1.</source>
         <translation>N&apos;ho peus gwir ebet da lenn ar restr %1.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2317"/>
+        <location filename="../src/texstudio.cpp" line="2308"/>
         <source>A crash recover file from %1 has been found for &quot;%2&quot;.
 Do you want to restore it?</source>
         <translation>Ur restr adtapout enep sac&apos;h adalek %1 a zo bet kavet &apos;%2&apos;.
 Ha fellout a ra deoc&apos;h hec&apos;h adsevel?</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2323"/>
+        <location filename="../src/texstudio.cpp" line="2314"/>
         <source>Failed to open recover file &quot;%1&quot;.</source>
         <translation>C&apos;hwitadur ar restr adtapout &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2473"/>
+        <location filename="../src/texstudio.cpp" line="2464"/>
         <source>%1 has been compiled with Qt %2, but is running with Qt %3.
 Please get the correct runtime library (e.g. .dll or .so files).
 Otherwise there might be random errors and crashes.</source>
@@ -11205,46 +11442,46 @@ Kemerit al levraoueg seveniñ reizh (d.sk restroù .dll pe .so).
 Bez e vo fazioù ha sac&apos;hadennoù dre-zegouezh, mod-all.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2563"/>
+        <location filename="../src/texstudio.cpp" line="2554"/>
         <source>Could not write template data:</source>
         <translation>Dibosupl skrivañ roadennoù ar patrom:</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2595"/>
+        <location filename="../src/texstudio.cpp" line="2586"/>
         <source>Could not write template meta data:</source>
         <translation>N&apos;heller ket skrivañ ar patrom meta-roadennoù:</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2646"/>
-        <location filename="../src/texstudio.cpp" line="2710"/>
+        <location filename="../src/texstudio.cpp" line="2637"/>
+        <location filename="../src/texstudio.cpp" line="2701"/>
         <source>File not found:</source>
         <translation>Restr nann-kavet:</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2650"/>
-        <location filename="../src/texstudio.cpp" line="2714"/>
+        <location filename="../src/texstudio.cpp" line="2641"/>
+        <location filename="../src/texstudio.cpp" line="2705"/>
         <source>You do not have read permission to this file:</source>
         <translation>N&apos;ho ket an aotre da lenn ar restr-mañ:</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2831"/>
-        <location filename="../src/texstudio.cpp" line="10281"/>
+        <location filename="../src/texstudio.cpp" line="2822"/>
+        <location filename="../src/texstudio.cpp" line="10357"/>
         <source>Open Files</source>
         <translation>Restroù digoret</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2849"/>
-        <location filename="../src/texstudio.cpp" line="2856"/>
+        <location filename="../src/texstudio.cpp" line="2840"/>
+        <location filename="../src/texstudio.cpp" line="2847"/>
         <source>Loading of last session failed.</source>
         <translation>Kargadur an dalc&apos;h diwezhañ c&apos;hwitet.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2922"/>
+        <location filename="../src/texstudio.cpp" line="2913"/>
         <source>Save As</source>
         <translation>Enrollañ dindan</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2939"/>
+        <location filename="../src/texstudio.cpp" line="2930"/>
         <source>Saving under the name
 %1
 is currently not possible because a modified version of a file
@@ -11257,269 +11494,279 @@ gant an anv-mañ a zo war-implij e-barzh TeXstudio. Bez ho peus da enrollañ pe 
 ar restr all-mañ a-raok na c&apos;hallfec&apos;h he flastrañ.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="2957"/>
+        <location filename="../src/texstudio.cpp" line="2948"/>
         <source>This pdf cannot be synchronized with the tex source any more because the source file has been renamed due to a Save As operation. You should recompile the renamed file and view its result.</source>
         <translation>Ar PDF-mañ n&apos;hall ket bezañ sinkronelaet gant ar vammenn tex ken dre ma &apos;z eo bet cheñchet anv ar restr-vammenn dre un oberiadenn Enrollañ evel. Rankout a rit adkempunañ ar restr adanvet ha gwelet an disoc&apos;h.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3057"/>
+        <location filename="../src/texstudio.cpp" line="3048"/>
         <source>Rename/Move</source>
         <translation>Adenvel/Fiñval</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3057"/>
-        <location filename="../src/texstudio.cpp" line="11727"/>
+        <location filename="../src/texstudio.cpp" line="3048"/>
+        <location filename="../src/texstudio.cpp" line="11909"/>
         <source>Copy</source>
         <translation>Eilañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3072"/>
+        <location filename="../src/texstudio.cpp" line="3063"/>
         <source>Do you really want to delete the file &quot;%1&quot;?</source>
         <translation>Ha fellout a ra deoc&apos;h dilemel da vat ar restr &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3081"/>
+        <location filename="../src/texstudio.cpp" line="3072"/>
         <source>Do you really want to revert the file &quot;%1&quot;?</source>
         <translation>Ha fellout a ra deoc&apos;h adsevel da vat ar restr &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3108"/>
+        <location filename="../src/texstudio.cpp" line="3099"/>
         <source>Numeric permissions</source>
         <translation>Aotreadurioù niverel</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3109"/>
+        <location filename="../src/texstudio.cpp" line="3100"/>
         <source>Verbose permissions</source>
         <translation>Aotreadurioù verbek</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3224"/>
+        <location filename="../src/texstudio.cpp" line="3233"/>
         <source>The document &quot;%1&quot; contains unsaved work. Do you want to save it before closing?</source>
         <translation>An teuliad &quot;%1&quot; a endalc&apos;h labour chomet di-enroll. Ha fellout a ra deoc&apos;h enrollañ anezhañ a-raok serriñ?</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3350"/>
-        <location filename="../src/texstudio.cpp" line="3409"/>
-        <location filename="../src/texstudio.cpp" line="3489"/>
+        <location filename="../src/texstudio.cpp" line="3360"/>
+        <location filename="../src/texstudio.cpp" line="3419"/>
+        <location filename="../src/texstudio.cpp" line="3499"/>
         <source>The file &quot;%1&quot; does not exist anymore. Do you want to remove it from the recent file list?</source>
         <translation>N&apos;eus ket eus ar &quot;%1&quot; ken. Ha fellout a ra deoc&apos;h dilemel anezhi diwar listenn ar restroù nevez?</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3502"/>
+        <location filename="../src/texstudio.cpp" line="3512"/>
         <source>Loading of session failed.</source>
         <translation>Kargadur dalc&apos;h c&apos;hwitet.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3519"/>
+        <location filename="../src/texstudio.cpp" line="3529"/>
         <source>Load Session</source>
         <translation>Kargañ an dalc&apos;h</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3519"/>
-        <location filename="../src/texstudio.cpp" line="3537"/>
+        <location filename="../src/texstudio.cpp" line="3529"/>
+        <location filename="../src/texstudio.cpp" line="3547"/>
         <source>TeXstudio Session</source>
         <translation>Dalc&apos;h TeXstudio</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3537"/>
+        <location filename="../src/texstudio.cpp" line="3547"/>
         <source>Save Session</source>
         <translation>Enrollañ an dalc&apos;h</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3543"/>
+        <location filename="../src/texstudio.cpp" line="3553"/>
         <source>Saving of session failed.</source>
         <translation>Enrollañ un dalc&apos;h c&apos;hwitet.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3619"/>
+        <location filename="../src/texstudio.cpp" line="3629"/>
         <source>The following files could not be loaded:</source>
         <translation>N&apos;hall ket bezañ karget ar restroù da-heul:</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3784"/>
+        <location filename="../src/texstudio.cpp" line="3794"/>
         <source>Image Formats (%1)</source>
         <translation>Stummoù ar skeudenn (%1)</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3786"/>
+        <location filename="../src/texstudio.cpp" line="3796"/>
         <source>Save Image</source>
         <translation>Enrollañ ar skeudenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3791"/>
+        <location filename="../src/texstudio.cpp" line="3801"/>
         <source>Could not save the image file.</source>
         <translation>N&apos;heller ket enrollañ ar restr skeudenn.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3879"/>
+        <location filename="../src/texstudio.cpp" line="3889"/>
         <source>Ascending</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3879"/>
+        <location filename="../src/texstudio.cpp" line="3889"/>
         <source>Descending</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3879"/>
+        <location filename="../src/texstudio.cpp" line="3889"/>
         <source>No Sorting</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3879"/>
+        <location filename="../src/texstudio.cpp" line="3889"/>
         <source>Random (Shuffle)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3885"/>
+        <location filename="../src/texstudio.cpp" line="3895"/>
         <source>Sorting</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3886"/>
+        <location filename="../src/texstudio.cpp" line="3896"/>
         <source>Complete Lines</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3887"/>
+        <location filename="../src/texstudio.cpp" line="3897"/>
         <source>Case Sensitive</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="3888"/>
+        <location filename="../src/texstudio.cpp" line="3898"/>
         <source>Remove Duplicates</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="4148"/>
+        <location filename="../src/texstudio.cpp" line="4155"/>
         <source>Insert hard line breaks after so many characters:</source>
         <translation>Enlakaat troc&apos;h linennoù garv goude &quot;n&quot; arouezioù:</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="4149"/>
+        <location filename="../src/texstudio.cpp" line="4156"/>
         <source>Smart scope selecting</source>
         <translation>Diuziñ hed speredek</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="4150"/>
+        <location filename="../src/texstudio.cpp" line="4157"/>
         <source>Join lines before wrapping</source>
         <translation>Stagañ al linennoù a-raok o fakañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="4164"/>
-        <location filename="../src/texstudio.cpp" line="6340"/>
-        <location filename="../src/texstudio.cpp" line="6397"/>
+        <location filename="../src/texstudio.cpp" line="4171"/>
+        <location filename="../src/texstudio.cpp" line="6392"/>
+        <location filename="../src/texstudio.cpp" line="6449"/>
         <source>No document open</source>
         <translation>Teuliad ebet digoret</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="4170"/>
+        <location filename="../src/texstudio.cpp" line="4177"/>
         <source>No dictionary available.</source>
         <translation>N&apos;eus geriadur hegerz ebet.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="4185"/>
+        <location filename="../src/texstudio.cpp" line="4192"/>
         <source>Can&apos;t load Thesaurus Database</source>
         <translation>N&apos;hall ket kargañ an diaz-roadenn Thesaurus</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="4594"/>
+        <location filename="../src/texstudio.cpp" line="4599"/>
         <source>Storing session failed</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="4594"/>
+        <location filename="../src/texstudio.cpp" line="4599"/>
         <source>Storing session information into %1 failed. File exists but is not writeable.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="4679"/>
+        <location filename="../src/texstudio.cpp" line="4684"/>
         <source>This will reset all settings to their defaults. At the end, TeXstudio will be closed. Please start TeXstudio manually anew afterwards.
 
 Do you want to continue?</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="4689"/>
+        <location filename="../src/texstudio.cpp" line="4694"/>
         <source>Unable to write to settings file %1</source>
         <translation>Divarrek da skrivañ er restr arventennoù %1</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="5459"/>
+        <location filename="../src/texstudio.cpp" line="5424"/>
+        <source>AI Chat</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/texstudio.cpp" line="5424"/>
+        <source>Please set the API key in the settings.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/texstudio.cpp" line="5512"/>
         <source>Quick Start</source>
         <translation>Loc&apos;hañ fonnus</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="5481"/>
+        <location filename="../src/texstudio.cpp" line="5534"/>
         <source>Quick Beamer Presentation</source>
         <translation>Kinnig Beamer prim</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="5518"/>
+        <location filename="../src/texstudio.cpp" line="5571"/>
         <source>&lt;Current File&gt;</source>
         <translation>&lt;Current File&gt;</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="5550"/>
+        <location filename="../src/texstudio.cpp" line="5603"/>
         <source>Type: %1</source>
         <translation>Doare: %1</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="5592"/>
+        <location filename="../src/texstudio.cpp" line="5645"/>
         <source>Edit User &amp;Tags</source>
         <translation>Aozañ ar balizoù implijer</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="5654"/>
+        <location filename="../src/texstudio.cpp" line="5707"/>
         <source>empty</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="5658"/>
+        <location filename="../src/texstudio.cpp" line="5711"/>
         <source>Labels:</source>
         <translation>Labelioù:</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="5746"/>
+        <location filename="../src/texstudio.cpp" line="5799"/>
         <source>show less entries ...</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="5787"/>
+        <location filename="../src/texstudio.cpp" line="5840"/>
         <source>Encoding Aliases: </source>
         <translation>Aliasoù enkodañ:</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="5843"/>
+        <location filename="../src/texstudio.cpp" line="5896"/>
         <source>Can't detect the file name.
 You have to save a document before you can compile it.</source>
         <translation>N&apos;haller ket diguzhañ an anv-restr.
 Bez ho peus da enrollañ an teuliad a-raok gellet e gempunañ.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="5851"/>
+        <location filename="../src/texstudio.cpp" line="5904"/>
         <source>Can&apos;t detect the file name</source>
         <translation>N&apos;haller ket diguzhañ anv ar restr</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="5890"/>
+        <location filename="../src/texstudio.cpp" line="5943"/>
         <source>  Running this command: </source>
         <translation>Lakaat da vont an urzhiad:</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="5896"/>
+        <location filename="../src/texstudio.cpp" line="5949"/>
         <source>could not start the command</source>
         <translation>N&apos;heller ket loc&apos;hañ an urzhiad-mañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6020"/>
+        <location filename="../src/texstudio.cpp" line="6072"/>
         <source>You have called the command to open the internal pdf viewer.
 However, you are using a version of TeXstudio that was compiled without the internal pdf viewer.</source>
         <translation>Bez ho peus anvet an urzhiad evit digeriñ al lenner PDFoù diabarzh.
 Ar pezh a zo, implijit e vez ganeoc&apos;h ur stumm eus TeXstudio hag a zo bet kempunet hep al lenner PDFoù diabarzh.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6040"/>
+        <location filename="../src/texstudio.cpp" line="6092"/>
         <source>The document &quot;%1&quot; wants to override the command &quot;%2&quot; with &quot;%3&quot;.
 
 Do you want to allow and run the new, overriding command?
@@ -11536,222 +11783,222 @@ Ha fellout a ra deoc&apos;h aotren hag implijout an urzhiad erlec&apos;hiañ?
 (c) Nann avat, chom hep implijout an urzhiad &quot;%3&quot; ha sevenit an urzhiad &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6124"/>
+        <location filename="../src/texstudio.cpp" line="6176"/>
         <source>Unknown internal command: %1</source>
         <translation>Urzhiad diabarzh dianav: %1</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6159"/>
+        <location filename="../src/texstudio.cpp" line="6211"/>
         <source>%!TeX program used: %1</source>
         <translation>%!TeX program implijet: %1</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6162"/>
+        <location filename="../src/texstudio.cpp" line="6214"/>
         <source>%!TeX program not recognized! (%1). Using default.</source>
         <translation>%!TeX program nann-anavezet! (%1). Implijout dre-ziouer.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6223"/>
+        <location filename="../src/texstudio.cpp" line="6275"/>
         <source>You cannot compile the document in a non writable directory.</source>
         <translation>N&apos;hallit ket kempunañ an teuliad en un nann-skrivus kavlec&apos;h.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6225"/>
+        <location filename="../src/texstudio.cpp" line="6277"/>
         <source>Could not start %1.</source>
         <translation>N&apos;haller ket loc&apos;hañ %1.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6254"/>
+        <location filename="../src/texstudio.cpp" line="6306"/>
         <source>Error:</source>
         <translation>Fazi:</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6330"/>
+        <location filename="../src/texstudio.cpp" line="6382"/>
         <source>No open project or tex file to clean.</source>
         <translation>Raktres ebet digor pe restr tex da netaat.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6401"/>
+        <location filename="../src/texstudio.cpp" line="6453"/>
         <source>Text Analysis</source>
         <translation>Analizadurioù testenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6425"/>
+        <location filename="../src/texstudio.cpp" line="6477"/>
         <source>The random text generator constructs new texts from existing words, so you have to open some text files</source>
         <translation>Ar geneler testenn dre-zegouezh a sav testennoù diwar-gerioù a zo anezho, bez ho peus da zigeriñ restroù testenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6463"/>
+        <location filename="../src/texstudio.cpp" line="6515"/>
         <source>File must be saved and compiling before you can view the log</source>
         <translation>A-raok ne c&apos;hallfec&apos;h gwelet ar renabl ar restr a rank bezañ enrollet ha kempunet anezhi</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6644"/>
-        <location filename="../src/texstudio.cpp" line="6656"/>
+        <location filename="../src/texstudio.cpp" line="6696"/>
+        <location filename="../src/texstudio.cpp" line="6708"/>
         <source>File not found</source>
         <translation>Restr nann-kavet</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6646"/>
-        <location filename="../src/texstudio.cpp" line="6658"/>
+        <location filename="../src/texstudio.cpp" line="6698"/>
+        <location filename="../src/texstudio.cpp" line="6710"/>
         <source>Could not open browser</source>
         <translation>N&apos;hall ket bezañ digoret ar merdeer</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="6974"/>
+        <location filename="../src/texstudio.cpp" line="7026"/>
         <source>%1 is an invalid TeX project directory.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="7267"/>
+        <location filename="../src/texstudio.cpp" line="7319"/>
         <source>You have to save the file before it can be defined as root document.</source>
         <translation>Bez ho peus da enrollañ ar restr a-raok na vefe termenet evel bezañ un teul gwrizienn.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="7723"/>
+        <location filename="../src/texstudio.cpp" line="7774"/>
         <source>Label</source>
         <translation>Label</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="7725"/>
-        <location filename="../src/texstudio.cpp" line="7747"/>
+        <location filename="../src/texstudio.cpp" line="7776"/>
+        <location filename="../src/texstudio.cpp" line="7798"/>
         <source>Beyond end of document.</source>
         <translation>Pelloc&apos;h evit fin an teuliad.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="7728"/>
-        <location filename="../src/texstudio.cpp" line="7749"/>
+        <location filename="../src/texstudio.cpp" line="7779"/>
+        <location filename="../src/texstudio.cpp" line="7800"/>
         <source>In Appendix.</source>
         <translation>E stagadenn.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="7767"/>
+        <location filename="../src/texstudio.cpp" line="7818"/>
         <source>File not found.</source>
         <translation>Restr nann-kavet.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="7782"/>
+        <location filename="../src/texstudio.cpp" line="7833"/>
         <source> (Line %1)</source>
         <translation> (Linenn %1)</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9071"/>
+        <location filename="../src/texstudio.cpp" line="9147"/>
         <source>commit comment:</source>
         <translation>kas un evezhiadenn:</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9075"/>
+        <location filename="../src/texstudio.cpp" line="9151"/>
         <source>check in whole directory ?</source>
         <translation>gwiriañ e-barzh an holl gavlec&apos;hioù?</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9077"/>
+        <location filename="../src/texstudio.cpp" line="9153"/>
         <source>Push to repository ?</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9434"/>
+        <location filename="../src/texstudio.cpp" line="9510"/>
         <source>Attention: dialog is automatically closed if the text is manually edited!</source>
         <translation>Diwallit: ar voest-kendiviz a vez em-sarret diouzhtu ma vez aozet an destenn gant an dorn!</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9733"/>
+        <location filename="../src/texstudio.cpp" line="9809"/>
         <source>Unable to open file &quot;%1&quot;.</source>
         <translation>Divarrek da zigeriñ ar restr &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9735"/>
+        <location filename="../src/texstudio.cpp" line="9811"/>
         <source>The file &quot;%1&quot; does not exist.
 Do you want to create it?</source>
         <translation>N&apos;eus ket eus ar restr &quot;%1&quot;.
 Ha fellout a ra deoc&apos;h he c&apos;hrouiñ?</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9772"/>
+        <location filename="../src/texstudio.cpp" line="9848"/>
         <source>Save Profile</source>
         <translation>Enrollañ ar profil</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9772"/>
-        <location filename="../src/texstudio.cpp" line="9779"/>
+        <location filename="../src/texstudio.cpp" line="9848"/>
+        <location filename="../src/texstudio.cpp" line="9855"/>
         <source>TXS Profile</source>
         <comment>filter</comment>
         <translation>Profil TXS</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9779"/>
+        <location filename="../src/texstudio.cpp" line="9855"/>
         <source>Load Profile</source>
         <translation>Kargañ ar profil</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9832"/>
+        <location filename="../src/texstudio.cpp" line="9908"/>
         <source>Failed to read profile file %1.</source>
         <translation>C&apos;hwitet da lenn ar restr profil %1.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9955"/>
+        <location filename="../src/texstudio.cpp" line="10031"/>
         <source>Problem</source>
         <translation>Kudenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9955"/>
+        <location filename="../src/texstudio.cpp" line="10031"/>
         <source>Finding word repetitions only works with activated online spell checking !</source>
         <translation>Kavout gerioù adlavaret n&apos;a &apos;z a nemet en-dro gant ar gwiriekadur reizhskrivadurel enlinenn enaouet!</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9960"/>
+        <location filename="../src/texstudio.cpp" line="10036"/>
         <source>Find Word Repetitions</source>
         <translation>Kavout gerioù adlavaret</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9969"/>
+        <location filename="../src/texstudio.cpp" line="10045"/>
         <source>&amp;Find Next</source>
         <translation>&amp;Kavout da-heul</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="9971"/>
+        <location filename="../src/texstudio.cpp" line="10047"/>
         <source>&amp;Find Previous</source>
         <translation>&amp;Kavout kent</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10022"/>
+        <location filename="../src/texstudio.cpp" line="10098"/>
         <source>Reached beginning of text.</source>
         <translation>Tizhet penn-kentañ an destenn.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10022"/>
+        <location filename="../src/texstudio.cpp" line="10098"/>
         <source>Reached end of text.</source>
         <translation>Tizhet fin an destenn.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10281"/>
-        <location filename="../src/texstudio.cpp" line="10491"/>
-        <location filename="../src/texstudio.cpp" line="10494"/>
+        <location filename="../src/texstudio.cpp" line="10357"/>
+        <location filename="../src/texstudio.cpp" line="10567"/>
+        <location filename="../src/texstudio.cpp" line="10570"/>
         <source>LaTeX Files (*.tex);;All Files (*)</source>
         <translation>Restroù LaTeX (*.tex);;An holl restroù (*)</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10451"/>
+        <location filename="../src/texstudio.cpp" line="10527"/>
         <source>You do not have read permission to this file.</source>
         <translation>N&apos;ho ket an aotre da lenn ar restr-mañ.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10491"/>
+        <location filename="../src/texstudio.cpp" line="10567"/>
         <source>Open Compare File</source>
         <translation>Digeriñ ar c&apos;heñverier restroù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10494"/>
+        <location filename="../src/texstudio.cpp" line="10570"/>
         <source>Open Base File</source>
         <translation>Digeriñ diaz restr</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10575"/>
+        <location filename="../src/texstudio.cpp" line="10651"/>
         <source>SVN Conflict!</source>
         <translation>Dizemglev SVN!</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10576"/>
+        <location filename="../src/texstudio.cpp" line="10652"/>
         <source>%1is conflicted with repository.
 Press &quot;OK&quot; to show differences instead of the generated source by subversion
 Press &quot;Cancel&quot;to do nothing.
@@ -11762,14 +12009,14 @@ Pouezit war &quot;Nullañ&quot; evit chom hep ober tra pe dra.
 </translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10673"/>
-        <location filename="../src/texstudio.cpp" line="10764"/>
-        <location filename="../src/texstudio.cpp" line="10770"/>
+        <location filename="../src/texstudio.cpp" line="10749"/>
+        <location filename="../src/texstudio.cpp" line="10840"/>
+        <location filename="../src/texstudio.cpp" line="10846"/>
         <source>TeXstudio Emergency</source>
         <translation>Skoazell prim TeXstudio</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10677"/>
+        <location filename="../src/texstudio.cpp" line="10753"/>
         <source>A backtrace was written to
 %1
 Please provide this file if you send a bug report.
@@ -11781,7 +12028,7 @@ Pourvezit ar restr-mañ ma kasit un danevell draen, mar plij.
 </translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10680"/>
+        <location filename="../src/texstudio.cpp" line="10756"/>
         <source>TeXstudio has CRASHED due to a %1.
 
 %2Do you want to keep TeXstudio running? This may cause data corruption.</source>
@@ -11790,18 +12037,18 @@ Pourvezit ar restr-mañ ma kasit un danevell draen, mar plij.
 %2 Ha fellout a ra deoc&apos;h laoskel TeXstudio o vont en-dro? An dra-se a c&apos;hall degas breinadur er roadennoù.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10681"/>
+        <location filename="../src/texstudio.cpp" line="10757"/>
         <source>Yes, try to recover</source>
         <translation>Ya, klask adsevel</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10682"/>
-        <location filename="../src/texstudio.cpp" line="10687"/>
+        <location filename="../src/texstudio.cpp" line="10758"/>
+        <location filename="../src/texstudio.cpp" line="10763"/>
         <source>No, kill the program</source>
         <translation>Ket, lazhañ ar program</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10684"/>
+        <location filename="../src/texstudio.cpp" line="10760"/>
         <source>TeXstudio has been paused due to a possible endless loop.
 
 %1Do you want to keep the program running? This may cause data corruption.</source>
@@ -11810,17 +12057,17 @@ Pourvezit ar restr-mañ ma kasit un danevell draen, mar plij.
 %1 Ha fellout a ra deoc&apos;h laoskel ar programm o vont en-dro? An dra-se a c&apos;hall degas breinadur er roadennoù.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10685"/>
+        <location filename="../src/texstudio.cpp" line="10761"/>
         <source>Yes, stop the loop and try to recover</source>
         <translation>Ya, paouez ar vouklenn ha klask adsevel</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10686"/>
+        <location filename="../src/texstudio.cpp" line="10762"/>
         <source>Yes, continue the loop</source>
         <translation>Ya, kenderc&apos;hel ar vouklenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10765"/>
+        <location filename="../src/texstudio.cpp" line="10841"/>
         <source>TeXstudio has CRASHED due to a %1 in thread %2.
 The thread has been stopped.
 Do you want to keep TeXstudio running? This may cause data corruption.</source>
@@ -11829,50 +12076,50 @@ An orjal a zo bet paouezet.
 Ha fellout a ra deoc&apos;h laoskel TeXstudio o vont en-dro? An dra-se a c&apos;hall degas breinadur er roadennoù.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10770"/>
+        <location filename="../src/texstudio.cpp" line="10846"/>
         <source>I tried to die, but nothing happened.</source>
         <translation>Klasket em eus mervel, n&apos;eus c&apos;hoarvezet netra, avat.</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10802"/>
+        <location filename="../src/texstudio.cpp" line="10878"/>
         <source>System Report</source>
         <translation>Danevell sistem</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10940"/>
+        <location filename="../src/texstudio.cpp" line="11016"/>
         <source>LT Report</source>
         <translation>Danevell LT</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10966"/>
+        <location filename="../src/texstudio.cpp" line="11042"/>
         <source>process failed to start
 </source>
         <translation>chomet eo bout an argerzh
 </translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10969"/>
+        <location filename="../src/texstudio.cpp" line="11045"/>
         <source>process crashed
 </source>
         <translation>sac&apos;het eo an argerzh
 </translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10979"/>
+        <location filename="../src/texstudio.cpp" line="11055"/>
         <source>Real-time checking is enabled.
 </source>
         <translation>Gwiriañ an amzer wirion a zo enaouet.
 </translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10981"/>
+        <location filename="../src/texstudio.cpp" line="11057"/>
         <source>Real-time checking is disabled!!!
 </source>
         <translation>Gwiriañ an amzer-wirion a zo lazhet!!!
 </translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10984"/>
+        <location filename="../src/texstudio.cpp" line="11060"/>
         <source>Grammar checking is enabled.
 
 </source>
@@ -11881,7 +12128,7 @@ Ha fellout a ra deoc&apos;h laoskel TeXstudio o vont en-dro? An dra-se a c&apos;
 </translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10986"/>
+        <location filename="../src/texstudio.cpp" line="11062"/>
         <source>Grammar checking is disabled!!!
 
 </source>
@@ -11890,7 +12137,7 @@ Ha fellout a ra deoc&apos;h laoskel TeXstudio o vont en-dro? An dra-se a c&apos;
 </translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10989"/>
+        <location filename="../src/texstudio.cpp" line="11065"/>
         <source>Tries to start automatically.
 
 </source>
@@ -11899,7 +12146,7 @@ Ha fellout a ra deoc&apos;h laoskel TeXstudio o vont en-dro? An dra-se a c&apos;
 </translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10991"/>
+        <location filename="../src/texstudio.cpp" line="11067"/>
         <source>Autostart disabled.
 
 </source>
@@ -11908,198 +12155,198 @@ Ha fellout a ra deoc&apos;h laoskel TeXstudio o vont en-dro? An dra-se a c&apos;
 </translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10996"/>
+        <location filename="../src/texstudio.cpp" line="11072"/>
         <source>LT current status: </source>
         <translation>LT: statud a-vremañ:</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="10999"/>
+        <location filename="../src/texstudio.cpp" line="11075"/>
         <source>working</source>
         <translation>o labourat</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11002"/>
+        <location filename="../src/texstudio.cpp" line="11078"/>
         <source>error</source>
         <translation>fazi</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11006"/>
+        <location filename="../src/texstudio.cpp" line="11082"/>
         <source>unknown</source>
         <translation>dizanv</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11009"/>
+        <location filename="../src/texstudio.cpp" line="11085"/>
         <source>LT-URL: %1
 </source>
         <translation>LT-URL: %1
 </translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11305"/>
+        <location filename="../src/texstudio.cpp" line="11389"/>
         <source>Error when communicating with LT: %1</source>
         <translation>Fazi en ur eskemm gant LT: %1</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11449"/>
-        <location filename="../src/texstudio.cpp" line="12239"/>
+        <location filename="../src/texstudio.cpp" line="11614"/>
+        <location filename="../src/texstudio.cpp" line="12421"/>
         <source>untitled</source>
         <translation>hep titl ebet</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11459"/>
-        <location filename="../src/texstudio.cpp" line="12281"/>
+        <location filename="../src/texstudio.cpp" line="11624"/>
+        <location filename="../src/texstudio.cpp" line="12463"/>
         <source>TODO</source>
         <translation>D&apos;OBER</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11575"/>
-        <location filename="../src/texstudio.cpp" line="11583"/>
-        <location filename="../src/texstudio.cpp" line="11614"/>
+        <location filename="../src/texstudio.cpp" line="11757"/>
+        <location filename="../src/texstudio.cpp" line="11765"/>
+        <location filename="../src/texstudio.cpp" line="11796"/>
         <source>Document: </source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11667"/>
+        <location filename="../src/texstudio.cpp" line="11849"/>
         <source>Close document</source>
         <translation>Serriñ an teuliad</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11668"/>
+        <location filename="../src/texstudio.cpp" line="11850"/>
         <source>Set as explicit root document</source>
         <translation>Lakaat evel teuliad gwrizienn ezpleget</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11669"/>
+        <location filename="../src/texstudio.cpp" line="11851"/>
         <source>Open all related documents</source>
         <translation>Digeriñ an holl deuliadoù liammet</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11670"/>
+        <location filename="../src/texstudio.cpp" line="11852"/>
         <source>Close all related documents</source>
         <translation>Serriñ an holl deuliadoù liammet</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11672"/>
+        <location filename="../src/texstudio.cpp" line="11854"/>
         <source>Remove explicit root document role</source>
         <translation>Dilemel rol ezpleget an teul gwrizienn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11674"/>
+        <location filename="../src/texstudio.cpp" line="11856"/>
         <source>Show all open documents in this tree</source>
         <translation>Diskouez an holl deuliadoù er wezenn-mañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11676"/>
+        <location filename="../src/texstudio.cpp" line="11858"/>
         <source>Show only current document in this tree</source>
         <translation>Diskouez ar restr a-vremañ hepken er wezenn-mañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11689"/>
+        <location filename="../src/texstudio.cpp" line="11871"/>
         <source>Copy filename</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11690"/>
+        <location filename="../src/texstudio.cpp" line="11872"/>
         <source>Copy file path</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11699"/>
+        <location filename="../src/texstudio.cpp" line="11881"/>
         <source>Insert</source>
         <translation>Enlakaat</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11700"/>
-        <location filename="../src/texstudio.cpp" line="11701"/>
+        <location filename="../src/texstudio.cpp" line="11882"/>
+        <location filename="../src/texstudio.cpp" line="11883"/>
         <source>Insert as %1</source>
         <translation>Enlakaat evel %1</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11703"/>
+        <location filename="../src/texstudio.cpp" line="11885"/>
         <source>Find Usages</source>
         <translation>Kavout implijoù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11714"/>
+        <location filename="../src/texstudio.cpp" line="11896"/>
         <source>Insert Label</source>
         <translation>Enlakaat al Label</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11718"/>
+        <location filename="../src/texstudio.cpp" line="11900"/>
         <source>Insert %1 to Label</source>
         <comment>autoreplaced, e.g.: Insert <byte value="xd"/>ef to Label</comment>
         <translation>Enlakaat %1 d&apos;al Label</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11722"/>
+        <location filename="../src/texstudio.cpp" line="11904"/>
         <source>Create Label</source>
         <translation>Krouiñ Label</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11726"/>
+        <location filename="../src/texstudio.cpp" line="11908"/>
         <source>Cut</source>
         <translation>Troc&apos;hañ</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11728"/>
+        <location filename="../src/texstudio.cpp" line="11910"/>
         <source>Paste Before</source>
         <translation>Pegañ a-raok</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11729"/>
+        <location filename="../src/texstudio.cpp" line="11911"/>
         <source>Paste After</source>
         <translation>Pegañ goude</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11731"/>
+        <location filename="../src/texstudio.cpp" line="11913"/>
         <source>Indent Section</source>
         <translation>Endantadur ar gevrenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11732"/>
+        <location filename="../src/texstudio.cpp" line="11914"/>
         <source>Unindent Section</source>
         <translation>Di-endantadur ar gevrenn</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11683"/>
-        <location filename="../src/texstudio.cpp" line="11735"/>
+        <location filename="../src/texstudio.cpp" line="11865"/>
+        <location filename="../src/texstudio.cpp" line="11917"/>
         <source>Expand Subitems</source>
         <translation>Astenn an is-elfennoù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="973"/>
+        <location filename="../src/texstudio.cpp" line="952"/>
         <source>C&amp;ut Line or Selection</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11684"/>
-        <location filename="../src/texstudio.cpp" line="11736"/>
+        <location filename="../src/texstudio.cpp" line="11866"/>
+        <location filename="../src/texstudio.cpp" line="11918"/>
         <source>Collapse Subitems</source>
         <translation>Bihanaat an is-elfennoù</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11748"/>
+        <location filename="../src/texstudio.cpp" line="11930"/>
         <source>Open Document</source>
         <translation>Digeriñ an teuliad</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="11749"/>
-        <location filename="../src/texstudio.cpp" line="11756"/>
+        <location filename="../src/texstudio.cpp" line="11931"/>
+        <location filename="../src/texstudio.cpp" line="11938"/>
         <source>Go to Definition</source>
         <translation>Mont d&apos;an termenadur</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="12265"/>
+        <location filename="../src/texstudio.cpp" line="12447"/>
         <source>BIBLIOGRAPHY</source>
         <translation>BIBLIOGRAFIEZH</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="12273"/>
+        <location filename="../src/texstudio.cpp" line="12455"/>
         <source>MAGIC_COMMENTS</source>
         <translation>EVEZHIADENNOÙ_HUD</translation>
     </message>
     <message>
-        <location filename="../src/texstudio.cpp" line="12289"/>
+        <location filename="../src/texstudio.cpp" line="12471"/>
         <source>LABELS</source>
         <translation>LABELIOÙ</translation>
     </message>
@@ -12611,19 +12858,75 @@ teuliad endalc&apos;het e-barzh %1</translation>
 <context>
     <name>UserMenuDialog</name>
     <message>
+        <location filename="../src/usermenudialog.cpp" line="50"/>
+        <location filename="../src/usermenudialog.cpp" line="468"/>
+        <source>Export all macros</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/usermenudialog.cpp" line="354"/>
+        <source>Folder is not empty.</source>
+        <translation>Neket goullo an teuliad.</translation>
+    </message>
+    <message>
+        <location filename="../src/usermenudialog.cpp" line="359"/>
+        <source>Do you really want to delete the current macro?</source>
+        <translation>Ha fellout a ra deoc&apos;h dilemel ar makro red da vat?</translation>
+    </message>
+    <message>
+        <location filename="../src/usermenudialog.cpp" line="438"/>
+        <location filename="../src/usermenudialog.cpp" line="450"/>
+        <source>txs macro files (*.txsMacro)</source>
+        <translation>restroù makro txs (*.txsMacro)</translation>
+    </message>
+    <message>
+        <location filename="../src/usermenudialog.cpp" line="438"/>
+        <source>Import macros</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/usermenudialog.cpp" line="450"/>
+        <source>Export macro</source>
+        <translation>Ezporzhiañ ar makro</translation>
+    </message>
+    <message>
+        <location filename="../src/usermenudialog.cpp" line="582"/>
+        <source> (col. %1)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
         <location filename="../src/usermenudialog.ui" line="19"/>
         <source>Edit Macros</source>
         <translation>Aozañ ar makroioù</translation>
     </message>
     <message>
-        <location filename="../src/usermenudialog.ui" line="139"/>
-        <source>Browse offered macros on txs site.</source>
-        <translation>Merdeit a-dreuz ar makroioù kinniget war lec&apos;hienn txs.</translation>
+        <location filename="../src/usermenudialog.ui" line="60"/>
+        <location filename="../src/usermenudialog.ui" line="263"/>
+        <source>Name</source>
+        <translation>Anv</translation>
     </message>
     <message>
-        <location filename="../src/usermenudialog.ui" line="142"/>
-        <source>Browse</source>
-        <translation>Merdeiñ</translation>
+        <location filename="../src/usermenudialog.ui" line="65"/>
+        <location filename="../src/usermenudialog.ui" line="516"/>
+        <source>Shortcut</source>
+        <translation>Berradenn-glavier</translation>
+    </message>
+    <message>
+        <location filename="../src/usermenudialog.ui" line="70"/>
+        <location filename="../src/usermenudialog.ui" line="292"/>
+        <source>Trigger</source>
+        <translation>Distegner</translation>
+    </message>
+    <message>
+        <location filename="../src/usermenudialog.ui" line="75"/>
+        <location filename="../src/usermenudialog.ui" line="280"/>
+        <source>Abbreviation</source>
+        <translation>Berradur</translation>
+    </message>
+    <message>
+        <location filename="../src/usermenudialog.ui" line="110"/>
+        <source>Export macro(s) to file(s)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/usermenudialog.ui" line="113"/>
@@ -12639,6 +12942,16 @@ teuliad endalc&apos;het e-barzh %1</translation>
         <location filename="../src/usermenudialog.ui" line="132"/>
         <source>Import</source>
         <translation>Emporzhiañ</translation>
+    </message>
+    <message>
+        <location filename="../src/usermenudialog.ui" line="139"/>
+        <source>Browse offered macros on txs site.</source>
+        <translation>Merdeit a-dreuz ar makroioù kinniget war lec&apos;hienn txs.</translation>
+    </message>
+    <message>
+        <location filename="../src/usermenudialog.ui" line="142"/>
+        <source>Browse</source>
+        <translation>Merdeiñ</translation>
     </message>
     <message>
         <location filename="../src/usermenudialog.ui" line="159"/>
@@ -12664,24 +12977,6 @@ teuliad endalc&apos;het e-barzh %1</translation>
         <location filename="../src/usermenudialog.ui" line="246"/>
         <source>Down</source>
         <translation>Traoñ</translation>
-    </message>
-    <message>
-        <location filename="../src/usermenudialog.ui" line="60"/>
-        <location filename="../src/usermenudialog.ui" line="263"/>
-        <source>Name</source>
-        <translation>Anv</translation>
-    </message>
-    <message>
-        <location filename="../src/usermenudialog.ui" line="75"/>
-        <location filename="../src/usermenudialog.ui" line="280"/>
-        <source>Abbreviation</source>
-        <translation>Berradur</translation>
-    </message>
-    <message>
-        <location filename="../src/usermenudialog.ui" line="70"/>
-        <location filename="../src/usermenudialog.ui" line="292"/>
-        <source>Trigger</source>
-        <translation>Distegner</translation>
     </message>
     <message>
         <location filename="../src/usermenudialog.ui" line="369"/>
@@ -12713,7 +13008,7 @@ Gellout a reer implijout ivez an dalvoudegezh ispisial ?txs-start evit loc&apos;
     <message>
         <location filename="../src/usermenudialog.ui" line="402"/>
         <source>Type</source>
-        <translation>doare</translation>
+        <translation>Doare</translation>
     </message>
     <message>
         <location filename="../src/usermenudialog.ui" line="411"/>
@@ -12731,6 +13026,11 @@ Gellout a reer implijout ivez an dalvoudegezh ispisial ?txs-start evit loc&apos;
         <translation>Skrid</translation>
     </message>
     <message>
+        <location filename="../src/usermenudialog.ui" line="473"/>
+        <source>Exec Macro</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
         <location filename="../src/usermenudialog.ui" line="493"/>
         <source>OK</source>
         <translation>Mat eo</translation>
@@ -12744,22 +13044,6 @@ Gellout a reer implijout ivez an dalvoudegezh ispisial ?txs-start evit loc&apos;
         <location filename="../src/usermenudialog.ui" line="509"/>
         <source>Description</source>
         <translation>Deskrivadur</translation>
-    </message>
-    <message>
-        <location filename="../src/usermenudialog.ui" line="65"/>
-        <location filename="../src/usermenudialog.ui" line="516"/>
-        <source>Shortcut</source>
-        <translation>Berradenn-glavier</translation>
-    </message>
-    <message>
-        <location filename="../src/usermenudialog.ui" line="110"/>
-        <source>Export macro(s) to file(s)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/usermenudialog.ui" line="473"/>
-        <source>Exec Macro</source>
-        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/usermenudialog.ui" line="532"/>
@@ -12817,46 +13101,16 @@ Gellout a reer implijout ivez an dalvoudegezh ispisial ?txs-start evit loc&apos;
         <source>Shift+F12</source>
         <translation>Lkd+F12</translation>
     </message>
-    <message>
-        <location filename="../src/usermenudialog.cpp" line="50"/>
-        <location filename="../src/usermenudialog.cpp" line="468"/>
-        <source>Export all macros</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/usermenudialog.cpp" line="354"/>
-        <source>Folder is not empty.</source>
-        <translation>Neket goullo an teuliad.</translation>
-    </message>
-    <message>
-        <location filename="../src/usermenudialog.cpp" line="359"/>
-        <source>Do you really want to delete the current macro?</source>
-        <translation>Ha fellout a ra deoc&apos;h dilemel ar makro red da vat?</translation>
-    </message>
-    <message>
-        <location filename="../src/usermenudialog.cpp" line="438"/>
-        <location filename="../src/usermenudialog.cpp" line="450"/>
-        <source>txs macro files (*.txsMacro)</source>
-        <translation>restroù makro txs (*.txsMacro)</translation>
-    </message>
-    <message>
-        <location filename="../src/usermenudialog.cpp" line="438"/>
-        <source>Import macros</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../src/usermenudialog.cpp" line="450"/>
-        <source>Export macro</source>
-        <translation>Ezporzhiañ ar makro</translation>
-    </message>
-    <message>
-        <location filename="../src/usermenudialog.cpp" line="582"/>
-        <source> (col. %1)</source>
-        <translation type="unfinished"/>
-    </message>
 </context>
 <context>
     <name>UserQuickDialog</name>
+    <message>
+        <location filename="../src/userquickdialog.cpp" line="39"/>
+        <location filename="../src/userquickdialog.cpp" line="43"/>
+        <location filename="../src/userquickdialog.cpp" line="57"/>
+        <source>User</source>
+        <translation>Implijer</translation>
+    </message>
     <message>
         <location filename="../src/userquickdialog.ui" line="14"/>
         <source>Quick Build Command</source>
@@ -12886,13 +13140,6 @@ Gellout a reer implijout ivez an dalvoudegezh ispisial ?txs-start evit loc&apos;
         <location filename="../src/userquickdialog.ui" line="102"/>
         <source>Delete</source>
         <translation>Dilemel</translation>
-    </message>
-    <message>
-        <location filename="../src/userquickdialog.cpp" line="39"/>
-        <location filename="../src/userquickdialog.cpp" line="43"/>
-        <location filename="../src/userquickdialog.cpp" line="57"/>
-        <source>User</source>
-        <translation>Implijer</translation>
     </message>
 </context>
 <context>

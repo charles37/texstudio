@@ -7,9 +7,34 @@ visible if you toggle \"Show advanced options\" in the lower left
 corner.
 
 ## Adapting the main GUI
-The side panel and the log panel may be hidden with a control on the lower-left edge of the main window.
+
+### Side-panel (Docks)
+The side-panel and the log panel may be hidden with a control on the lower-left edge of the main window.
 
 ![Hide panes](images/hide_panes.png)
+
+The sidepanel itself consists of different docks which can be reordered, split and even moved to the right hand side of the window.
+
+
+```{tab} Side-panel with all docks
+![side-panel with all docks](images/dock_start.png)
+```
+
+```{tab} Dragging dock to new place
+![Dragging dock to new place](images/dock_move.png)
+```
+
+```{tab} Split off dock
+![Split off dock](images/dock_split.png)
+```
+
+The side-panel set-up can be reset to default by using View/Show/"Reset Sidepanel/Docks".
+
+The menu \"View/Show\" also offers to show/hide docks.
+
+![Viewer Menu for docks](images/view_docks.png)
+
+### Toolbars
 
 The toolbars can be hidden by a right click anywhere on the toolbar area.
 
@@ -116,10 +141,10 @@ Special commands
 :   Are special commands which do not add cell content and need to handled specially, e.g. `\hline` at the end of a row.
 
 Special commands position
-:   where to place them when reformating a table.
+:   where to place them when reformatting a table.
 
 One line per cell
-:   when reformating a table, just put each cell in an individual line
+:   when reformatting a table, just put each cell in an individual line
 
 ![Configure Editor advanced: table autoformatting](images/conf_tableautoformating.png)
 

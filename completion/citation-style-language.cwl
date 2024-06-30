@@ -1,5 +1,5 @@
 # citation-style-language package
-# Matthew Bertucci 2023/04/13 for v0.4.1
+# Matthew Bertucci 2024/06/11 for v0.5.0
 
 #include:filehook
 #include:url
@@ -15,6 +15,7 @@ bib-font=%<font commands%>
 bib-entry-page-break#true,false
 bib-item-sep=%<<length> or <glue>%>
 bib-hang=##L
+bib-par-indent=##L
 prefix-separator=%<separator%>
 suffix-separator=%<separator%>
 #endkeyvals
@@ -23,8 +24,11 @@ suffix-separator=%<separator%>
 \addbibresource[options]{bib file}#S
 
 \cite[options%keyvals]{keylist}
+\cite*[options%keyvals]{keylist}
 \parencite{keylist}#*
 \parencite[options%keyvals]{keylist}#*
+\parencite*{keylist}#*
+\parencite*[options%keyvals]{keylist}#*
 \citep{keylist}#*
 \citep[options%keyvals]{keylist}#*
 \textcite{keylist}
@@ -36,8 +40,14 @@ suffix-separator=%<separator%>
 \cites{%<key1%>}{%<key2%>}%<...{keyN}%>
 \cites[%<options%>]{%<key1%>}[%<options%>]{%<key2%>}%<...[options]{keyN}%>
 \citeauthor{keylist}
+\citeyearpar{keylist}
+\citeyearpar[options%keyvals]{keylist}
+\citeyearpar*{keylist}#*
+\citeyearpar*[options%keyvals]{keylist}#*
+\fullcite{keylist}
+\fullcite[options%keyvals]{keylist}
 
-#keyvals:\cite,\parencite,\citep,\textcite,\citet,\cites
+#keyvals:\cite,\cite*,\parencite,\parencite*,\citep,\textcite,\citet,\cites,\citeyearpar,\citeyearpar*,\fullcite
 prefix=%<text%>
 suffix=%<text%>
 act=%<number%>

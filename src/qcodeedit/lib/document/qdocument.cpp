@@ -964,7 +964,7 @@ QDocument::LineEnding QDocument::lineEnding() const
 /*!
 	\return the lin endings detected upon loading
 
-	This should only ever take the the Window of Linux value
+	This should only ever take the Window of Linux value
 	if a document has been loaded. If no content has been
 	loaded it will fall back to Local.
 */
@@ -5297,7 +5297,7 @@ bool QDocumentCursorHandle::movePosition(int count, int op, const QDocumentCurso
                     candidates.push(p);
                 }
                 if(p.role&QParenthesis::Close){
-                    if(candidates.top().id == p.id && candidates.top().role&QParenthesis::Open){
+                    if(!candidates.isEmpty() && candidates.top().id == p.id && candidates.top().role&QParenthesis::Open){
                         candidates.pop();
                     }else{
                         candidates.push(p);
@@ -6990,14 +6990,20 @@ void QDocumentPrivate::drawCursors(QPainter *p, const QDocument::PaintContext &c
 QString QDocumentPrivate::exportAsHtml(const QDocumentCursor& range, bool includeHeader, bool simplifyCSS, int maxLineWidth, int maxWrap) const{
 	QString result;
 	if (includeHeader) {
-		result += "<html><head>";
-		if ( m_formatScheme ) {
-			result += "<style type=\"text/css\">";
-			result += QString("pre { margin: %1px }\n").arg(simplifyCSS?0:1);
-			result += m_formatScheme->exportAsCSS(simplifyCSS);
-			result += "</style>";
-		}
-		result += "</head><body>";
+        // check tooltip background color
+        const QColor clr=QPalette().toolTipBase().color();
+        const bool tooltipWithDarkBackground=qGray(clr.rgb())<128;
+        if(darkMode==tooltipWithDarkBackground){
+            // set CSS scheme
+            result += "<html><head>";
+            if ( m_formatScheme ) {
+                result += "<style type=\"text/css\">";
+                result += QString("pre { margin: %1px }\n").arg(simplifyCSS?0:1);
+                result += m_formatScheme->exportAsCSS(simplifyCSS);
+                result += "</style>";
+            }
+            result += "</head><body>";
+        }
 	}
 	QDocumentSelection sel = range.selection();
 	REQUIRE_RET(sel.startLine >= 0 && sel.startLine < m_lines.size(),"");
@@ -7464,6 +7470,10 @@ qreal QDocumentPrivate::textWidth(int fid, const QString& text){
 				containsSurrogates = true; //strange characters (e.g.  0xbcd, 0x1d164)
             else if (c < QChar(0x20))
 				containsAsianChars = true;
+            else if (c >= QChar(0xff00) && c <= QChar(0xffef))
+                containsAsianChars = true;
+            else if (c >= QChar(0x3000) && c <= QChar(0x303f))
+                containsAsianChars = true;
 		}
 		if (!containsAsianChars && !containsSurrogates)
 			// TODO: we've blacklisted certain characters from which we know they may have non-standard text width

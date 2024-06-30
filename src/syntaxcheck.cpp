@@ -1,5 +1,4 @@
 #include "syntaxcheck.h"
-#include "latexdocument.h"
 #include "latexeditorview_config.h"
 #include "spellerutility.h"
 #include "tablemanipulation.h"
@@ -442,8 +441,18 @@ bool SyntaxCheck::checkCommand(const QString &cmd, const StackEnvironment &envs)
     bool textOrMathEnvUsed=false;
     for (int i = envs.size()-1; i > -1; --i) {
 		Environment env = envs.at(i);
-        if(textOrMathEnvUsed &&(env.name=="math" || env.name=="text" )){
-            continue; // only the lowest text/math is valid as they can be used alternately
+        if(textOrMathEnvUsed){
+            if(env.name=="math" || env.name=="text" ) continue; // only the lowest text/math is valid as they can be used alternately
+            // look also for alias envs!
+            QStringList altEnvs = ltxCommands->environmentAliases.values(env.name);
+            bool skip=false;
+            foreach (const QString &altEnv, altEnvs) {
+                if (altEnv=="math" || altEnv=="text" ){
+                    skip=true;
+                    break;
+                }
+            }
+            if(skip) continue; // only the lowest text/math is valid as they can be used alternately
         }
 		if (ltxCommands->possibleCommands.contains(env.name) && ltxCommands->possibleCommands.value(env.name).contains(cmd))
 			return true;
@@ -569,6 +578,68 @@ void SyntaxCheck::checkLine(const QString &line, Ranges &newRanges, StackEnviron
         if(!activeEnv.isEmpty() && activeEnv.top().endingColumn>=0 && tk.start>activeEnv.top().endingColumn){
             Environment env=activeEnv.pop();
         }
+        // special treatment for ExplSyntaxOff
+        // it is used to toggle expl3 mode off
+        if(!activeEnv.isEmpty() && activeEnv.top().name == "expl3"){
+            const QString word=tk.getText();
+            if( word == "\\ExplSyntaxOff"){
+                activeEnv.pop();
+                continue;
+            }
+            if(tk.type==Token::commandUnknown || tk.type==Token::command){
+                // collect next parts
+                // e.g. \cs_new:Npn is split into \cs _ new : Npn
+                const int start = tk.start;
+                int end=tk.start+tk.length;
+                int colonPosition=-1;
+                for(++i;i<tl.length();++i){
+                    Token tk2= tl[i];
+                    if(end != tk2.start){
+                        // token does not adjoin previous one
+                        --i;
+                        break;
+                    }
+                    end+=tk2.length;
+                    if(tk2.type==Token::word){
+                        continue;
+                    }
+                    if(tk2.type==Token::punctuation){
+                        if(tk2.getText()=="_"){
+                            continue;
+                        }
+                        if(tk2.getText()==":"){
+                            colonPosition=end;
+                            continue;
+                        }
+                    }
+                    end-=tk2.length;
+                    --i;
+                    break; // unwanted element, stop joing for latex3 command
+                }
+                if(colonPosition>=0) {
+                    // highlight part after colon as math/number
+                    // highlight command part
+                    Error elem;
+                    elem.range = QPair<int, int>(start, colonPosition-start);
+                    elem.format=mFormatList["#pictureHighlight"];
+                    elem.type = ERR_highlight;
+                    newRanges.append(elem); // highlight
+                    // highlight after column
+                    elem.range = QPair<int, int>(colonPosition, end-colonPosition);
+                    elem.format=mFormatList["math"];
+                    elem.type = ERR_highlight;
+                    newRanges.append(elem); // highlight
+                }else{
+                    // ltx3 command w/o colon inside
+                    Error elem;
+                    elem.range = QPair<int, int>(start, end-start);
+                    elem.format=mFormatList["#pictureHighlight"];
+                    elem.type = ERR_highlight;
+                    newRanges.append(elem); // highlight
+                }
+            }
+            continue;
+        }
 		// ignore commands in definition arguments e.g. \newcommand{cmd}{definition}
 		if (stackContainsDefinition(stack)) {
 			Token top = stack.top();
@@ -648,7 +719,7 @@ void SyntaxCheck::checkLine(const QString &line, Ranges &newRanges, StackEnviron
         }
         // force text != math when text command is used, i.e. \textbf in math env, see #2603
         if(tk.subtype==Token::text){
-            if(tk.type==Token::braces){
+            if(tk.type==Token::braces||tk.type==Token::openBrace){
                 // add to active env
                 // invalidates math env as active
                 Environment env;
@@ -658,11 +729,20 @@ void SyntaxCheck::checkLine(const QString &line, Ranges &newRanges, StackEnviron
                 env.ticket = ticket;
                 env.level = tk.level;
                 env.startingColumn=tk.start+1;
-                env.endingColumn=tk.start+tk.length-1;
+                if(tk.type==Token::openBrace){
+                    env.endingColumn=-1;
+                }else{
+                    env.endingColumn=tk.start+tk.length-1;
+                }
                 // avoid stacking same env (e.g. braces in braces, see #2411 )
                 Environment topEnv=activeEnv.top();
                 if(topEnv.name!=env.name)
                     activeEnv.push(env);
+            }
+            if(tk.type==Token::closeBrace){
+                if(activeEnv.top().name=="text"){
+                    activeEnv.pop();
+                }
             }
         }
         // spell checking
@@ -973,6 +1053,21 @@ void SyntaxCheck::checkLine(const QString &line, Ranges &newRanges, StackEnviron
 					word = word + line.mid(tkEnvName.start, tkEnvName.length);
 				}
 			}
+            // special treatment for \ExplSyntaxOn, \ExplSyntaxOff
+            // \ProvidesExplPackage, \ProvidesExplClass and \ProvidesExplFile
+            // activate latex3 mode which ignores _ in commandnames
+            if(word=="\\ExplSyntaxOn" || word=="\\ProvidesExplPackage" || word=="\\ProvidesExplClass" || word=="\\ProvidesExplFile"){
+                Environment env;
+                env.name = "expl3";
+                env.id = 1; // to be changed
+                env.dlh = dlh;
+                env.ticket = ticket;
+                env.level = tk.level;
+                env.startingColumn=tk.start+tk.length;
+                activeEnv.push(env);
+                continue;
+            }
+
             // special treatment for & in math
             if(word=="&" && containsEnv("math", activeEnv)){
                 Error elem;

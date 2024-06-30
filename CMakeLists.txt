@@ -1,13 +1,17 @@
 cmake_minimum_required(VERSION 3.1.0)
 
-project(TeXstudio VERSION 4.7.3 LANGUAGES C CXX)
+project(TeXstudio VERSION 4.8.2 LANGUAGES C CXX)
 SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
 set(CMAKE_DEBUG_POSTFIX "d")
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+if(APPLE)
+set(CMAKE_CXX_STANDARD 20)
+else()
 set(CMAKE_CXX_STANDARD 17)
+endif()
 
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
@@ -110,8 +114,14 @@ set(TRANSLATION_FILES
 	translation/texstudio_en.ts
 )
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6 AND CMAKE_BUILD_TYPE STREQUAL "Debug")
-    message(STATUS "Generate translation source option.")
-    qt6_add_lupdate(texstudio TS_FILES ${TRANSLATION_FILES})
+	if(${QT_VERSION_MINOR} LESS_EQUAL 6)
+		message(STATUS "Generate translation source option.")
+		qt6_add_lupdate(texstudio TS_FILES ${TRANSLATION_FILES})
+	endif()
+	if(${QT_VERSION_MINOR} GREATER_EQUAL 7)
+                message(STATUS "Generate translation source option. (>= Qt6.7)")
+                qt6_add_translations(texstudio TS_FILES ${TRANSLATION_FILES})
+	endif()
 endif()
 
 if(WIN32)
@@ -313,7 +323,7 @@ endif()
 # poppler
 
 find_package(PkgConfig)
-pkg_check_modules(POPPLER QUIET IMPORTED_TARGET poppler-cpp poppler-qt${QT_VERSION_MAJOR})
+pkg_check_modules(POPPLER QUIET IMPORTED_TARGET poppler poppler-cpp poppler-qt${QT_VERSION_MAJOR})
 if(POPPLER_FOUND)
     message(STATUS "Build internal pdf previewer.")
 else()
@@ -326,7 +336,8 @@ endif()
 add_subdirectory(src/pdfviewer)
 
 # Build texstudio application
-add_executable(texstudio ${SOURCE_FILES} ${HEADER_FILES} ${RESOURCE_FILES} ${FORM_FILES} ${OSX_FILES} ${manual} ${images} ${static} ${static_scripts} ${static_styles} ${design_static})
+add_executable(texstudio ${SOURCE_FILES} ${HEADER_FILES} ${RESOURCE_FILES} ${FORM_FILES} ${OSX_FILES} ${manual} ${images} ${static} ${static_scripts} ${static_styles} ${design_static}
+)
 target_link_libraries(texstudio PRIVATE
     Qt${QT_VERSION_MAJOR}::Core
     Qt${QT_VERSION_MAJOR}::Gui

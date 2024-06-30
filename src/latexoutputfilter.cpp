@@ -735,11 +735,12 @@ bool LatexOutputFilter::detectWarning(const QString &strLine, short &dwCookie)
 	bool found = false, flush = false;
 	QString warning;
 
-	static QRegExp reLaTeXWarning("^(((! )?(La|pdf|Lua)TeX)|Package|Class|Module) .*Warning.*:(.*)", Qt::CaseInsensitive);
+    static QRegExp reLaTeXWarning("^(((! )?(La|pdf|Lua)TeX[3]?)|Package|Class|Module) .*Warning.*:(.*)", Qt::CaseInsensitive);
 	static QRegExp reLatex3Warning("^\\*\\s+(\\S.*)");
 	static QRegExp reLatex3WarningHeader("^\\*\\s*(.*warning:\\s*.*)", Qt::CaseInsensitive);
 	static QRegExp reNoFile("^No file (.*)");
 	static QRegExp reNoAsyFile("File .* does not exist."); // FIXME can be removed when http://sourceforge.net/tracker/index.php?func=detail&aid=1772022&group_id=120000&atid=685683 has promoted to the users
+    static const QRegularExpression rePackageWarningConinued("^\\(.*\\)[ ]{15}|^\\(LaTeX3\\)[ ]{7}");
 
 	switch (dwCookie) {
 	//detect the beginning of a warning
@@ -776,10 +777,18 @@ bool LatexOutputFilter::detectWarning(const QString &strLine, short &dwCookie)
 
 	//warning spans multiple lines, detect the end
 	case Warning :
-		warning = m_currentItem.message + strLine;
-		//KILE_DEBUG() << "'\tWarning (cont'd) : " << warning << endl;
-		flush = detectLaTeXLineNumber(warning, dwCookie, strLine.length());
-		m_currentItem.message = (warning);
+        // check if strline startswith (packageName), 16 spaces and remove these if true
+        {
+            QString ln=strLine;
+            QRegularExpressionMatch match=rePackageWarningConinued.match(ln);
+            if (match.hasMatch()) {
+                ln=ln.mid(match.capturedLength());
+            }
+            warning = m_currentItem.message + ln;
+            //KILE_DEBUG() << "'\tWarning (cont'd) : " << warning << endl;
+            flush = detectLaTeXLineNumber(warning, dwCookie, ln.length());
+            m_currentItem.message = (warning);
+        }
 		break;
 	case MaybeLatex3Warning:
 		if (!strLine.startsWith('*')) {
@@ -789,7 +798,7 @@ bool LatexOutputFilter::detectWarning(const QString &strLine, short &dwCookie)
 			break;
 		}
 		// no break,
-        [[gnu::fallthrough]];
+        [[fallthrough]];
 	case Latex3Warning:
 		if (!strLine.startsWith('*') || strLine.startsWith("****************************************")) {
 			found = false;
@@ -952,7 +961,7 @@ short LatexOutputFilter::parseLine(const QString &strLine, short dwCookie)
 		} else {
 			dwCookie = Start; // reset and treat currently independently
 		}
-		[[gnu::fallthrough]];
+        [[fallthrough]];
 	case Start :
 		if (detectBadBox(strLine, dwCookie))
 			break;

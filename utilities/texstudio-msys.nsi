@@ -2,8 +2,8 @@
 !define DESCRIPTION "TeXstudio is a fully featured LaTeX editor."
 # These three must be integers
 !define VERSIONMAJOR 4
-!define VERSIONMINOR 7
-!define VERSIONBUILD 3
+!define VERSIONMINOR 8
+!define VERSIONBUILD 2
 # These will be displayed by the "Click here for support information" link in "Add/Remove Programs"
 # It is possible to use "mailto:" links in here to open the email client
 !define HELPURL "https://texstudio.org" # "Support Information" link
@@ -191,7 +191,7 @@ SetOutPath $INSTDIR\share\poppler
 File /r ..\utilities\poppler-data\*
 
 SetOutPath $INSTDIR\share\fonts
-File /r ..\travis-ci\mxe\fonts\*
+File /r ..\utilities\fonts\*
 
 SetOutPath $INSTDIR\TexTablet
 File ..\utilities\TexTablet\*
